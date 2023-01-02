@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Nav from "./Nav/Nav";
 import { Modal } from "./Nav/Modal";
+import { AnimatePresence } from "framer-motion";
 import Footer from "./Footer/Footer";
 
 const Layout = () => {
@@ -14,7 +15,7 @@ const Layout = () => {
 		<div>
 			<Nav {...props} />
 			<div className='relative'>
-				{modalOpen && <Modal />}
+				<AnimatePresence initial={false}>{modalOpen && <Modal />}</AnimatePresence>
 				<Outlet />
 			</div>
 			<Footer />
