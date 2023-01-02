@@ -5,13 +5,16 @@ import { Modal } from "./Nav/Modal";
 import Footer from "./Footer/Footer";
 
 const Layout = () => {
-	const [modalOpen, setModalOpen] = useState(true);
+	const [modalOpen, setModalOpen] = useState(false);
+	const [menuOpen, setMenuOpen] = useState(false);
+
+	const props = { modalOpen, setModalOpen, menuOpen, setMenuOpen };
 
 	return (
 		<div>
-			<Nav />
+			<Nav {...props} />
 			<div className='relative'>
-				{modalOpen && <Modal setModalOpen={setModalOpen} />}
+				{modalOpen && <Modal />}
 				<Outlet />
 			</div>
 			<Footer />
