@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Nav from "./Nav/Nav";
+import MobileMenu from "./Nav/MobileMenu";
 import { Modal } from "./Nav/Modal";
 import { AnimatePresence } from "framer-motion";
 import Footer from "./Footer/Footer";
@@ -8,6 +9,8 @@ import Footer from "./Footer/Footer";
 const Layout = () => {
 	const [modalOpen, setModalOpen] = useState(false);
 	const [menuOpen, setMenuOpen] = useState(false);
+	const [cartOpen, setCartOpen] = useState(false);
+	const [thankyouOpen, setThankyouOpen] = useState(false);
 
 	const props = { modalOpen, setModalOpen, menuOpen, setMenuOpen };
 
@@ -16,6 +19,7 @@ const Layout = () => {
 			<Nav {...props} />
 			<div className='relative'>
 				<AnimatePresence initial={false}>{modalOpen && <Modal />}</AnimatePresence>
+				<AnimatePresence initial={false}>{menuOpen && <MobileMenu {...props} />}</AnimatePresence>
 				<Outlet />
 			</div>
 			<Footer />
