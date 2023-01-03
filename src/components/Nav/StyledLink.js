@@ -6,7 +6,7 @@ const StyledLink = ({ dest, text }) => {
 			to={dest}
 			className='font-bold text-[13px] leading-[25px] tracking-[2px] uppercase text-white hover:text-peru duration-500'
 		>
-			{text}
+			<p>{text}</p>
 		</Link>
 	);
 };
