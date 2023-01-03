@@ -17,7 +17,7 @@ const Layout = () => {
 	return (
 		<div>
 			<Nav {...props} />
-			<div className='relative'>
+			<div className='relative overflow-hidden'>
 				<AnimatePresence initial={false}>{modalOpen && <Modal />}</AnimatePresence>
 				<AnimatePresence initial={false}>{menuOpen && <MobileMenu {...props} />}</AnimatePresence>
 				<Outlet />

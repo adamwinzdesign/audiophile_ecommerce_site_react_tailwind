@@ -16,19 +16,19 @@ export const modalFadeIn = {
 	},
 };
 
-export const menuFadeIn = {
+export const menuSlideDown = {
 	hidden: {
-		opacity: 0,
+		y: "-100%",
 	},
 	show: {
-		opacity: 1,
+		y: 1,
 		transition: {
 			duration: 0.7,
 			delay: 0.5,
 		},
 	},
 	exit: {
-		opacity: 0,
+		y: "-100%",
 		transition: {
 			duration: 0.5,
 		},
