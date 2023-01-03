@@ -1,5 +1,9 @@
 const HeadphonesCategory = () => {
-	return <h1>HeadphonesCategory!</h1>;
+	return (
+		<div className='h-screen'>
+			<h1 className='text-black'>Headphones Category!</h1>
+		</div>
+	);
 };
 
 export default HeadphonesCategory;

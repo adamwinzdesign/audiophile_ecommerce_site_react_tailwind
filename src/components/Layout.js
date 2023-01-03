@@ -12,7 +12,22 @@ const Layout = () => {
 	const [cartOpen, setCartOpen] = useState(false);
 	const [thankyouOpen, setThankyouOpen] = useState(false);
 
-	const props = { modalOpen, setModalOpen, menuOpen, setMenuOpen };
+	const handleMenuClick = () => {
+		setModalOpen(!modalOpen);
+		setMenuOpen(!menuOpen);
+	};
+
+	const props = {
+		modalOpen,
+		setModalOpen,
+		menuOpen,
+		setMenuOpen,
+		cartOpen,
+		setCartOpen,
+		thankyouOpen,
+		setThankyouOpen,
+		handleMenuClick,
+	};
 
 	return (
 		<div>
