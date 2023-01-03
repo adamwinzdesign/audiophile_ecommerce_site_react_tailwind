@@ -5,6 +5,7 @@ import arrowRight from "../../images/shared/desktop/icon-arrow-right.svg";
 import headphones from "../../images/shared/desktop/image-category-thumbnail-headphones.png";
 import speakers from "../../images/shared/desktop/image-category-thumbnail-speakers.png";
 import earphones from "../../images/shared/desktop/image-category-thumbnail-earphones.png";
+import MobileCard from "./MobileCard";
 
 const MobileMenu = ({ handleMenuClick }) => {
 	return (
@@ -17,38 +18,9 @@ const MobileMenu = ({ handleMenuClick }) => {
 			onClick={handleMenuClick}
 		>
 			{/* mobile item */}
-			<div className='h-[12.25rem] flex flex-col md:flex-row items-center justify-between cursor-pointer'>
-				<img src={headphones} alt='headphones category' className='h-[8.375rem]' />
-				<h2 className='font-bold text-[1rem] leading-[1.125rem] tracking-[1.07px] uppercase text-black'>
-					headphones
-				</h2>
-				<div className='flex items-center justify-center gap-[13px]'>
-					<MobileLink dest='/headphones' />
-					<img src={arrowRight} alt='arrow' className='w-[5px] h-[10px]' />
-				</div>
-			</div>
-
-			<div className='h-[12.25rem] flex flex-col md:flex-row items-center justify-between cursor-pointer'>
-				<img src={speakers} alt='speakers category' className='h-[8.375rem]' />
-				<h2 className='font-bold text-[1rem] leading-[1.125rem] tracking-[1.07px] uppercase text-black'>
-					speakers
-				</h2>
-				<div className='flex items-center justify-center gap-[13px]'>
-					<MobileLink dest='/speakers' />
-					<img src={arrowRight} alt='arrow' className='w-[5px] h-[10px]' />
-				</div>
-			</div>
-
-			<div className='h-[12.25rem] flex flex-col md:flex-row items-center justify-between cursor-pointer'>
-				<img src={earphones} alt='earphones category' className='h-[8.375rem]' />
-				<h2 className='font-bold text-[1rem] leading-[1.125rem] tracking-[1.07px] uppercase text-black'>
-					earphones
-				</h2>
-				<div className='flex items-center justify-center gap-[13px]'>
-					<MobileLink dest='/earphones' />
-					<img src={arrowRight} alt='arrow' className='w-[5px] h-[10px]' />
-				</div>
-			</div>
+			<MobileCard img={headphones} title='headphones' dest='/headphones' />
+			<MobileCard img={speakers} title='speakers' dest='/speakers' />
+			<MobileCard img={earphones} title='earphones' dest='/earphones' />
 		</motion.div>
 	);
 };
