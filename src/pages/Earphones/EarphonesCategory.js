@@ -1,5 +1,11 @@
+import PageFadeIn from "../../components/PageFadeIn";
+
 const EarphonesCategory = () => {
-	return <h1>EarphonesCategory!</h1>;
+	return (
+		<PageFadeIn>
+			<h1>EarphonesCategory</h1>
+		</PageFadeIn>
+	);
 };
 
 export default EarphonesCategory;

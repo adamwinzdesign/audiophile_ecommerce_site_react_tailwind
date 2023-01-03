@@ -1,8 +1,11 @@
+import PageFadeIn from "../../components/PageFadeIn";
+
 const HeadphonesCategory = () => {
 	return (
-		<div className='h-screen'>
+		<PageFadeIn>
 			<h1 className='text-black'>Headphones Category!</h1>
-		</div>
+		</PageFadeIn>
+		// </motion.div>
 	);
 };
 

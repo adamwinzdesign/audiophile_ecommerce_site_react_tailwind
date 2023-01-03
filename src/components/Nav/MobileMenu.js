@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { menuSlideDown } from "../../utils/animations";
-import MobileLink from "./MobileLink";
-import arrowRight from "../../images/shared/desktop/icon-arrow-right.svg";
 import headphones from "../../images/shared/desktop/image-category-thumbnail-headphones.png";
 import speakers from "../../images/shared/desktop/image-category-thumbnail-speakers.png";
 import earphones from "../../images/shared/desktop/image-category-thumbnail-earphones.png";

@@ -1,8 +1,10 @@
+import PageFadeIn from "../../components/PageFadeIn";
+
 const SpeakersCategory = () => {
 	return (
-		<div className='h-screen'>
+		<PageFadeIn>
 			<h1 className='text-black'>SpeakersCategory</h1>
-		</div>
+		</PageFadeIn>
 	);
 };
 
