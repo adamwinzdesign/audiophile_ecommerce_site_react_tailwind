@@ -3,9 +3,13 @@ import PageFadeIn from "../../components/PageFadeIn";
 const Home = () => {
 	return (
 		<PageFadeIn>
-			<h1>Home!</h1>
+			<HomeHero></HomeHero>
 		</PageFadeIn>
 	);
 };
 
 export default Home;
+
+const HomeHero = () => {
+	return <div className='min-h-[32rem] bg-black'></div>;
+};

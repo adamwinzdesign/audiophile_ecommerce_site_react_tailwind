@@ -3,12 +3,13 @@ import facebook from "../../images/shared/desktop/icon-facebook.svg";
 import twitter from "../../images/shared/desktop/icon-twitter.svg";
 import instagram from "../../images/shared/desktop/icon-instagram.svg";
 import StyledLink from "../Nav/StyledLink";
+import FooterMain from "../Footer/FooterMain";
 
 // left off with spacing on footer at tablet width.  Spacing has been updated/specified, but was rendered incorrect when we had to group the logo and links together to switch to flex row for the links at desktop width
 
 const Footer = () => {
 	return (
-		<div className='relative h-[40.875rem] md:h-[25rem] desk:h-[22.875rem] w-full pt-[3.25rem] md:pt-[3.75rem] desk:pt-[4.75rem] pb-[2.375rem] md:pb-[2.875rem] desk:pb-[3.5rem] px-[1.6rem] md:px-[2.375rem] desk:px-[10.375rem] flex flex-col items-center md:items-start md:justify-between gap-[3rem] md:gap-0 bg-black'>
+		<FooterMain>
 			{/* brand accent */}
 			<div className='absolute top-0 md:left-[2.375rem] desk:left-[10.375rem] w-[101px] h-[4px] bg-peru' />
 			{/* logo and links */}
@@ -46,7 +47,8 @@ const Footer = () => {
 					<img src={instagram} alt='instagram' />
 				</div>
 			</div>
-		</div>
+		</FooterMain>
+		// </div>
 	);
 };
 
