@@ -9,8 +9,8 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				heroBGMobile: "url(../public/images/home/mobile/image-header.jpg)",
-				zx9Rings: "url(../public/images/home/desktop/pattern-circles.svg)",
+				heroBGMobile: "url(../src/images/home/mobile/image-header.jpg)",
+				zx9Rings: "url(../src/images/home/desktop/pattern-circles.svg)",
 			},
 			backgroundSize: {
 				944: "944px",
