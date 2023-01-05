@@ -3,8 +3,10 @@ const HomeYX1Card = () => {
 		<div className='pb-[5rem] md:pb-0 flex flex-col md:flex-row items-start md:items-center'>
 			<div
 				className='
-					h-[12.5rem] md:h-[20rem] w-full md:max-w-[21.25rem]
-					bg-cover bg-no-repeat bg-homeYX1BGMobile md:bg-homeYX1BGTablet rounded-lg
+					h-[12.5rem] md:h-[20rem] w-full md:w-[21.25rem] desk:w-[33.75rem]
+					bg-cover bg-no-repeat 
+					bg-homeYX1BGMobile md:bg-homeYX1BGTablet desk:bg-homeYX1BGDesk 
+					rounded-lg
 				'
 			/>
 			<div className='mt-[3.5rem] mb-[1.5rem] mx-[1.625rem] md:mx-[2.75rem]'>
