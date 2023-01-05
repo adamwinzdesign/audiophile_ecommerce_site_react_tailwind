@@ -13,6 +13,7 @@ module.exports = {
 				homeHeroBGTablet: "url(../src/images/home/tablet/image-header.jpg)",
 				homeZX7BGMobile: "url(../src/images/home/mobile/image-speaker-zx7.jpg)",
 				homeYX1BGMobile: "url(../src/images/home/mobile/image-earphones-yx1.jpg)",
+				homeYX1BGTablet: "url(../src/images/home/tablet/image-earphones-yx1.jpg)",
 				aboutBGMobile: "url(../src/images/shared/mobile/image-best-gear.jpg)",
 				aboutBGTablet: "url(../src/images/shared/tablet/image-best-gear.jpg)",
 				aboutBGDesk: "url(../src/images/shared/desktop/image-best-gear.jpg)",

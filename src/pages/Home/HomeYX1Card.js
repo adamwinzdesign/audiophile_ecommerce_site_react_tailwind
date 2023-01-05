@@ -1,7 +1,13 @@
 const HomeYX1Card = () => {
 	return (
 		<div className='pb-[5rem] flex flex-col items-start'>
-			<div className='h-[12.5rem] w-full bg-cover bg-no-repeat bg-homeYX1BGMobile rounded-lg' />
+			<div
+				className='
+					h-[12.5rem] w-full 
+					bg-cover bg-no-repeat bg-homeYX1BGMobile md:bg-homeYX1BGTablet rounded-lg
+				'
+			/>
+
 			<h2 className='mt-[3.5rem] mb-[1.5rem] mx-[1.625rem] font-bold text-[1.75rem] leading-[3.375rem] tracking-[2px] uppercase text-black'>
 				YX1 Earphones
 			</h2>
