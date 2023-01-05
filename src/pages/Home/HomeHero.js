@@ -3,7 +3,7 @@ const HomeHero = () => {
 		<div
 			className='
 				w-[100vw] h-[32rem] 
-				bg-[center_bottom_0.1rem] bg-cover bg-no-repeat bg-black bg-heroBGMobile 
+				bg-[center_bottom_0.1rem] bg-cover bg-no-repeat bg-black bg-homeHeroBGMobile 
 				flex items-center justify-center
 				'
 		>
