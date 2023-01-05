@@ -5,6 +5,7 @@ import MobileMenu from "./Nav/MobileMenu";
 import { Modal } from "./Nav/Modal";
 import { AnimatePresence } from "framer-motion";
 import Footer from "./Footer/Footer";
+import About from "./About/About";
 
 const Layout = () => {
 	const [modalOpen, setModalOpen] = useState(false);
@@ -37,6 +38,7 @@ const Layout = () => {
 				<AnimatePresence initial={false}>{menuOpen && <MobileMenu {...props} />}</AnimatePresence>
 				<Outlet />
 			</div>
+			<About />
 			<Footer />
 		</div>
 	);

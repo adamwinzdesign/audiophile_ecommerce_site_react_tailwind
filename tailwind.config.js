@@ -13,6 +13,7 @@ module.exports = {
 				homeHeroBGTablet: "url(../src/images/home/tablet/image-header.jpg)",
 				homeZX7BGMobile: "url(../src/images/home/mobile/image-speaker-zx7.jpg)",
 				homeYX1BGMobile: "url(../src/images/home/mobile/image-earphones-yx1.jpg)",
+				aboutBGMobile: "url(../src/images/shared/mobile/image-best-gear.jpg)",
 				zx9Rings: "url(../src/images/home/desktop/pattern-circles.svg)",
 			},
 			backgroundSize: {
