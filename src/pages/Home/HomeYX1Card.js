@@ -9,7 +9,7 @@ const HomeYX1Card = () => {
 					rounded-lg
 				'
 			/>
-			<div className='mt-[3.5rem] md:mt-0 mb-[1.5rem] mx-[1.625rem] md:mx-[2.75rem]'>
+			<div className='mt-[3.5rem] md:mt-0 mb-[1.5rem] mx-[1.625rem] md:mx-[2.75rem] desk:pl-[5rem]'>
 				<h2 className='mb-[1.5rem] font-bold text-[1.75rem] leading-[3.375rem] tracking-[2px] uppercase text-black'>
 					YX1 Earphones
 				</h2>
