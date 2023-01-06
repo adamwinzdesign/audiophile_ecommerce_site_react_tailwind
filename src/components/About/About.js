@@ -14,7 +14,7 @@ const About = () => {
 				{/* title */}
 				<h2
 					className='
-            md:max-w-[36rem] desk:max-w-[28rem] my-[2.5rem] md:my-[3rem] desk:mt-[4rem]
+            md:max-w-[36rem] desk:max-w-[28rem] my-[2.5rem] md:mt-[3.75rem] desk:mt-[4rem]
             font-bold text-[1.75rem] md:text-[2.5rem] leading-[2.375rem] md:leading-[2.75rem] text-center desk:text-left tracking-[1px] uppercase text-black'
 				>
 					Bringing you the <span className='text-peru'>best</span> audio gear
