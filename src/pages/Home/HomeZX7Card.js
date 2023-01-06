@@ -1,6 +1,12 @@
 const HomeZX7Card = () => {
 	return (
-		<div className='h-[20rem] px-[1.5rem] flex flex-col items-start justify-center gap-[2rem] bg-cover bg-no-repeat bg-homeZX7BGMobile rounded-lg'>
+		<div
+			className='
+				h-[20rem] px-[1.5rem] md:px-[4rem] desk:px-[6rem]
+				flex flex-col items-start justify-center gap-[2rem] 
+				bg-cover bg-no-repeat bg-homeZX7BGMobile md:bg-homeZX7BGTablet desk:bg-homeZX7BGDesk rounded-lg
+			'
+		>
 			<h2 className='font-bold text-[1.75rem] leading-[2.375rem] tracking-[2px] uppercase text-black'>
 				ZX7 Speaker
 			</h2>

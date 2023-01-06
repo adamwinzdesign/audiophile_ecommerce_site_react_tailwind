@@ -12,6 +12,8 @@ module.exports = {
 				homeHeroBGMobile: "url(../src/images/home/mobile/image-header.jpg)",
 				homeHeroBGTablet: "url(../src/images/home/tablet/image-header.jpg)",
 				homeZX7BGMobile: "url(../src/images/home/mobile/image-speaker-zx7.jpg)",
+				homeZX7BGTablet: "url(../src/images/home/tablet/image-speaker-zx7.jpg)",
+				homeZX7BGDesk: "url(../src/images/home/desktop/image-speaker-zx7.jpg)",
 				homeYX1BGMobile: "url(../src/images/home/mobile/image-earphones-yx1.jpg)",
 				homeYX1BGTablet: "url(../src/images/home/tablet/image-earphones-yx1.jpg)",
 				homeYX1BGDesk: "url(../src/images/home/desktop/image-earphones-yx1.jpg)",
