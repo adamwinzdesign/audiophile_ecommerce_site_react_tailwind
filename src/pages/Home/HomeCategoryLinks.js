@@ -7,7 +7,12 @@ import earphones from "../../images/shared/desktop/image-category-thumbnail-earp
 
 const HomeCategoryLinks = () => {
 	return (
-		<div className='h-[47.75rem] py-[2.5rem] flex flex-col justify-between'>
+		<div
+			className='
+				h-[47.75rem] md:h-[25.75rem] desk:h-[35.75rem] py-[2.5rem] md:px-[2.5rem] desk:px-[10.25rem] 
+				flex flex-col md:flex-row justify-between md:items-center border border-red-600
+			'
+		>
 			<MobileCard img={headphones} title='headphones' dest='/headphones' />
 			<MobileCard img={speakers} title='speakers' dest='/speakers' />
 			<MobileCard img={earphones} title='earphones' dest='/earphones' />
