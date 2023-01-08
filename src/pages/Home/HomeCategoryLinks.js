@@ -9,8 +9,10 @@ const HomeCategoryLinks = () => {
 	return (
 		<div
 			className='
-				h-[47.75rem] md:h-[25.75rem] desk:h-[35.75rem] py-[2.5rem] md:px-[2.5rem] desk:px-[10.25rem] 
-				flex flex-col md:flex-row justify-between md:items-center border border-red-600
+				h-[46.5rem] md:h-[25.75rem] desk:h-[35.75rem] 
+				py-[2.5rem] md:px-[3.75rem] desk:px-[10.25rem] 
+				md:mx-[2.5rem]
+				flex flex-col md:flex-row justify-between md:items-center desk:gap-[2rem]
 			'
 		>
 			<MobileCard img={headphones} title='headphones' dest='/headphones' />
