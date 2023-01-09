@@ -1,11 +1,11 @@
+import CategoryHeader from "../../components/CategoryHeader";
 import PageFadeIn from "../../components/PageFadeIn";
 
 const HeadphonesCategory = () => {
 	return (
 		<PageFadeIn>
-			<h1 className='text-black'>Headphones Category!</h1>
+			<CategoryHeader text='Headphones' />
 		</PageFadeIn>
-		// </motion.div>
 	);
 };
 
