@@ -8,7 +8,7 @@ const HeadphonesCategory = () => {
 		<PageFadeIn>
 			<CategoryHeader text='Headphones' />
 			<CategoryList>
-				<CategoryProductCard>XX99 Category Product Card</CategoryProductCard>
+				<CategoryProductCard />
 			</CategoryList>
 		</PageFadeIn>
 	);
