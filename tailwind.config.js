@@ -11,6 +11,7 @@ module.exports = {
 			backgroundImage: {
 				homeHeroBGMobile: "url(../src/images/home/mobile/image-header.jpg)",
 				homeHeroBGTablet: "url(../src/images/home/tablet/image-header.jpg)",
+				homeHeroBGDesk: "url(../src/images/home/desktop/image-hero.jpg)",
 				homeZX7BGMobile: "url(../src/images/home/mobile/image-speaker-zx7.jpg)",
 				homeZX7BGTablet: "url(../src/images/home/tablet/image-speaker-zx7.jpg)",
 				homeZX7BGDesk: "url(../src/images/home/desktop/image-speaker-zx7.jpg)",
