@@ -4,14 +4,14 @@ import CategoryList from "../../components/ProductCategories/CategoryList";
 import allProductData from "../../utils/data.json";
 
 const HeadphonesCategory = () => {
-	const allHeadphonesProductData = allProductData.filter(
+	const allCategoryProductData = allProductData.filter(
 		(product) => product.category === "headphones"
 	);
 
 	return (
 		<PageFadeIn>
 			<CategoryHeader text='Headphones' />
-			<CategoryList allHeadphonesProductData={allHeadphonesProductData} />
+			<CategoryList allCategoryProductData={allCategoryProductData} />
 		</PageFadeIn>
 	);
 };
