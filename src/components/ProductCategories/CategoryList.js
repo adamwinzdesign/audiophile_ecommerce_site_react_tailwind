@@ -1,4 +1,6 @@
-const CategoryList = ({ children }) => {
+import CategoryProductCard from "./CategoryProductCard";
+
+const CategoryList = ({ allHeadphonesProductData }) => {
 	return (
 		<div
 			className='
@@ -8,7 +10,7 @@ const CategoryList = ({ children }) => {
         border border-red-600
       '
 		>
-			{children}
+			<h1>CategoryList!</h1>
 		</div>
 	);
 };
