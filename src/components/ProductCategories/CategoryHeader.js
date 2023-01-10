@@ -1,6 +1,6 @@
 const CategoryHeader = ({ text }) => {
 	return (
-		<div className='w-full h-[6.25rem] md:h-[15.5rem] desk:h-[15rem] flex items-center justify-center bg-black'>
+		<div className='w-full h-[6.4rem] md:h-[15.5rem] desk:h-[15rem] flex items-center justify-center bg-black'>
 			<h1
 				className='
           font-bold text-[1.75rem] md:text-[2.5rem] desk:text-[] 
