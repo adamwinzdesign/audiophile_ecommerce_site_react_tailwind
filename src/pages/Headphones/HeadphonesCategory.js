@@ -8,7 +8,6 @@ const HeadphonesCategory = () => {
 		(product) => product.category === "headphones"
 	);
 
-	console.log({ allHeadphonesProductData });
 	return (
 		<PageFadeIn>
 			<CategoryHeader text='Headphones' />

@@ -1,4 +1,9 @@
-const CategoryProductCard = ({ img, newProduct, title, text, dest }) => {
+const CategoryProductCard = ({ product }) => {
+	// console.log(product.product);
+
+	const newProduct = product.product.new;
+	const { name } = product.product;
+
 	return (
 		<div
 			className='
@@ -10,7 +15,9 @@ const CategoryProductCard = ({ img, newProduct, title, text, dest }) => {
 			{/* img */}
 			<div>
 				{/* if new product, display new product text */}
+				{newProduct && <h2>new product</h2>}
 				{/* product title */}
+				<p>{name}</p>
 				{/* product text */}
 				{/* product link/dest */}
 			</div>
