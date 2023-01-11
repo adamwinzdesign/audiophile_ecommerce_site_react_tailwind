@@ -2,6 +2,7 @@ import PageFadeIn from "../../components/PageFadeIn";
 import CategoryHeader from "../../components/ProductCategories/CategoryHeader";
 import CategoryList from "../../components/ProductCategories/CategoryList";
 import allProductData from "../../utils/data.json";
+import HomeCategoryLinks from "../Home/HomeCategoryLinks";
 
 const HeadphonesCategory = () => {
 	const allCategoryProductData = allProductData.filter(
@@ -12,6 +13,7 @@ const HeadphonesCategory = () => {
 		<PageFadeIn>
 			<CategoryHeader text='Headphones' />
 			<CategoryList allCategoryProductData={allCategoryProductData} />
+			<HomeCategoryLinks />
 		</PageFadeIn>
 	);
 };
