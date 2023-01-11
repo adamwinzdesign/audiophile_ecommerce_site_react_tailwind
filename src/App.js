@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Layout from "./components/Layout";
 import Home from "./pages/Home/Home";
 import HeadphonesCategory from "./pages/Headphones/HeadphonesCategory";
@@ -14,6 +15,7 @@ function App() {
 
 	return (
 		<div className='App'>
+			<ScrollToTop />
 			<AnimatePresence mode='wait'>
 				<Routes location={location} key={location.pathname}>
 					<Route path='/' element={<Layout />}>
