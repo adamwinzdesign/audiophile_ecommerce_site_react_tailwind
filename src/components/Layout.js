@@ -37,8 +37,8 @@ const Layout = () => {
 				<AnimatePresence initial={false}>{modalOpen && <Modal />}</AnimatePresence>
 				<AnimatePresence initial={false}>{menuOpen && <MobileMenu {...props} />}</AnimatePresence>
 				<Outlet />
+				<About />
 			</div>
-			<About />
 			<Footer />
 		</div>
 	);
