@@ -9,7 +9,6 @@ const CategoryList = ({ allCategoryProductData }) => {
         pt-[4rem] md:pt-[7.5rem] desk:pt-[10rem]
 				pb-[7.5rem] desk:pb-[10rem]
         flex flex-col-reverse items-center justify-between gap-[7.5rem] bg-white
-				border border-green-600
       '
 		>
 			{allCategoryProductData.map((product) => (

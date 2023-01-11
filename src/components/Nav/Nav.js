@@ -5,19 +5,29 @@ import cart from "../../images/shared/desktop/icon-cart.svg";
 
 const Nav = ({ handleMenuClick }) => {
 	return (
-		<nav className='h-[5.625rem] desk:h-[6rem] flex items-center justify-center bg-black'>
-			<MenuButton handleMenuClick={handleMenuClick} />
+		<nav className='px-[1.5rem] md:px-[2.5rem] desk:px-[10.25rem] h-[5.625rem] desk:h-[6rem] bg-black'>
+			<div className='w-full h-full flex items-center justify-between border-b-[1px] border-white/20'>
+				<div className='min-w-[30%] desk:hidden w-[16px] h-[15px] cursor-pointer'>
+					<MenuButton handleMenuClick={handleMenuClick} />
+				</div>
 
-			<img src={logo} alt='audiophile logo' />
+				<div className='min-w-[30%]'>
+					<img src={logo} alt='audiophile logo' />
+				</div>
 
-			<div className='hidden desk:flex gap-[2.125rem] '>
-				<StyledLink dest='/' text='Home' />
-				<StyledLink dest='/headphones' text='Headphones' />
-				<StyledLink dest='/speakers' text='Speakers' />
-				<StyledLink dest='/earphones' text='Earphones' />
+				<div className='min-w-[30%] hidden desk:flex'>
+					<div className='hidden desk:flex gap-[2.125rem]'>
+						<StyledLink dest='/' text='Home' />
+						<StyledLink dest='/headphones' text='Headphones' />
+						<StyledLink dest='/speakers' text='Speakers' />
+						<StyledLink dest='/earphones' text='Earphones' />
+					</div>
+				</div>
+
+				<div className='min-w-[30%] flex justify-end'>
+					<img src={cart} alt='cart' />
+				</div>
 			</div>
-
-			<img src={cart} alt='cart' />
 		</nav>
 	);
 };

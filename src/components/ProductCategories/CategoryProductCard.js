@@ -13,7 +13,6 @@ const CategoryProductCard = ({ product }) => {
 			className={`
 				w-full
         flex flex-col desk:flex-row desk:even:flex-row-reverse justify-between
-				border border-yellow-600
 			`}
 		>
 			{/* img */}
@@ -29,7 +28,6 @@ const CategoryProductCard = ({ product }) => {
 			<div
 				className={`
 					flex flex-col items-center justify-between
-					border border-red-600
 				`}
 			>
 				{/* if new product, display new product text */}
