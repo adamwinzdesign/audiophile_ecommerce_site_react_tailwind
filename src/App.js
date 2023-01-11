@@ -9,6 +9,7 @@ import EarphonesCategory from "./pages/Earphones/EarphonesCategory";
 import Checkout from "./pages/Checkout/Checkout";
 import NoMatch from "./components/NoMatch";
 import { AnimatePresence } from "framer-motion";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
 
 function App() {
 	const location = useLocation();
@@ -23,6 +24,7 @@ function App() {
 						<Route path='headphones' element={<HeadphonesCategory />} />
 						<Route path='speakers' element={<SpeakersCategory />} />
 						<Route path='earphones' element={<EarphonesCategory />} />
+						<Route path='details/:productId' element={<ProductDetail />} />
 						<Route path='checkout' element={<Checkout />} />
 						<Route path='*' element={<NoMatch />} />
 					</Route>
