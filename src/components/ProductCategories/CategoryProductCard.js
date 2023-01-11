@@ -29,8 +29,8 @@ const CategoryProductCard = ({ product }) => {
 			{/* min-h-[23.25rem] is correct for new product, height is less for the other cards */}
 			<div
 				className={`
-					${newProduct ? "min-h-[23.25rem]" : "min-h-[20.5rem]"}
-					 pt-[2rem] flex flex-col items-center desk:items-start justify-between
+					${newProduct ? "min-h-[23.25rem] md:min-h-[22.25rem]" : "min-h-[20.5rem]"}
+					 pt-[2rem] md:pt-[3.25rem] flex flex-col items-center desk:items-start justify-between
 				`}
 			>
 				{/* if new product, display new product text */}
