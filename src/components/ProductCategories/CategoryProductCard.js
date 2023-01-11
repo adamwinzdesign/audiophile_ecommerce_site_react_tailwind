@@ -11,9 +11,8 @@ const CategoryProductCard = ({ product }) => {
 	return (
 		<div
 			className={`
-				${newProduct ? "min-h-[42.75rem]" : "min-h-[40rem]"}
-				w-full md:h-[44.25rem] desk:h-[35rem]
-        flex flex-col desk:flex-row desk:even:flex-row-reverse
+				w-full
+        flex flex-col desk:flex-row desk:even:flex-row-reverse justify-between
 				border border-yellow-600
 			`}
 		>
@@ -28,10 +27,7 @@ const CategoryProductCard = ({ product }) => {
 				<img src={desktopPreviewURL} alt='category preview' className='hidden desk:inline' />
 			</div>
 			<div
-				// new products get larger cards.
 				className={`
-					${newProduct ? "min-h-[23.5rem]" : "min-h-[18.75rem]"}
-					pt-[2rem]
 					flex flex-col items-center justify-between
 					border border-red-600
 				`}
@@ -43,7 +39,7 @@ const CategoryProductCard = ({ product }) => {
 					</h2>
 				)}
 				{/* product title */}
-				<h3 className='mt-[0.75rem] font-bold text-[1.75rem] md:text-[2.5rem] leading-[2.375rem] md:leading-[2.75rem] text-center desk:text-left tracking-[1px] md:tracking-[1.4px] uppercase text-black'>
+				<h3 className='max-w-[80%] font-bold text-[1.75rem] md:text-[2.5rem] leading-[2.375rem] md:leading-[2.75rem] text-center desk:text-left tracking-[1px] md:tracking-[1.4px] uppercase text-black'>
 					{name}
 				</h3>
 				{/* product text */}
