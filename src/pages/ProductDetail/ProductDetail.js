@@ -40,9 +40,11 @@ const ProductDetail = () => {
 							{name}
 						</h1>
 						{/* description */}
-						<p className='my-[1.5rem]'>{description}</p>
+						<p className='my-[1.5rem] font-medium text-[15px] leading-[1.5rem] text-black/50'>
+							{description}
+						</p>
 						{/* price */}
-						<p className='font-bold text-[1.125rem] leading-[25px] tracking-[1.3px] uppercase text-black'>
+						<p className='mb-[2rem] font-bold text-[1.125rem] leading-[25px] tracking-[1.3px] uppercase text-black'>
 							$ {price}
 						</p>
 						{/* quantity and add to cart button */}
