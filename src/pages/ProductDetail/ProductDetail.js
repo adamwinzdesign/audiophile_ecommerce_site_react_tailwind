@@ -9,8 +9,8 @@ const ProductDetail = () => {
 		(product) => product.id === parseInt(params.productId)
 	);
 
-	const { name, price, description, features } = productDetailData[0];
-	// cannot destructure because 'new' is included in the data as a property name but 'new' is also a JS keyword
+	const { name, price, description, features, includes, gallery, others } = productDetailData[0];
+	// cannot destructure productDetailData.new because 'new' is included in the data as a property name but 'new' is also a JS keyword
 	const newProduct = productDetailData[0].new;
 
 	return (

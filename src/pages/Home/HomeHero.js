@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const HomeHero = () => {
 	return (
 		<div
@@ -18,9 +20,11 @@ const HomeHero = () => {
 					Experience natural, lifelike audio and exceptional build quality made for the passionate
 					music enthusiast.
 				</p>
-				<button className='w-[10rem] h-[3rem] font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-white bg-peru'>
-					see product
-				</button>
+				<Link to='/details/4'>
+					<button className='w-[10rem] h-[3rem] font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-white bg-peru'>
+						see product
+					</button>
+				</Link>
 			</div>
 		</div>
 	);

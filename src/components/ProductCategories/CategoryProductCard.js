@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import CategoryProductButton from "./CategoryProductButton";
 
 const CategoryProductCard = ({ product }) => {
 	const newProduct = product.product.new;
-	const { name, description, slug } = product.product;
+	const { name, description, slug, id } = product.product;
 
 	const mobilePreviewURL = require(`../../images/product-${slug}/mobile/image-category-page-preview.jpg`);
 	const tabletPreviewURL = require(`../../images/product-${slug}/tablet/image-category-page-preview.jpg`);
@@ -53,7 +54,9 @@ const CategoryProductCard = ({ product }) => {
 					{description}
 				</p>
 				{/* product link/dest */}
-				<CategoryProductButton />
+				<Link to={`/details/${id}`}>
+					<CategoryProductButton />
+				</Link>
 			</div>
 		</div>
 	);
