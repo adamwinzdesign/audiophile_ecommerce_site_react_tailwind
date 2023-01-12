@@ -4,6 +4,7 @@ import NewProduct from "../../components/shared/NewProduct";
 import allProductData from "../../utils/data.json";
 import HomeCategoryLinks from "../Home/HomeCategoryLinks";
 import CategoryLink from "./CategoryLink";
+import DetailHeaderImg from "./DetailHeaderImg";
 
 const ProductDetail = () => {
 	const params = useParams();
@@ -17,8 +18,9 @@ const ProductDetail = () => {
 	// cannot destructure productDetailData.new because 'new' is included in the data as a property name but 'new' is also a JS keyword
 	const newProduct = productDetailData[0].new;
 
-	// "slug": "xx99-mark-two-headphones",
 	const detailHeaderImgMobile = require(`../../images/product-${slug}/mobile/image-product.jpg`);
+	const detailHeaderImgTablet = require(`../../images/product-${slug}/tablet/image-product.jpg`);
+	const detailHeaderImgDesk = require(`../../images/product-${slug}/desktop/image-product.jpg`);
 
 	return (
 		<PageFadeIn>
@@ -28,15 +30,21 @@ const ProductDetail = () => {
 
 				{/* img and info/add to cart, aka detail header */}
 				<div className='flex flex-col md:flex-row'>
-					{/* img */}
-					<img src={detailHeaderImgMobile} alt='detail' className='md:hidden' />
+					<DetailHeaderImg slug={slug} />
+
 					{/* info and add to cart */}
-					<div>
+					<div className='border border-red-600'>
 						{newProduct && <NewProduct />}
-						<h1>{name}</h1>
 						{/* title */}
+						<h1 className='font-bold text-[1.75rem] leading-[38px] md:leading-[32px] tracking-[1px] desk:tracking-[1.4px] uppercase text-black'>
+							{name}
+						</h1>
 						{/* description */}
+						<p className='my-[1.5rem]'>{description}</p>
 						{/* price */}
+						<p className='font-bold text-[1.125rem] leading-[25px] tracking-[1.3px] uppercase text-black'>
+							$ {price}
+						</p>
 						{/* quantity and add to cart button */}
 						<div>
 							{/* quantity */}
@@ -47,9 +55,22 @@ const ProductDetail = () => {
 				{/* features and in the box, col at mobile and tablet, row at desk */}
 				<div className='flex flex-col desk:flex-row'>
 					{/* features */}
+					<h2>Features</h2>
+					<p>{features}</p>
 					{/* in the box */}
+					<div className='flex flex-col'>
+						<h2>In the Box</h2>
+						<div>
+							{includes.map((item) => (
+								<div key={item.item}>
+									{item.quantity}x <span>{item.item}</span>
+								</div>
+							))}
+						</div>
+					</div>
 				</div>
 				{/* gallery */}
+				<div className='flex'></div>
 				{/* you may also like */}
 
 				<HomeCategoryLinks />
