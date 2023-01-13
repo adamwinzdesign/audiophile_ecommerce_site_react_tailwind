@@ -6,6 +6,7 @@ import { Modal } from "./Nav/Modal";
 import { AnimatePresence } from "framer-motion";
 import Footer from "./Footer/Footer";
 import About from "./About/About";
+import CartDebuggerViewer from "./Cart/CartDebuggerViewer";
 
 const Layout = () => {
 	const [modalOpen, setModalOpen] = useState(false);
@@ -33,6 +34,7 @@ const Layout = () => {
 	return (
 		<div>
 			<Nav {...props} />
+			<CartDebuggerViewer />
 			<div className='relative overflow-hidden'>
 				<AnimatePresence initial={false}>{modalOpen && <Modal />}</AnimatePresence>
 				<AnimatePresence initial={false}>{menuOpen && <MobileMenu {...props} />}</AnimatePresence>

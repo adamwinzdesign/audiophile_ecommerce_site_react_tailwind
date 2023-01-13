@@ -3,8 +3,10 @@ import PageFadeIn from "../../components/PageFadeIn";
 import NewProduct from "../../components/shared/NewProduct";
 import allProductData from "../../utils/data.json";
 import HomeCategoryLinks from "../Home/HomeCategoryLinks";
+import AddCartButton from "./AddCartButton";
 import CategoryLink from "./CategoryLink";
 import DetailHeaderImg from "./DetailHeaderImg";
+import { useState } from "react";
 
 const ProductDetail = () => {
 	const params = useParams();
@@ -13,14 +15,17 @@ const ProductDetail = () => {
 		(product) => product.id === parseInt(params.productId)
 	);
 
-	const { name, category, price, description, features, includes, gallery, others, slug } =
+	const { id, name, category, price, description, features, includes, gallery, others, slug } =
 		productDetailData[0];
 	// cannot destructure productDetailData.new because 'new' is included in the data as a property name but 'new' is also a JS keyword
 	const newProduct = productDetailData[0].new;
 
-	const detailHeaderImgMobile = require(`../../images/product-${slug}/mobile/image-product.jpg`);
-	const detailHeaderImgTablet = require(`../../images/product-${slug}/tablet/image-product.jpg`);
-	const detailHeaderImgDesk = require(`../../images/product-${slug}/desktop/image-product.jpg`);
+	const [productQty, setProductQty] = useState(1);
+
+	const decrementQty = () => {
+		productQty > 0 ? setProductQty(productQty - 1) : setProductQty(0);
+	};
+	const incrementQty = () => setProductQty(productQty + 1);
 
 	return (
 		<PageFadeIn>
@@ -48,9 +53,27 @@ const ProductDetail = () => {
 							$ {price}
 						</p>
 						{/* quantity and add to cart button */}
-						<div>
+						<div className='w-full flex justify-between border-border-green-600'>
 							{/* quantity */}
+							<div className='w-[50%] flex items-center justify-center gap-[1.25rem]'>
+								<p
+									className='font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-black/25 cursor-pointer'
+									onClick={decrementQty}
+								>
+									-
+								</p>
+								<p className='font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-black'>
+									{productQty}
+								</p>
+								<p
+									className='font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-black/50 cursor-pointer'
+									onClick={incrementQty}
+								>
+									+
+								</p>
+							</div>
 							{/* add to cart */}
+							<AddCartButton id={id} productQty={productQty} />
 						</div>
 					</div>
 				</div>
