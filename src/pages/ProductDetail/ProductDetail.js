@@ -22,8 +22,6 @@ const ProductDetail = () => {
 	// cannot destructure productDetailData.new because 'new' is included in the data as a property name but 'new' is also a JS keyword
 	const newProduct = productDetailData[0].new;
 
-	console.log(cart[id]);
-
 	// const [productQty, setProductQty] = useState(1);
 	const [productQty, setProductQty] = useState(cart[id] || 1);
 
