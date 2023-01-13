@@ -1,10 +1,27 @@
 import { create } from "zustand";
 import produce from "immer";
 
+// addDrama: (payload) =>
+//   set(
+//     produce((draft) => {
+//       draft.kdramas.push({
+//         id: Math.floor(Math.random() * 100),
+//         name: payload,
+//       });
+//     })
+//   ),
+
 export const useCartStore = create((set) => ({
 	cart: {},
+	// addCartItem: (payload) => {
+	// 	console.log(payload);
+	// },
 	addCartItem: (payload) => {
-		console.log(payload);
+		set(
+			produce((item) => {
+				item.cart[payload.id] = payload.productQty;
+			})
+		);
 	},
 	removeCartItem: () => {},
 	// xx59Headphones: 0,
