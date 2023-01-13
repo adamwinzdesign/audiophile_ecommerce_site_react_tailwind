@@ -1,15 +1,27 @@
 import { useCartStore } from "../../store/cartStore";
 
 const CartDebuggerViewer = () => {
-	const { cart } = useCartStore();
-
 	return (
 		<div className='absolute top-0 right-[25%] flex flex-col items-center justify-center bg-red-600'>
-			<p className='text-white'>Obj.keys(cart): {Object.keys(cart)}</p>
-			<p className='text-white'>cart[5]: {cart[5]}</p>
-			<p className='text-white'>cart[6]: {cart[6]}</p>
+			<CartMapper />
 		</div>
 	);
 };
 
 export default CartDebuggerViewer;
+
+const CartMapper = () => {
+	const { cart } = useCartStore();
+	const allCartItems = Object.entries(cart);
+	console.log(allCartItems);
+
+	return (
+		<div className='flex flex-col'>
+			{allCartItems.map((item) => (
+				<p key={item}>
+					{item[0]}: {item[1]}
+				</p>
+			))}
+		</div>
+	);
+};

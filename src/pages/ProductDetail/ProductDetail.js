@@ -7,8 +7,10 @@ import AddCartButton from "./AddCartButton";
 import CategoryLink from "./CategoryLink";
 import DetailHeaderImg from "./DetailHeaderImg";
 import { useState } from "react";
+import { useCartStore } from "../../store/cartStore";
 
 const ProductDetail = () => {
+	const { cart } = useCartStore();
 	const params = useParams();
 
 	const productDetailData = allProductData.filter(
@@ -20,7 +22,10 @@ const ProductDetail = () => {
 	// cannot destructure productDetailData.new because 'new' is included in the data as a property name but 'new' is also a JS keyword
 	const newProduct = productDetailData[0].new;
 
-	const [productQty, setProductQty] = useState(1);
+	console.log(cart[id]);
+
+	// const [productQty, setProductQty] = useState(1);
+	const [productQty, setProductQty] = useState(cart[id] || 1);
 
 	const decrementQty = () => {
 		productQty > 0 ? setProductQty(productQty - 1) : setProductQty(0);
