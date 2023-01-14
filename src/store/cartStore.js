@@ -2,13 +2,22 @@ import { create } from "zustand";
 import produce from "immer";
 
 export const useCartStore = create((set) => ({
-	cart: {},
-	addCartItem: (payload) => {
+	// cart: {},
+	cart: [],
+	// addCartItem: (payload) => {
+	// 	set(
+	// 		produce((item) => {
+	// 			item.cart[payload.id] = payload.productQty;
+	// 		})
+	// 	);
+	// },
+	addCartItem: (payload) =>
 		set(
-			produce((item) => {
-				item.cart[payload.id] = payload.productQty;
+			produce((draft) => {
+				draft.cart.push({
+					id: payload.id,
+					productQty: payload.productQty,
+				});
 			})
-		);
-	},
-	removeCartItem: () => {},
+		),
 }));

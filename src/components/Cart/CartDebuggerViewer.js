@@ -13,11 +13,12 @@ export default CartDebuggerViewer;
 
 const CartMapper = () => {
 	const { cart } = useCartStore();
-	const allCartItems = Object.entries(cart);
+	// const allCartItems = Object.entries(cart);
 
+	console.log(cart);
 	return (
 		<div className='flex flex-col'>
-			{allCartItems.map((item) => {
+			{/* {allCartItems.map((item) => {
 				const itemDetails = allProductData.filter((product) => product.id === parseInt(item[0]));
 				const itemName = itemDetails[0].name;
 				const itemPrice = itemDetails[0].price;
@@ -26,7 +27,7 @@ const CartMapper = () => {
 						{itemName}: {item[1]} {itemPrice} for ${itemPrice * item[1]}
 					</p>
 				);
-			})}
+			})} */}
 		</div>
 	);
 };
