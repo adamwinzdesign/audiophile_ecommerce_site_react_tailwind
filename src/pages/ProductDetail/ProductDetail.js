@@ -6,11 +6,11 @@ import HomeCategoryLinks from "../Home/HomeCategoryLinks";
 import AddCartButton from "./AddCartButton";
 import CategoryLink from "./CategoryLink";
 import DetailHeaderImg from "./DetailHeaderImg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useCartStore } from "../../store/cartStore";
 
 const ProductDetail = () => {
-	const { cart, addCartItem } = useCartStore();
+	const { cart, addCartItem, updateCartItem } = useCartStore();
 	const params = useParams();
 
 	const productDetailData = allProductData.filter(
@@ -22,16 +22,21 @@ const ProductDetail = () => {
 	// cannot destructure productDetailData.new because 'new' is included in the data as a property name but 'new' is also a JS keyword
 	const newProduct = productDetailData[0].new;
 
+	const itemInCart = cart.find((item) => item.id === id);
+
+	// console.log(itemInCart);
 	const [productQty, setProductQty] = useState(1);
 
-	const itemInCart = cart.find((item) => item.id === id);
+	useEffect(() => {
+		if (itemInCart) {
+			setProductQty(itemInCart.productQty);
+		}
+	}, [itemInCart]);
 
 	const decrementQty = () => {
 		productQty > 0 ? setProductQty(productQty - 1) : setProductQty(0);
 	};
 	const incrementQty = () => setProductQty(productQty + 1);
-
-	console.log(cart);
 
 	return (
 		<PageFadeIn>
@@ -69,7 +74,6 @@ const ProductDetail = () => {
 									-
 								</p>
 								<p className='font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-black'>
-									{/* if product is already in cart, display cart's qty here, otherwise, productQty from local state */}
 									{productQty}
 								</p>
 								<p
@@ -80,12 +84,22 @@ const ProductDetail = () => {
 								</p>
 							</div>
 							{/* add to cart */}
-							<div onClick={() => addCartItem({ id: id, name: name, productQty: productQty })}>
-								<AddCartButton itemInCart={itemInCart} />
-							</div>
+							{!itemInCart && (
+								<div
+									onClick={() =>
+										addCartItem({ id: id, name: name, productQty: productQty, price: price })
+									}
+								>
+									<AddCartButton itemInCart={itemInCart} />
+								</div>
+							)}
+
 							{/* update cart */}
-							{/* add onClick for update cart, also add conditional rendering for either the AddCartButton or UpdateCartButton */}
-							<div>{/* <UpdateCartbutton */}</div>
+							{itemInCart && (
+								<div onClick={() => updateCartItem({ id: id, productQty: productQty })}>
+									<AddCartButton itemInCart={itemInCart} />
+								</div>
+							)}
 						</div>
 					</div>
 				</div>

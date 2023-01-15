@@ -1,5 +1,4 @@
 import { useCartStore } from "../../store/cartStore";
-import allProductData from "../../utils/data.json";
 
 const CartDebuggerViewer = () => {
 	return (
@@ -13,21 +12,16 @@ export default CartDebuggerViewer;
 
 const CartMapper = () => {
 	const { cart } = useCartStore();
-	// const allCartItems = Object.entries(cart);
 
-	// console.log(cart);
 	return (
 		<div className='flex flex-col'>
-			{/* {allCartItems.map((item) => {
-				const itemDetails = allProductData.filter((product) => product.id === parseInt(item[0]));
-				const itemName = itemDetails[0].name;
-				const itemPrice = itemDetails[0].price;
+			{cart.map((item, index) => {
 				return (
-					<p key={item}>
-						{itemName}: {item[1]} {itemPrice} for ${itemPrice * item[1]}
+					<p key={index}>
+						{item.name}: {item.productQty} for {item.productQty * item.price}
 					</p>
 				);
-			})} */}
+			})}
 		</div>
 	);
 };

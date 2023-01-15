@@ -2,7 +2,6 @@ import { create } from "zustand";
 import produce from "immer";
 
 export const useCartStore = create((set) => ({
-	// cart: {},
 	cart: [],
 	addCartItem: (payload) =>
 		set(
@@ -11,8 +10,15 @@ export const useCartStore = create((set) => ({
 					id: payload.id,
 					name: payload.name,
 					productQty: payload.productQty,
+					price: payload.price,
 				});
 			})
 		),
-	// updateCartItem:
+	updateCartItem: (payload) =>
+		set(
+			produce((draft) => {
+				const cartItem = draft.cart.find((item) => item.id === payload.id);
+				cartItem.productQty = payload.productQty;
+			})
+		),
 }));
