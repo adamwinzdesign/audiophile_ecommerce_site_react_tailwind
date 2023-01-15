@@ -15,7 +15,7 @@ const CartMapper = () => {
 	const { cart } = useCartStore();
 	// const allCartItems = Object.entries(cart);
 
-	console.log(cart);
+	// console.log(cart);
 	return (
 		<div className='flex flex-col'>
 			{/* {allCartItems.map((item) => {
