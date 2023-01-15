@@ -8,6 +8,7 @@ import CategoryLink from "./CategoryLink";
 import DetailHeaderImg from "./DetailHeaderImg";
 import { useEffect, useState } from "react";
 import { useCartStore } from "../../store/cartStore";
+import ProductDetailFeatures from "./ProductDetailFeatures";
 
 const ProductDetail = () => {
 	const { cart, addCartItem, updateCartItem } = useCartStore();
@@ -105,13 +106,8 @@ const ProductDetail = () => {
 				{/* features and in the box, col at mobile and tablet, row at desk */}
 				<div className='flex flex-col desk:flex-row'>
 					{/* features */}
-					<h2 className='font-bold text-[1.5rem] md:text-[2rem] leading-[2.25rem] tracking-[0.86px] md:[1.14px] uppercase text-black'>
-						Features
-					</h2>
-					{/* whitespace-pre-line and align-text-bottom are necessary here because the json data provided includes \n for new paragraphs */}
-					<p className='font-medium text-[15px] leading-[25px] text-black/50 whitespace-pre-line align-text-bottom'>
-						{features}
-					</p>
+					<ProductDetailFeatures features={features} />
+
 					{/* in the box */}
 					<div className='flex flex-col'>
 						<h2>In the Box</h2>
