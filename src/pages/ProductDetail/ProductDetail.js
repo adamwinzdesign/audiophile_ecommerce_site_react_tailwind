@@ -9,6 +9,7 @@ import DetailHeaderImg from "./DetailHeaderImg";
 import { useEffect, useState } from "react";
 import { useCartStore } from "../../store/cartStore";
 import ProductDetailFeatures from "./ProductDetailFeatures";
+import ProductDetailInTheBox from "./ProductDetailInTheBox";
 
 const ProductDetail = () => {
 	const { cart, addCartItem, updateCartItem } = useCartStore();
@@ -108,17 +109,7 @@ const ProductDetail = () => {
 					{/* features */}
 					<ProductDetailFeatures features={features} />
 
-					{/* in the box */}
-					<div className='flex flex-col'>
-						<h2>In the Box</h2>
-						<div>
-							{includes.map((item) => (
-								<div key={item.item}>
-									{item.quantity}x <span>{item.item}</span>
-								</div>
-							))}
-						</div>
-					</div>
+					<ProductDetailInTheBox includes={includes} />
 				</div>
 				{/* gallery */}
 				<div className='flex'></div>
