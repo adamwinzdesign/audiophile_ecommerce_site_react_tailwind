@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { useCartStore } from "../../store/cartStore";
 import ProductDetailFeatures from "./ProductDetailFeatures";
 import ProductDetailInTheBox from "./ProductDetailInTheBox";
+import ProductDetailGallery from "./ProductDetailGallery";
 
 const ProductDetail = () => {
 	const { cart, addCartItem, updateCartItem } = useCartStore();
@@ -106,13 +107,13 @@ const ProductDetail = () => {
 				</div>
 				{/* features and in the box, col at mobile and tablet, row at desk */}
 				<div className='flex flex-col desk:flex-row'>
-					{/* features */}
 					<ProductDetailFeatures features={features} />
 
 					<ProductDetailInTheBox includes={includes} />
 				</div>
 				{/* gallery */}
-				<div className='flex'></div>
+				<ProductDetailGallery gallery={gallery} slug={slug} />
+
 				{/* you may also like */}
 
 				<HomeCategoryLinks />
