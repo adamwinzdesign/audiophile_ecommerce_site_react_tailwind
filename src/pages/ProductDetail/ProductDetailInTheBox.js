@@ -8,7 +8,8 @@ const ProductDetailInTheBox = ({ includes }) => {
 				{includes.map((item) => (
 					<div key={item.item}>
 						<p className='font-bold text-[15px] leading-[25px] text-peru'>
-							{item.quantity}x <span className='font-medium text-black/50'>{item.item}</span>
+							{item.quantity}x{" "}
+							<span className='ml-[20px] md:ml-[24px] font-medium text-black/50'>{item.item}</span>
 						</p>
 					</div>
 				))}
