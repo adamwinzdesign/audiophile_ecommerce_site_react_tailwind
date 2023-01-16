@@ -1,12 +1,14 @@
 const ProductDetailInTheBox = ({ includes }) => {
 	return (
 		<div className='flex flex-col'>
-			<h2>In the Box</h2>
+			<h2 className='font-bold text-[1.5rem] md:text-[2rem] leading-[2rem] md:leading-[2.25rem] tracking-[0.8px] md:tracking-[1.1px] uppercase text-black'>
+				In the Box
+			</h2>
 			<div>
 				{includes.map((item) => (
 					<div key={item.item}>
-						<p>
-							{item.quantity}x <span>{item.item}</span>
+						<p className='font-bold text-[15px] leading-[25px] text-peru'>
+							{item.quantity}x <span className='font-medium text-black/50'>{item.item}</span>
 						</p>
 					</div>
 				))}
