@@ -12,6 +12,7 @@ import ProductDetailInTheBox from "./ProductDetailInTheBox";
 import ProductDetailGallery from "./ProductDetailGallery";
 import ProductDetailInfo from "./ProductDetailInfo";
 import ProductAddToCart from "./ProductAddToCart";
+import YouMayAlsoLike from "./YouMayAlsoLike";
 
 const ProductDetail = () => {
 	const { cart, addCartItem, updateCartItem, removeCartItem } = useCartStore();
@@ -64,7 +65,7 @@ const ProductDetail = () => {
 				<div className='flex flex-col md:flex-row'>
 					<DetailHeaderImg slug={slug} />
 					{/* info and add to cart */}
-					<div className='mt-[2.5rem]'>
+					<div>
 						{newProduct && <NewProduct />}
 						<ProductDetailInfo name={name} description={description} price={price} />
 
@@ -73,7 +74,7 @@ const ProductDetail = () => {
 					</div>
 				</div>
 				{/* features and in the box, col at mobile and tablet, row at desk */}
-				<div className='flex flex-col desk:flex-row'>
+				<div className='my-[5.5rem] flex flex-col desk:flex-row'>
 					<ProductDetailFeatures features={features} />
 
 					<ProductDetailInTheBox includes={includes} />
@@ -82,6 +83,7 @@ const ProductDetail = () => {
 				<ProductDetailGallery gallery={gallery} slug={slug} />
 
 				{/* you may also like */}
+				<YouMayAlsoLike others={others} />
 
 				<HomeCategoryLinks />
 			</div>

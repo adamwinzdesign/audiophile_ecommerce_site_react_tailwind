@@ -1,4 +1,5 @@
 import AddCartButton from "./AddCartButton";
+import ProductQuantity from "./ProductQuantity";
 
 const ProductAddToCart = ({
 	incrementQty,
@@ -13,25 +14,14 @@ const ProductAddToCart = ({
 	removeCartItem,
 }) => {
 	return (
-		<div className='w-full flex justify-between'>
+		<div className='w-full flex gap-[1rem]'>
 			{/* quantity */}
-			<div className='w-[50%] flex items-center justify-center gap-[1.25rem]'>
-				<p
-					className='font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-black/25 cursor-pointer'
-					onClick={decrementQty}
-				>
-					-
-				</p>
-				<p className='font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-black'>
-					{productQty}
-				</p>
-				<p
-					className='font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-black/50 cursor-pointer'
-					onClick={incrementQty}
-				>
-					+
-				</p>
-			</div>
+			<ProductQuantity
+				productQty={productQty}
+				incrementQty={incrementQty}
+				decrementQty={decrementQty}
+			/>
+
 			{/* add to cart */}
 			{!itemInCart && (
 				<div

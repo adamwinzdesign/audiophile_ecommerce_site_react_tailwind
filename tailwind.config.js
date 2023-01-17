@@ -35,6 +35,7 @@ module.exports = {
 				very_light_tangelo: "#FBAF85",
 				black: "#000",
 				white: "#FFF",
+				light_grey: "#F1F1F1",
 				border_grey: "#979797",
 			},
 			screens: {
