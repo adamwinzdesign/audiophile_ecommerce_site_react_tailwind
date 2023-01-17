@@ -64,7 +64,7 @@ const ProductDetail = () => {
 				<div className='flex flex-col md:flex-row'>
 					<DetailHeaderImg slug={slug} />
 					{/* info and add to cart */}
-					<div>
+					<div className='mt-[2.5rem]'>
 						{newProduct && <NewProduct />}
 						<ProductDetailInfo name={name} description={description} price={price} />
 

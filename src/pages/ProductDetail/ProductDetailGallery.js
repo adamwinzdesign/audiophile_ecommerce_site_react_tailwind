@@ -10,7 +10,7 @@ const ProductDetailGallery = ({ gallery, slug }) => {
 	const desktopGallery3 = require(`../../images/product-${slug}/desktop/image-gallery-3.jpg`);
 
 	return (
-		<div className='flex flex-col gap-[20px]'>
+		<div className='flex flex-col md:flex-row gap-[20px]'>
 			{/* first two images in the gallery are paired together, the third image is always displayed larger and to the right side at tablet and desk */}
 			<div className='flex flex-col gap-[20px]'>
 				{/* images one and two */}

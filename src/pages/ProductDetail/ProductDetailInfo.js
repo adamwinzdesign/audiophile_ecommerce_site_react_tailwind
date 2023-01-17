@@ -2,7 +2,7 @@ const ProductDetailInfo = ({ name, description, price }) => {
 	return (
 		<>
 			{/* title */}
-			<h1 className='font-bold text-[1.75rem] leading-[38px] md:leading-[32px] tracking-[1px] desk:tracking-[1.4px] uppercase text-black'>
+			<h1 className='max-w-[60%] font-bold text-[1.75rem] leading-[38px] md:leading-[32px] tracking-[1px] desk:tracking-[1.4px] uppercase text-black text-left'>
 				{name}
 			</h1>
 			{/* description */}
