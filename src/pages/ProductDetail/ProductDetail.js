@@ -18,18 +18,14 @@ const ProductDetail = () => {
 	const { cart, addCartItem, updateCartItem, removeCartItem } = useCartStore();
 	const params = useParams();
 
-	const productDetailData = allProductData.filter(
-		(product) => product.id === parseInt(params.productId)
-	);
+	const productDetailData = allProductData.filter((product) => product.slug === params.slug);
 
 	const { id, name, category, price, description, features, includes, gallery, others, slug } =
 		productDetailData[0];
 	// cannot destructure productDetailData.new because 'new' is included in the data as a property name but 'new' is also a JS keyword
 	const newProduct = productDetailData[0].new;
-
 	const itemInCart = cart.find((item) => item.id === id);
 
-	// console.log(itemInCart);
 	const [productQty, setProductQty] = useState(1);
 
 	useEffect(() => {

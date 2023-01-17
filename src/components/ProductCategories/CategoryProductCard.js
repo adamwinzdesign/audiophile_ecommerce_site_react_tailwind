@@ -54,7 +54,7 @@ const CategoryProductCard = ({ product }) => {
 					{description}
 				</p>
 				{/* product link/dest */}
-				<Link to={`/details/${id}`}>
+				<Link to={`/details/${slug}`}>
 					<CategoryProductButton />
 				</Link>
 			</div>

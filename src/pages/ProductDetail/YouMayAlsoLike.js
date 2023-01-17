@@ -1,6 +1,5 @@
 const YouMayAlsoLike = ({ others }) => {
-	console.log(others);
-	return <div>YouMayAlsoLike</div>;
+	return <div className='flex flex-col'>YouMayAlsoLike</div>;
 };
 
 export default YouMayAlsoLike;
