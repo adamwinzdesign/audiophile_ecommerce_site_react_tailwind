@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
 import { menuSlideDown } from "../../utils/animations";
-import headphones from "../../images/shared/desktop/image-category-thumbnail-headphones.png";
-import speakers from "../../images/shared/desktop/image-category-thumbnail-speakers.png";
-import earphones from "../../images/shared/desktop/image-category-thumbnail-earphones.png";
 import MobileCard from "./MobileCard";
 
 const MobileMenu = ({ handleMenuClick }) => {
@@ -16,9 +13,9 @@ const MobileMenu = ({ handleMenuClick }) => {
 			onClick={handleMenuClick}
 		>
 			{/* mobile item */}
-			<MobileCard img={headphones} title='headphones' dest='/headphones' />
-			<MobileCard img={speakers} title='speakers' dest='/speakers' />
-			<MobileCard img={earphones} title='earphones' dest='/earphones' />
+			<MobileCard title='headphones' dest='/headphones' />
+			<MobileCard title='speakers' dest='/speakers' />
+			<MobileCard title='earphones' dest='/earphones' />
 		</motion.div>
 	);
 };

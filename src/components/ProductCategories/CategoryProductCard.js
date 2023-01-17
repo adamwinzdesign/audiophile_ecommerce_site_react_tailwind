@@ -3,7 +3,7 @@ import CategoryProductButton from "./CategoryProductButton";
 
 const CategoryProductCard = ({ product }) => {
 	const newProduct = product.product.new;
-	const { name, description, slug, id } = product.product;
+	const { name, description, slug } = product.product;
 
 	const mobilePreviewURL = require(`../../images/product-${slug}/mobile/image-category-page-preview.jpg`);
 	const tabletPreviewURL = require(`../../images/product-${slug}/tablet/image-category-page-preview.jpg`);

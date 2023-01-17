@@ -9,8 +9,6 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				// "product-xx99-mark-two-headphones":
-				// 	"url(../src/images/product-xx59-headphones/mobile/image-product.jpg)",
 				detailxx992Mobile:
 					"url(../src/images/product-xx99-mark-two-headphones/mobile/image-product.jpg)",
 				homeHeroBGMobile: "url(../src/images/home/mobile/image-header.jpg)",

@@ -58,7 +58,7 @@ const ProductDetail = () => {
 				<CategoryLink to={`/${category}`} />
 
 				{/* img and info/add to cart, aka detail header */}
-				<div className='flex flex-col md:flex-row'>
+				<div className='flex flex-col md:flex-row border border-red-600'>
 					<DetailHeaderImg slug={slug} />
 					{/* info and add to cart */}
 					<div>
