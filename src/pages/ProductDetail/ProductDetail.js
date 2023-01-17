@@ -14,7 +14,7 @@ import ProductDetailInfo from "./ProductDetailInfo";
 import ProductAddToCart from "./ProductAddToCart";
 
 const ProductDetail = () => {
-	const { cart, addCartItem, updateCartItem } = useCartStore();
+	const { cart, addCartItem, updateCartItem, removeCartItem } = useCartStore();
 	const params = useParams();
 
 	const productDetailData = allProductData.filter(
@@ -52,6 +52,7 @@ const ProductDetail = () => {
 		name,
 		price,
 		updateCartItem,
+		removeCartItem,
 	};
 
 	return (

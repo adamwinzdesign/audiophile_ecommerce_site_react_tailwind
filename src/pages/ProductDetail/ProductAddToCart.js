@@ -10,6 +10,7 @@ const ProductAddToCart = ({
 	name,
 	price,
 	updateCartItem,
+	removeCartItem,
 }) => {
 	return (
 		<div className='w-full flex justify-between'>
@@ -41,8 +42,15 @@ const ProductAddToCart = ({
 			)}
 
 			{/* update cart */}
-			{itemInCart && (
+			{itemInCart && productQty > 0 && (
 				<div onClick={() => updateCartItem({ id: id, productQty: productQty })}>
+					<AddCartButton itemInCart={itemInCart} />
+				</div>
+			)}
+
+			{/* remove item from cart debug */}
+			{itemInCart && productQty === 0 && (
+				<div onClick={() => removeCartItem({ id: id })}>
 					<AddCartButton itemInCart={itemInCart} />
 				</div>
 			)}

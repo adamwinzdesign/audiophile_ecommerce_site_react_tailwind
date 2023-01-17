@@ -21,4 +21,11 @@ export const useCartStore = create((set) => ({
 				cartItem.productQty = payload.productQty;
 			})
 		),
+	removeCartItem: (payload) =>
+		set(
+			produce((draft) => {
+				const cartItemIndex = draft.cart.findIndex((item) => item.id === payload);
+				draft.cart.splice(cartItemIndex, 1);
+			})
+		),
 }));
