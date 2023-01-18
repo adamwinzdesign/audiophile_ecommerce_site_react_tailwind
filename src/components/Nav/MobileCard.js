@@ -5,8 +5,8 @@ const MobileCard = ({ title, dest }) => {
 	const mobileMenuCategoryThumbnail = require(`../../images/shared/desktop/image-category-thumbnail-${title}.png`);
 
 	return (
-		<div className='pt-[2px] h-[14rem] flex flex-col items-center justify-between border border-green-600 z-30'>
-			<div className='border border-red-600'>
+		<div className='h-[14rem] flex flex-col items-center justify-between'>
+			<div>
 				<img src={mobileMenuCategoryThumbnail} alt='product category' className='h-[6.5rem]' />
 			</div>
 

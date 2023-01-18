@@ -42,7 +42,7 @@ export const menuSlideDown = {
 		},
 	},
 	show: {
-		y: 1,
+		y: 0,
 		transition: {
 			duration: 0.9,
 		},
