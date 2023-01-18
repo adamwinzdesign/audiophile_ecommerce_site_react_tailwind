@@ -76,7 +76,7 @@ const ProductDetail = () => {
 					<ProductDetailInTheBox includes={includes} />
 				</div>
 				{/* gallery */}
-				<ProductDetailGallery gallery={gallery} slug={slug} />
+				<ProductDetailGallery slug={slug} />
 
 				{/* you may also like */}
 				<YouMayAlsoLike others={others} />

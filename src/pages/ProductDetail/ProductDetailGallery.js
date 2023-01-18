@@ -1,4 +1,4 @@
-const ProductDetailGallery = ({ gallery, slug }) => {
+const ProductDetailGallery = ({ slug }) => {
 	const mobileGallery1 = require(`../../images/product-${slug}/mobile/image-gallery-1.jpg`);
 	const tabletGallery1 = require(`../../images/product-${slug}/tablet/image-gallery-1.jpg`);
 	const desktopGallery1 = require(`../../images/product-${slug}/desktop/image-gallery-1.jpg`);
