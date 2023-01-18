@@ -24,6 +24,7 @@ const Layout = () => {
 			setMenuOpen(true);
 		}
 		setCartOpen(false);
+		setThankyouOpen(false);
 	};
 
 	const handleCartClick = () => {
@@ -35,6 +36,7 @@ const Layout = () => {
 			setCartOpen(true);
 		}
 		setMenuOpen(false);
+		setThankyouOpen(false);
 	};
 
 	const props = {
