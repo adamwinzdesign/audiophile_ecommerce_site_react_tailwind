@@ -2,11 +2,10 @@ import MenuButton from "./MenuButton";
 import StyledLink from "./StyledLink";
 import logo from "../../images/shared/desktop/logo.svg";
 import cartIcon from "../../images/shared/desktop/icon-cart.svg";
-import { useCartStore } from "../../store/cartStore";
-import PageFadeIn from "../PageFadeIn";
+// import { useCartStore } from "../../store/cartStore";
 
 const Nav = ({ handleMenuClick, handleCartClick }) => {
-	const { cart } = useCartStore();
+	// const { cart } = useCartStore();
 
 	return (
 		<nav className='px-[1.5rem] md:px-[2.5rem] desk:px-[10.25rem] h-[5.625rem] desk:h-[6rem] bg-black'>
