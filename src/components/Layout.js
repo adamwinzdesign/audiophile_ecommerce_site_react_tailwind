@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import Footer from "./Footer/Footer";
 import About from "./About/About";
 import CartDebuggerViewer from "./Cart/CartDebuggerViewer";
+import Cart from "./Cart/Cart";
 
 const Layout = () => {
 	const [modalOpen, setModalOpen] = useState(false);
@@ -15,8 +16,25 @@ const Layout = () => {
 	const [thankyouOpen, setThankyouOpen] = useState(false);
 
 	const handleMenuClick = () => {
-		setModalOpen(!modalOpen);
-		setMenuOpen(!menuOpen);
+		if (menuOpen) {
+			setModalOpen(false);
+			setMenuOpen(false);
+		} else {
+			setModalOpen(true);
+			setMenuOpen(true);
+		}
+		setCartOpen(false);
+	};
+
+	const handleCartClick = () => {
+		if (cartOpen) {
+			setModalOpen(false);
+			setCartOpen(false);
+		} else {
+			setModalOpen(true);
+			setCartOpen(true);
+		}
+		setMenuOpen(false);
 	};
 
 	const props = {
@@ -29,6 +47,7 @@ const Layout = () => {
 		thankyouOpen,
 		setThankyouOpen,
 		handleMenuClick,
+		handleCartClick,
 	};
 
 	return (
@@ -38,6 +57,7 @@ const Layout = () => {
 			<div className='relative overflow-hidden'>
 				<AnimatePresence initial={false}>{modalOpen && <Modal />}</AnimatePresence>
 				<AnimatePresence initial={false}>{menuOpen && <MobileMenu {...props} />}</AnimatePresence>
+				<AnimatePresence initial={false}>{cartOpen && <Cart {...props} />}</AnimatePresence>
 				<Outlet />
 				<About />
 			</div>

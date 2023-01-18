@@ -5,7 +5,7 @@ import cartIcon from "../../images/shared/desktop/icon-cart.svg";
 import { useCartStore } from "../../store/cartStore";
 import PageFadeIn from "../PageFadeIn";
 
-const Nav = ({ handleMenuClick }) => {
+const Nav = ({ handleMenuClick, handleCartClick }) => {
 	const { cart } = useCartStore();
 
 	return (
@@ -28,7 +28,10 @@ const Nav = ({ handleMenuClick }) => {
 					</div>
 				</div>
 
-				<div className='desk:min-w-[30%] flex justify-end overflow-visible'>
+				<div
+					className='desk:min-w-[30%] flex justify-end overflow-visible'
+					onClick={handleCartClick}
+				>
 					<img src={cartIcon} alt='cart' />
 					{/* {cart.length && (
 						<PageFadeIn>
