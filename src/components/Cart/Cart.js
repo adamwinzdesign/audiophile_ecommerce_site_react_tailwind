@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { modalFadeIn } from "../../utils/animations";
+import { useCartStore } from "../../store/cartStore";
 
 const Cart = ({ handleCartClick }) => {
+	const { cart, removeAllCartItems } = useCartStore();
+
 	return (
 		<motion.div
 			// left-[50%] and negative left margin equal to half of the width to center an absolute element
@@ -14,7 +17,17 @@ const Cart = ({ handleCartClick }) => {
 			onClick={handleCartClick}
 		>
 			{/* Cart header with Cart(3) and remove all items button */}
-			<div className='flex'></div>
+			<div className='flex'>
+				<h3 className='font-bold text-[18px] leading-[25px] tracking-[1.28px] uppercase text-black'>
+					cart ({cart.length})
+				</h3>
+				<button
+					className='font-medium text-[15px] leading-[25px] text-black/50 underline'
+					onClick={removeAllCartItems}
+				>
+					Remove all
+				</button>
+			</div>
 			{/* list of items in cart, including photo, name, price, quantity buttons, and quantity in cart */}
 			<div className='flex flex-col'></div>
 			{/* total */}

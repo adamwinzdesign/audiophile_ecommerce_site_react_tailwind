@@ -28,4 +28,10 @@ export const useCartStore = create((set) => ({
 				draft.cart.splice(cartItemIndex, 1);
 			})
 		),
+	removeAllCartItems: () =>
+		set(
+			produce((draft) => {
+				draft.cart = [];
+			})
+		),
 }));
