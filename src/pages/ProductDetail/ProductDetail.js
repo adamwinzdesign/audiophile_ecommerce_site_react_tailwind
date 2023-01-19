@@ -20,7 +20,7 @@ const ProductDetail = () => {
 
 	const productDetailData = allProductData.filter((product) => product.slug === params.slug);
 
-	const { id, name, category, price, description, features, includes, others, slug } =
+	const { id, name, category, price, nameForCart, description, features, includes, others, slug } =
 		productDetailData[0];
 	// cannot destructure productDetailData.new because 'new' is included in the data as a property name but 'new' is also a JS keyword
 	const newProduct = productDetailData[0].new;
@@ -48,6 +48,7 @@ const ProductDetail = () => {
 		id,
 		name,
 		price,
+		nameForCart,
 		updateCartItem,
 		removeCartItem,
 	};

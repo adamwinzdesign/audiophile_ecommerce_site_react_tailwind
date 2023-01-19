@@ -3,6 +3,7 @@ import { modalFadeIn } from "../../utils/animations";
 import { useCartStore } from "../../store/cartStore";
 import CartHeader from "./CartHeader";
 import CartItemList from "./CartItemList";
+import CartTotal from "./CartTotal";
 
 const Cart = ({ handleCartClick }) => {
 	const { cart, removeAllCartItems } = useCartStore();
@@ -23,8 +24,9 @@ const Cart = ({ handleCartClick }) => {
 			/>
 			{/* list of items in cart, including photo, name, price, quantity buttons, and quantity in cart */}
 			<CartItemList />
-			{/* total */}
-			<div className='flex'></div>
+			{/* product subtotal, does not include shipping or indicate VAT amount */}
+
+			<CartTotal cart={cart} />
 			{/* checkout button */}
 			<div></div>
 		</motion.div>

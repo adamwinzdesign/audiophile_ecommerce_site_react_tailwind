@@ -10,6 +10,7 @@ const ProductAddToCart = ({
 	id,
 	name,
 	price,
+	nameForCart,
 	updateCartItem,
 	removeCartItem,
 }) => {
@@ -24,7 +25,9 @@ const ProductAddToCart = ({
 			{/* add to cart */}
 			{!itemInCart && productQty !== 0 && (
 				<div
-					onClick={() => addCartItem({ id: id, name: name, productQty: productQty, price: price })}
+					onClick={() =>
+						addCartItem({ id: id, name: name, productQty: productQty, price: price, nameForCart })
+					}
 				>
 					<AddCartButton itemInCart={itemInCart} />
 				</div>

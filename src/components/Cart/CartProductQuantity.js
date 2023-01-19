@@ -12,7 +12,7 @@ const CartProductQuantity = ({ id, productQty, updateCartItem, removeCartItem })
 	};
 
 	return (
-		<div className='h-[3rem] flex items-center justify-center bg-light_grey'>
+		<div className='w-[6rem] h-[2rem] px-[1rem] flex items-center justify-between bg-light_grey'>
 			<p
 				className='font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-black/25 cursor-pointer'
 				onClick={decrementQty}

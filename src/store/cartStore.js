@@ -11,6 +11,7 @@ export const useCartStore = create((set) => ({
 					name: payload.name,
 					productQty: payload.productQty,
 					price: payload.price,
+					nameForCart: payload.nameForCart,
 				});
 			})
 		),
