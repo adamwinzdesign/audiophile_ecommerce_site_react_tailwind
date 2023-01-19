@@ -1,10 +1,10 @@
 import React from "react";
 
-const CartProductQuantity = ({ id, productQty, updateCartItem }) => {
+const CartProductQuantity = ({ id, productQty, updateCartItem, removeCartItem }) => {
 	const decrementQty = () => {
 		productQty > 0
 			? updateCartItem({ id: id, productQty: productQty - 1 })
-			: updateCartItem({ id: id, productQty: 0 });
+			: removeCartItem({ id: id });
 	};
 
 	const incrementQty = () => {
@@ -12,7 +12,7 @@ const CartProductQuantity = ({ id, productQty, updateCartItem }) => {
 	};
 
 	return (
-		<div className='flex items-center justify-center bg-light_grey'>
+		<div className='h-[3rem] flex items-center justify-center bg-light_grey'>
 			<p
 				className='font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-black/25 cursor-pointer'
 				onClick={decrementQty}

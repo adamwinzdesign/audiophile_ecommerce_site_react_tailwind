@@ -14,8 +14,7 @@ const ProductAddToCart = ({
 	removeCartItem,
 }) => {
 	return (
-		<div className='w-full flex gap-[1rem]'>
-			{/* quantity */}
+		<div className='w-full h-[3rem] flex gap-[1rem]'>
 			<ProductQuantity
 				productQty={productQty}
 				incrementQty={incrementQty}
@@ -23,7 +22,7 @@ const ProductAddToCart = ({
 			/>
 
 			{/* add to cart */}
-			{!itemInCart && (
+			{!itemInCart && productQty !== 0 && (
 				<div
 					onClick={() => addCartItem({ id: id, name: name, productQty: productQty, price: price })}
 				>

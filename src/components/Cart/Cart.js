@@ -5,7 +5,7 @@ import CartHeader from "./CartHeader";
 import CartItemList from "./CartItemList";
 
 const Cart = ({ handleCartClick }) => {
-	const { cart, updateCartItem, removeCartItem, removeAllCartItems } = useCartStore();
+	const { cart, removeAllCartItems } = useCartStore();
 
 	return (
 		<motion.div
@@ -21,7 +21,6 @@ const Cart = ({ handleCartClick }) => {
 				removeAllCartItems={removeAllCartItems}
 				handleCartClick={handleCartClick}
 			/>
-
 			{/* list of items in cart, including photo, name, price, quantity buttons, and quantity in cart */}
 			<CartItemList />
 			{/* total */}

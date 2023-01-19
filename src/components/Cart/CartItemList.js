@@ -1,9 +1,8 @@
 import { useCartStore } from "../../store/cartStore";
-import ProductQuantity from "../../pages/ProductDetail/ProductQuantity";
 import CartProductQuantity from "./CartProductQuantity";
 
 const CartItemList = () => {
-	const { cart, updateCartItem } = useCartStore();
+	const { cart, updateCartItem, removeCartItem } = useCartStore();
 
 	return (
 		<div className='w-full flex flex-col'>
@@ -20,6 +19,7 @@ const CartItemList = () => {
 						id={item.id}
 						productQty={item.productQty}
 						updateCartItem={updateCartItem}
+						removeCartItem={removeCartItem}
 					/>
 				</div>
 			))}
