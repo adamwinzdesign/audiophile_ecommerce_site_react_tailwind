@@ -25,7 +25,6 @@ const Cart = ({ handleCartClick }) => {
 			{/* list of items in cart, including photo, name, price, quantity buttons, and quantity in cart */}
 			<CartItemList />
 			{/* product subtotal, does not include shipping or indicate VAT amount */}
-
 			<CartTotal cart={cart} />
 			{/* checkout button */}
 			<div></div>
