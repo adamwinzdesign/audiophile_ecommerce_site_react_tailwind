@@ -30,17 +30,18 @@ module.exports = {
 			},
 			colors: {
 				peru: "#D87D4A",
+				error_red: "#CD2C2C",
 				very_light_tangelo: "#FBAF85",
 				black: "#000",
 				white: "#FFF",
 				bg_grey: "#FAFAFA",
 				light_grey: "#F1F1F1",
-				border_grey: "#979797",
+				border_grey: "#CFCFCF",
 			},
 			screens: {
 				desk: "1440px",
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require("tailwindcss"), require("autoprefixer")],
 };

@@ -48,24 +48,40 @@ const CheckoutForm = () => {
 	});
 
 	return (
-		<div className='p-[1.5rem] flex flex-col items-start bg-white rounded-lg'>
+		<div className='w-full p-[1.5rem] flex flex-col items-start bg-white rounded-lg'>
 			<h1 className='font-bold text-[1.75rem] leading-[38px] tracking-[1px] uppercase font-black'>
 				Checkout
 			</h1>
-			<form onSubmit={formik.handleSubmit}>
+			<form onSubmit={formik.handleSubmit} className='w-full'>
 				<h2 className='font-bold text-[13px] leading-[25px] tracking-[0.9px] uppercase text-peru'>
 					Billing Details
 				</h2>
 
 				<div className='flex flex-col'>
 					<label htmlFor='name' className='w-full flex justify-between'>
-						<h2 className='font-bold text-[12px] leading-[16px] tracking-[-0.2px] text-black'>
+						<h2
+							className={`font-bold text-[12px] leading-[16px] tracking-[-0.2px]
+              ${formik.touched.name && formik.errors.name ? "text-error_red" : "text-black"}
+            `}
+						>
 							Name
 						</h2>
-						<p>Errors</p>
+						{formik.touched.name && formik.errors.name && (
+							<p className='font-med text-[12px] leading-[16px] tracking-[0.2px] text-error_red'>
+								{formik.errors.name}
+							</p>
+						)}
 					</label>
 					<input
-						className={`h-[3.5rem]`}
+						className={`
+              h-[3.5rem] px-[1.5rem] py-[1.25rem] 
+              font-bold text-[14px] leading-[19px] -tracking-[0.25px] text-black/40 focus-visible:text-black autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)] rounded-lg border
+              ${
+								formik.touched.name && formik.errors.name
+									? "font-bold border-[2px] border-error_red"
+									: "border-border_grey"
+							}
+            `}
 						type='text'
 						name='name'
 						placeholder='Insert your name'
@@ -84,3 +100,13 @@ const CheckoutForm = () => {
 };
 
 export default CheckoutForm;
+
+// active form:
+// border is peru
+
+// touched and error form:
+// label, error, and border are red
+// text is still black
+
+// normal form:
+// border is
