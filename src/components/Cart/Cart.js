@@ -4,6 +4,7 @@ import { useCartStore } from "../../store/cartStore";
 import CartHeader from "./CartHeader";
 import CartItemList from "./CartItemList";
 import CartTotal from "./CartTotal";
+import { Link } from "react-router-dom";
 
 const Cart = ({ handleCartClick }) => {
 	const { cart, removeAllCartItems } = useCartStore();
@@ -27,7 +28,12 @@ const Cart = ({ handleCartClick }) => {
 			{/* product subtotal, does not include shipping or indicate VAT amount */}
 			<CartTotal cart={cart} />
 			{/* checkout button */}
-			<div></div>
+			<button
+				className='w-full h-[3rem] font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-white bg-peru'
+				onClick={handleCartClick}
+			>
+				<Link to='/checkout'>checkout</Link>
+			</button>
 		</motion.div>
 	);
 };
