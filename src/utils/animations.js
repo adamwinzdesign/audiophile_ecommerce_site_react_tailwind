@@ -36,19 +36,19 @@ export const modalFadeIn = {
 
 export const menuSlideDown = {
 	hidden: {
-		y: "-100%",
+		x: "-100%",
 		transition: {
 			duration: 0.5,
 		},
 	},
 	show: {
-		y: 0,
+		x: 0,
 		transition: {
 			duration: 0.9,
 		},
 	},
 	exit: {
-		y: "-100%",
+		x: "-100%",
 		transition: {
 			duration: 0.5,
 		},
