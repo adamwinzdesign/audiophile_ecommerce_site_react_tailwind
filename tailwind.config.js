@@ -33,6 +33,7 @@ module.exports = {
 				very_light_tangelo: "#FBAF85",
 				black: "#000",
 				white: "#FFF",
+				bg_grey: "#FAFAFA",
 				light_grey: "#F1F1F1",
 				border_grey: "#979797",
 			},

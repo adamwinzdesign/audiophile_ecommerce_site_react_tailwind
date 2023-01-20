@@ -28,12 +28,14 @@ const Cart = ({ handleCartClick }) => {
 			{/* product subtotal, does not include shipping or indicate VAT amount */}
 			<CartTotal cart={cart} />
 			{/* checkout button */}
-			<button
-				className='w-full h-[3rem] font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-white bg-peru'
-				onClick={handleCartClick}
-			>
-				<Link to='/checkout'>checkout</Link>
-			</button>
+			<Link to='/checkout' className='w-full'>
+				<button
+					className='w-full h-[3rem] font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-white bg-peru'
+					onClick={handleCartClick}
+				>
+					checkout
+				</button>
+			</Link>
 		</motion.div>
 	);
 };
