@@ -49,6 +49,7 @@ const ProductDetail = () => {
 		name,
 		price,
 		nameForCart,
+		slug,
 		updateCartItem,
 		removeCartItem,
 	};

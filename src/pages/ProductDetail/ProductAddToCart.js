@@ -11,6 +11,7 @@ const ProductAddToCart = ({
 	name,
 	price,
 	nameForCart,
+	slug,
 	updateCartItem,
 	removeCartItem,
 }) => {
@@ -26,7 +27,8 @@ const ProductAddToCart = ({
 			{!itemInCart && productQty !== 0 && (
 				<div
 					onClick={() =>
-						addCartItem({ id: id, name: name, productQty: productQty, price: price, nameForCart })
+						// addCartItem({ id: id, name: name, productQty: productQty, price: price, nameForCart })
+						addCartItem({ id, name, productQty, price, nameForCart, slug })
 					}
 				>
 					<AddCartButton itemInCart={itemInCart} />
