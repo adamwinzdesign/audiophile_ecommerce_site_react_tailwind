@@ -25,7 +25,13 @@ const CheckoutForm = () => {
 		},
 
 		validationSchema: Yup.object({
-			name: Yup.string().max(40, "Name must be 40 characters or less").required("Name is required"),
+			name: Yup.string()
+				.max(40, "Name must be 40 characters or less")
+				.required("Name is required")
+				.matches(
+					/^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
+					"Name can only contain letters."
+				),
 			// email: Yup.string().email("Wrong format").required("Email is required"),
 			// phoneNumber: Yup.string()
 			// 	.matches(phoneRegExp, "Wrong format")
@@ -72,14 +78,30 @@ const CheckoutForm = () => {
 							</p>
 						)}
 					</label>
+					{/* autofill:opacity-40 and autofill:shadow-[rgb] are necessary to override chrome styling after autocomplete */}
 					<input
+						// className={`
+						//   h-[3.5rem] px-[1.5rem] py-[1.25rem]
+						//   font-bold text-[14px] leading-[19px] -tracking-[0.25px] text-black/40
+						//   autofill:opacity-40
+						//   autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)]
+						//   rounded-lg
+						//   autofill:focus:border-green-600
+						//   autofill:active:border-yellow-600
+						//   ${
+						// 		formik.touched.name && formik.errors.name
+						// 			? "border-[2px] border-error_red active:border-error_red"
+						// 			: "border-border_grey"
+						// 	}
+						// `}
 						className={`
-              h-[3.5rem] px-[1.5rem] py-[1.25rem] 
-              font-bold text-[14px] leading-[19px] -tracking-[0.25px] text-black/40 focus-visible:text-black autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)] rounded-lg border
+              h-[3.5rem] px-[1.5rem] py-[1.25rem] font-bold text-[14px] leading-[19px] -tracking-[0.25px] text-black/40 focus:text-black caret-peru rounded-lg border
+              autofill:opacity-40
+						  autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)]
               ${
 								formik.touched.name && formik.errors.name
-									? "font-bold border-[2px] border-error_red"
-									: "border-border_grey"
+									? "border-[2px] border-error_red focus-visible:outline-error_red"
+									: "border-border_grey focus-visible:outline-peru "
 							}
             `}
 						type='text'
