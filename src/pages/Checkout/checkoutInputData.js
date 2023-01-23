@@ -48,6 +48,21 @@ export const shippingInputData = [
 	},
 ];
 
+export const paymentInputData = [
+	{
+		inputName: "eMoneyNumber",
+		inputType: "text",
+		inputPlaceholder: "Insert e-Money Number",
+		label: "e-Money Number",
+	},
+	{
+		inputName: "eMoneyPIN",
+		inputType: "text",
+		inputPlaceholder: "Insert e-Money PIN",
+		label: "e-Money PIN",
+	},
+];
+
 export const initialValues = {
 	name: "",
 	email: "",
