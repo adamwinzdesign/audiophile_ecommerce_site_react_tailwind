@@ -9,6 +9,7 @@ import {
 	validationSchema,
 } from "./checkoutInputData";
 import PageFadeIn from "../../components/PageFadeIn";
+import cashIcon from "../../images/checkout/icon-cash-on-delivery.svg";
 
 const CheckoutForm = () => {
 	const [paymentMethod, setPaymentMethod] = useState("eMoney");
@@ -98,6 +99,7 @@ const CheckoutForm = () => {
 					<PageFadeIn>
 						<div className='flex flex-col'>
 							{/* cash icon */}
+							<img src={cashIcon} alt='cash' className='h-[48px] w-[48px]' />
 							<p className='font-medium text-[15px] leading-[25px] text-black/50 '>
 								The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier
 								arrives at your residence. Just make sure your address is correct so that your order
