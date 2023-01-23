@@ -99,10 +99,6 @@ export const validationSchema = Yup.object({
 	city: Yup.string().required("City is required"),
 	country: Yup.string().required("Country is required"),
 	paymentMethod: Yup.string().required("Payment method is required"),
-	eMoneyNumber: Yup.number()
-		.min(9, "e-Money Number must be 9 digits")
-		.max(9, "e-Money Number must be 9 digits"),
-	eMoneyPIN: Yup.number()
-		.min(4, "e-Money PIN must be 4 digits")
-		.max(4, "e-Money PIN must be 4 digits"),
+	eMoneyNumber: Yup.number().required("Enter e-Money Number"),
+	eMoneyPIN: Yup.number().required("Enter e-Money PIN"),
 });

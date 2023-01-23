@@ -70,11 +70,38 @@ const CheckoutForm = () => {
 					<h2 className='font-bold text-[12px] leading-[16px] tracking-[-0.2px] text-black'>
 						Payment Method
 					</h2>
-					<button onClick={() => setPaymentMethod("eMoney")} type='button'>
-						eMoney
+					<button
+						onClick={() => setPaymentMethod("eMoney")}
+						type='button'
+						className={`w-full px-[1rem] py-[18px] font-bold text-[14px] leading-[19px] tracking-[-0.25px] text-black flex items-center justify-start gap-[1rem] rounded-lg border ${
+							paymentMethod === "eMoney" ? "border-peru" : "border-border_grey"
+						}`}
+					>
+						{/* indicator */}
+						<div className='w-[20px] h-[20px] flex items-center justify-center border border-border_grey rounded-full'>
+							{/* center of indicator */}
+							{paymentMethod === "eMoney" && (
+								<div className='w-[10px] h-[10px] bg-peru rounded-full' />
+							)}
+						</div>
+						<p>e-Money</p>
 					</button>
-					<button onClick={() => setPaymentMethod("cash")} type='button'>
-						cash
+
+					<button
+						onClick={() => setPaymentMethod("cash")}
+						type='button'
+						className={`w-full px-[1rem] py-[18px] font-bold text-[14px] leading-[19px] tracking-[-0.25px] text-black flex items-center justify-start gap-[1rem] rounded-lg border ${
+							paymentMethod === "cash" ? "border-peru" : "border-border_grey"
+						}`}
+					>
+						{/* indicator */}
+						<div className='w-[20px] h-[20px] flex items-center justify-center border border-border_grey rounded-full'>
+							{/* center of indicator */}
+							{paymentMethod === "cash" && (
+								<div className='w-[10px] h-[10px] bg-peru rounded-full' />
+							)}
+						</div>
+						<p>Cash on Delivery</p>
 					</button>
 				</div>
 
