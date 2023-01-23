@@ -11,8 +11,6 @@ import PaymentSelector from "./PaymentSelector";
 
 const CheckoutForm = () => {
 	const [paymentMethod, setPaymentMethod] = useState("eMoney");
-	// use hasSubmitted to display ThankYou and modal, site should not navigate out of checkout per design file
-	// const [hasSubmitted, setHasSubmitted] = useState(false);
 
 	const formik = useFormik({
 		initialValues,

@@ -1,7 +1,12 @@
+// import { useState } from "react";
 import { Link } from "react-router-dom";
 import CheckoutForm from "./CheckoutForm";
+import CheckoutSummary from "./CheckoutSummary";
 
 const Checkout = () => {
+	// use hasSubmitted to display ThankYou and modal, site should not navigate out of checkout per design file
+	// const [hasSubmitted, setHasSubmitted] = useState(false);
+
 	return (
 		<div className='w-full px-[1.5rem] md:px-[2.5rem] desk:px-[10.25rem] py-[1rem] md:py-[2rem] desk:py-[5rem] flex flex-col bg-bg_grey'>
 			<Link
@@ -11,6 +16,7 @@ const Checkout = () => {
 				Go Back
 			</Link>
 			<CheckoutForm />
+			<CheckoutSummary />
 		</div>
 	);
 };
