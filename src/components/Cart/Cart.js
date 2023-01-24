@@ -5,9 +5,16 @@ import CartHeader from "./CartHeader";
 import CartItemList from "./CartItemList";
 import CartTotal from "./CartTotal";
 import { Link } from "react-router-dom";
+import { useLayoutStore } from "../../store/layoutStore";
 
-const Cart = ({ handleCartClick }) => {
+const Cart = () => {
 	const { cart, removeAllCartItems } = useCartStore();
+	const { updateCartOpen, updateModalOpen } = useLayoutStore();
+
+	const handleCheckoutClick = () => {
+		updateCartOpen(false);
+		updateModalOpen(false);
+	};
 
 	return (
 		<motion.div
@@ -21,7 +28,7 @@ const Cart = ({ handleCartClick }) => {
 			<CartHeader
 				cart={cart}
 				removeAllCartItems={removeAllCartItems}
-				handleCartClick={handleCartClick}
+				updateCartOpen={updateCartOpen}
 			/>
 			{/* list of items in cart, including photo, name, price, quantity buttons, and quantity in cart */}
 			<CartItemList />
@@ -31,7 +38,7 @@ const Cart = ({ handleCartClick }) => {
 			<Link to='/checkout' className='w-full'>
 				<button
 					className='w-full h-[3rem] font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-white bg-peru'
-					onClick={handleCartClick}
+					onClick={handleCheckoutClick}
 				>
 					checkout
 				</button>

@@ -1,9 +1,7 @@
 import CheckoutItemList from "./CheckoutItemLIst";
-// import { useCartStore } from "../../store/cartStore";
 import { useLayoutStore } from "../../store/layoutStore";
 
 const CheckoutSummary = () => {
-	// const { orderSubmitted, updateOrderSubmitted } = useCartStore();
 	const {
 		modalOpen,
 		thankYouOpen,
