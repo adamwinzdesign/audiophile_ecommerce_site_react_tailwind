@@ -7,12 +7,14 @@ import { AnimatePresence } from "framer-motion";
 import Footer from "./Footer/Footer";
 import About from "./About/About";
 import Cart from "./Cart/Cart";
+import ThankYou from "./Cart/ThankYou";
+import { useCartStore } from "../store/cartStore";
 
 const Layout = () => {
+	const { orderSubmitted } = useCartStore();
 	const [modalOpen, setModalOpen] = useState(false);
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [cartOpen, setCartOpen] = useState(false);
-	const [thankyouOpen, setThankyouOpen] = useState(false);
 
 	const handleMenuClick = () => {
 		if (menuOpen) {
@@ -23,7 +25,6 @@ const Layout = () => {
 			setMenuOpen(true);
 		}
 		setCartOpen(false);
-		setThankyouOpen(false);
 	};
 
 	const handleCartClick = () => {
@@ -35,7 +36,6 @@ const Layout = () => {
 			setCartOpen(true);
 		}
 		setMenuOpen(false);
-		setThankyouOpen(false);
 	};
 
 	const props = {
@@ -45,8 +45,6 @@ const Layout = () => {
 		setMenuOpen,
 		cartOpen,
 		setCartOpen,
-		thankyouOpen,
-		setThankyouOpen,
 		handleMenuClick,
 		handleCartClick,
 	};
@@ -58,6 +56,7 @@ const Layout = () => {
 				<AnimatePresence initial={false}>{modalOpen && <Modal />}</AnimatePresence>
 				<AnimatePresence initial={false}>{menuOpen && <MobileMenu {...props} />}</AnimatePresence>
 				<AnimatePresence initial={false}>{cartOpen && <Cart {...props} />}</AnimatePresence>
+				<AnimatePresence initial={false}>{orderSubmitted && <ThankYou />}</AnimatePresence>
 				<Outlet />
 				<About />
 			</div>

@@ -42,7 +42,6 @@ const ProductAddToCart = ({
 				</div>
 			)}
 
-			{/* remove item from cart debug */}
 			{itemInCart && productQty === 0 && (
 				<div onClick={() => removeCartItem({ id: id })}>
 					<AddCartButton itemInCart={itemInCart} />

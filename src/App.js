@@ -24,7 +24,6 @@ function App() {
 						<Route path='headphones' element={<HeadphonesCategory />} />
 						<Route path='speakers' element={<SpeakersCategory />} />
 						<Route path='earphones' element={<EarphonesCategory />} />
-						{/* <Route path='details/:productId' element={<ProductDetail />} /> */}
 						<Route path='details/:slug' element={<ProductDetail />} />
 						<Route path='checkout' element={<Checkout />} />
 						<Route path='*' element={<NoMatch />} />
