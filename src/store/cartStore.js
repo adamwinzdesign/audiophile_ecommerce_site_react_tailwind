@@ -37,10 +37,10 @@ export const useCartStore = create((set) => ({
 				draft.cart = [];
 			})
 		),
-	updateOrderSubmitted: () =>
+	updateOrderSubmitted: (payload) =>
 		set(
 			produce((draft) => {
-				draft.orderSubmitted = true;
+				draft.orderSubmitted = payload;
 			})
 		),
 }));

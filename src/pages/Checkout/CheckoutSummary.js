@@ -2,7 +2,7 @@ import CheckoutItemList from "./CheckoutItemLIst";
 import { useCartStore } from "../../store/cartStore";
 
 const CheckoutSummary = () => {
-	const { updateOrderSubmitted } = useCartStore();
+	const { orderSubmitted, updateOrderSubmitted } = useCartStore();
 
 	return (
 		<div className='w-full p-[1.5rem] flex flex-col items-start bg-white rounded-lg'>
@@ -12,7 +12,7 @@ const CheckoutSummary = () => {
 			<CheckoutItemList />
 			<button
 				className='w-full h-[3rem] font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-white bg-peru'
-				onClick={() => updateOrderSubmitted()}
+				onClick={() => updateOrderSubmitted(!orderSubmitted)}
 			>
 				continue & pay
 			</button>
