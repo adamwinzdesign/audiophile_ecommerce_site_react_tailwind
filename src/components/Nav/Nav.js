@@ -43,7 +43,7 @@ const Nav = () => {
 				</div>
 
 				<div
-					className='desk:min-w-[30%] flex justify-end overflow-visible'
+					className='desk:min-w-[30%] flex justify-end overflow-visible cursor-pointer'
 					onClick={handleCartClick}
 				>
 					<img src={cartIcon} alt='cart' />
