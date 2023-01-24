@@ -13,13 +13,11 @@ const CheckoutSummary = () => {
 		updateThankYouOpen,
 	} = useLayoutStore();
 
-	console.log({ thankYouOpen, modalOpen });
-
 	const handleContinueClick = () => {
-		updateModalOpen({ modalOpen: !modalOpen });
-		updateThankYouOpen({ thankYouOpen: !thankYouOpen });
-		updateMenuOpen({ menuOpen: false });
-		updateCartOpen({ cartOpen: false });
+		updateModalOpen(!modalOpen);
+		updateThankYouOpen(!thankYouOpen);
+		updateMenuOpen(false);
+		updateCartOpen(false);
 	};
 
 	return (

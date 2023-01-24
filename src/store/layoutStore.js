@@ -9,27 +9,27 @@ export const useLayoutStore = create((set) => ({
 	updateModalOpen: (payload) =>
 		set(
 			produce((draft) => {
-				draft.modalOpen = payload.modalOpen;
+				draft.modalOpen = payload;
 			})
 		),
 	updateMenuOpen: (payload) => {
 		set(
 			produce((draft) => {
-				draft.menuOpen = payload.menuOpen;
+				draft.menuOpen = payload;
 			})
 		);
 	},
 	updateCartOpen: (payload) => {
 		set(
 			produce((draft) => {
-				draft.cartOpen = payload.cartOpen;
+				draft.cartOpen = payload;
 			})
 		);
 	},
 	updateThankYouOpen: (payload) => {
 		set(
 			produce((draft) => {
-				draft.thankYouOpen = payload.thankYouOpen;
+				draft.thankYouOpen = payload;
 			})
 		);
 	},

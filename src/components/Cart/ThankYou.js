@@ -7,8 +7,8 @@ const ThankYou = () => {
 	const { updateModalOpen, updateThankYouOpen } = useLayoutStore();
 
 	const handleThankYouClose = () => {
-		updateThankYouOpen({ thankYouOpen: false });
-		updateModalOpen({ modalOpen: false });
+		updateThankYouOpen(false);
+		updateModalOpen(false);
 	};
 
 	return (

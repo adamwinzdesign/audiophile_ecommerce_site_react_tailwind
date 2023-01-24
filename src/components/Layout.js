@@ -13,55 +13,6 @@ import { useLayoutStore } from "../store/layoutStore";
 
 const Layout = () => {
 	const { modalOpen, menuOpen, cartOpen, thankYouOpen } = useLayoutStore();
-	// const { orderSubmitted, updateOrderSubmitted } = useCartStore();
-	// const [modalOpen, setModalOpen] = useState(false);
-	// const [menuOpen, setMenuOpen] = useState(false);
-	// const [cartOpen, setCartOpen] = useState(false);
-
-	// console.log({ orderSubmitted, modalOpen });
-
-	// useEffect(() => {
-	// 	console.log("useEffect in Layout!");
-	// 	if (orderSubmitted) {
-	// 		setModalOpen(true);
-	// 	}
-	// 	setModalOpen(false);
-	// }, [orderSubmitted]);
-
-	// const handleMenuClick = () => {
-	// 	if (menuOpen) {
-	// 		setModalOpen(false);
-	// 		setMenuOpen(false);
-	// 	} else {
-	// 		setModalOpen(true);
-	// 		setMenuOpen(true);
-	// 		updateOrderSubmitted(false);
-	// 	}
-	// 	setCartOpen(false);
-	// };
-
-	// const handleCartClick = () => {
-	// 	if (cartOpen) {
-	// 		setModalOpen(false);
-	// 		setCartOpen(false);
-	// 	} else {
-	// 		setModalOpen(true);
-	// 		setCartOpen(true);
-	// 		updateOrderSubmitted(false);
-	// 	}
-	// 	setMenuOpen(false);
-	// };
-
-	// const props = {
-	// 	modalOpen,
-	// 	setModalOpen,
-	// 	menuOpen,
-	// 	setMenuOpen,
-	// 	cartOpen,
-	// 	setCartOpen,
-	// 	handleMenuClick,
-	// 	handleCartClick,
-	// };
 
 	const props = {};
 
