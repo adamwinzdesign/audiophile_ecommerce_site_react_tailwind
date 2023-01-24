@@ -32,10 +32,22 @@ const ThankYou = () => {
 				You will receive an email confirmation shortly.
 			</p>
 			{/* thank you summary, see design, only includes one item with photo, price and qty and a line about additional items, plus the grand total */}
-			<div className='w-full min-h-[14.5rem] flex flex-col rounded-lg'>
-				<div>
+			<div className='w-full min-h-[14.5rem] flex flex-col rounded-lg overflow-hidden'>
+				<div className='h-[8.75rem] px-[1.5rem] flex flex-col bg-light_grey'>
 					{/* one item's photo, name from cart, price, and qty ordered */}
+					<div className='flex'>
+						{/* photo */}
+						<p>photo</p>
+						{/* name and price */}
+						<p>name and price</p>
+						<div className='flex flex-col'></div>
+						{/* quantity of just this one item */}
+						<p>x1</p>
+					</div>
 					{/* and x other item(s) */}
+					<div>
+						<p>and 3 other items</p>
+					</div>
 				</div>
 				{/* grand total */}
 				<div className='w-full px-[1.5rem] py-[1rem] flex flex-col items-start justify-between bg-black rounded-b-lg'>

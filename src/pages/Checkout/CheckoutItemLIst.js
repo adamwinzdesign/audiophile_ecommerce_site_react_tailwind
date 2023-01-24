@@ -20,7 +20,7 @@ const CheckoutItemLIst = () => {
 				return (
 					<div key={item.name} className='flex items-start justify-between'>
 						{/* product photo */}
-						<div className='z-20'>
+						<div>
 							<img
 								src={cartItemThumbnail}
 								alt={item.name}
