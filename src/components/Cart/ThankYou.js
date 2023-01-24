@@ -1,8 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { modalFadeIn } from "../../utils/animations";
+import { useLayoutStore } from "../../store/layoutStore";
 
 const ThankYou = () => {
+	const { updateModalOpen, updateThankYouOpen } = useLayoutStore();
+
+	const handleThankYouClose = () => {
+		updateThankYouOpen({ thankYouOpen: false });
+		updateModalOpen({ modalOpen: false });
+	};
+
 	return (
 		<motion.div
 			// left-[50%] and negative left margin equal to half of the width to center an absolute element
@@ -13,6 +21,7 @@ const ThankYou = () => {
 			exit='exit'
 		>
 			<h1 className='font-bold text-black'>Thank You!</h1>
+			<button onClick={handleThankYouClose}>close</button>
 		</motion.div>
 	);
 };

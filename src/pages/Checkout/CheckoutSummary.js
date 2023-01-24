@@ -1,8 +1,26 @@
 import CheckoutItemList from "./CheckoutItemLIst";
-import { useCartStore } from "../../store/cartStore";
+// import { useCartStore } from "../../store/cartStore";
+import { useLayoutStore } from "../../store/layoutStore";
 
 const CheckoutSummary = () => {
-	const { orderSubmitted, updateOrderSubmitted } = useCartStore();
+	// const { orderSubmitted, updateOrderSubmitted } = useCartStore();
+	const {
+		modalOpen,
+		thankYouOpen,
+		updateModalOpen,
+		updateMenuOpen,
+		updateCartOpen,
+		updateThankYouOpen,
+	} = useLayoutStore();
+
+	console.log({ thankYouOpen, modalOpen });
+
+	const handleContinueClick = () => {
+		updateModalOpen({ modalOpen: !modalOpen });
+		updateThankYouOpen({ thankYouOpen: !thankYouOpen });
+		updateMenuOpen({ menuOpen: false });
+		updateCartOpen({ cartOpen: false });
+	};
 
 	return (
 		<div className='w-full p-[1.5rem] flex flex-col items-start bg-white rounded-lg'>
@@ -12,7 +30,7 @@ const CheckoutSummary = () => {
 			<CheckoutItemList />
 			<button
 				className='w-full h-[3rem] font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-white bg-peru'
-				onClick={() => updateOrderSubmitted(!orderSubmitted)}
+				onClick={handleContinueClick}
 			>
 				continue & pay
 			</button>
