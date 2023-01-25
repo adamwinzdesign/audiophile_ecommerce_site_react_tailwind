@@ -7,6 +7,7 @@ import { useLayoutStore } from "../../store/layoutStore";
 import { AnimatePresence, motion } from "framer-motion";
 import { modalFadeIn } from "../../utils/animations";
 import { useCartTotalItems } from "../../hooks/useCartTotalItems";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
 	const { cart } = useCartStore();
@@ -33,9 +34,11 @@ const Nav = () => {
 				<div className='desk:hidden w-[16px] h-[15px] cursor-pointer'>
 					<MenuButton />
 				</div>
-				<div className='desk:min-w-[30%] flex justify-start'>
-					<img src={logo} alt='audiophile logo' />
-				</div>
+				<Link to='/'>
+					<div className='desk:min-w-[30%] flex justify-start'>
+						<img src={logo} alt='audiophile logo' />
+					</div>
+				</Link>
 				<div className='desk:min-w-[30%] hidden desk:flex'>
 					<div className='hidden desk:flex gap-[2.125rem]'>
 						<StyledLink dest='/' text='Home' />

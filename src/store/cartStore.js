@@ -16,17 +16,11 @@ export const useCartStore = create((set) => ({
 				});
 			})
 		),
-	// updateCartItem: (payload) =>
-	// 	set(
-	// 		produce((draft) => {
-	// 			const cartItem = draft.cart.find((item) => item.id === payload.id);
-	// 			cartItem.productQty = payload.productQty;
-	// 		})
-	// 	),
 	updateCartItem: (payload) =>
 		set(
 			produce((draft) => {
 				const cartItem = draft.cart.find((item) => item.id === payload.id);
+				// if user updates a productQty to 0, remove the item from the cart entirely, rather than leave item in cart at 0
 				if (cartItem.productQty === 0) {
 					const cartItemIndex = draft.cart.findIndex((item) => item.id === payload);
 					draft.cart.splice(cartItemIndex, 1);
