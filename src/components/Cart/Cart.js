@@ -16,6 +16,11 @@ const Cart = () => {
 		updateModalOpen(false);
 	};
 
+	const cartTotalItems = cart.reduce((result, item) => {
+		result = result + item.productQty;
+		return result;
+	}, 0);
+
 	return (
 		<motion.div
 			// left-[50%] and negative left margin equal to half of the width to center an absolute element
@@ -37,8 +42,9 @@ const Cart = () => {
 			{/* checkout button */}
 			<Link to='/checkout' className='w-full'>
 				<button
-					className='w-full h-[3rem] font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-white bg-peru'
+					className='w-full h-[3rem] font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-white bg-peru disabled:bg-peru/50 disabled:cursor-not-allowed'
 					onClick={handleCheckoutClick}
+					disabled={cartTotalItems === 0}
 				>
 					checkout
 				</button>
