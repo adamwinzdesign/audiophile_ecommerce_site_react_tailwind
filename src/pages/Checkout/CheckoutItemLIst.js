@@ -10,8 +10,8 @@ const CheckoutItemLIst = () => {
 	}, 0);
 
 	const shipping = 50;
-	const vat = Math.trunc(cartSubtotal * 0.2);
-	const grandTotal = cartSubtotal + shipping;
+	const vat = Math.trunc(cartSubtotal * 0.2).toLocaleString();
+	const grandTotal = (cartSubtotal + shipping).toLocaleString();
 
 	return (
 		<div className='w-full flex flex-col'>
@@ -32,7 +32,9 @@ const CheckoutItemLIst = () => {
 							<h3 className='font-bold text-[15px] leading-[25px] text-black uppercase'>
 								{item.nameForCart}
 							</h3>
-							<p className='font-bold text-[14px] leading-[25px] text-black/50'>$ {item.price}</p>
+							<p className='font-bold text-[14px] leading-[25px] text-black/50'>
+								$ {item.price.toLocaleString()}
+							</p>
 						</div>
 						{/* quantity indciators */}
 						<div className='ml-auto'>
@@ -64,16 +66,14 @@ const CheckoutItemLIst = () => {
 					<h3 className='font-medium text-[15px] leading-[25px] text-black/50 uppercase'>
 						VAT (Included)
 					</h3>
-					<h3 className='font-bold text-[18px] leading-[25px] uppercase text-black'>
-						$ {vat.toLocaleString()}
-					</h3>
+					<h3 className='font-bold text-[18px] leading-[25px] uppercase text-black'>$ {vat}</h3>
 				</div>
 				<div className='flex items-center justify-between'>
 					<h3 className='font-medium text-[15px] leading-[25px] text-black/50 uppercase'>
 						Grand Total
 					</h3>
 					<h3 className='font-bold text-[18px] leading-[25px] uppercase text-black'>
-						$ {grandTotal.toLocaleString()}
+						$ {grandTotal}
 					</h3>
 				</div>
 			</div>
