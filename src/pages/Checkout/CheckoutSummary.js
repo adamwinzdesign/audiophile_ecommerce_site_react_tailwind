@@ -1,15 +1,13 @@
 import CheckoutItemList from "./CheckoutItemLIst";
 import { useLayoutStore } from "../../store/layoutStore";
 import { useCartStore } from "../../store/cartStore";
+import { useCartTotalItems } from "../../hooks/useCartTotalItems";
 
 const CheckoutSummary = () => {
 	const { updateModalOpen, updateMenuOpen, updateCartOpen, updateThankYouOpen } = useLayoutStore();
 	const { cart } = useCartStore();
 
-	const cartTotalItems = cart.reduce((result, item) => {
-		result = result + item.productQty;
-		return result;
-	}, 0);
+	const cartTotalItems = useCartTotalItems(cart);
 
 	const handleContinueClick = () => {
 		updateModalOpen(true);
