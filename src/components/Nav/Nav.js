@@ -6,16 +6,14 @@ import { useCartStore } from "../../store/cartStore";
 import { useLayoutStore } from "../../store/layoutStore";
 import { AnimatePresence, motion } from "framer-motion";
 import { modalFadeIn } from "../../utils/animations";
+import { useCartTotalItems } from "../../hooks/useCartTotalItems";
 
 const Nav = () => {
 	const { cart } = useCartStore();
 	const { cartOpen, updateModalOpen, updateMenuOpen, updateCartOpen, updateThankYouOpen } =
 		useLayoutStore();
 
-	const cartTotalItems = cart.reduce((result, item) => {
-		result = result + item.productQty;
-		return result;
-	}, 0);
+	const cartTotalItems = useCartTotalItems(cart);
 
 	const handleCartClick = () => {
 		updateMenuOpen(false);

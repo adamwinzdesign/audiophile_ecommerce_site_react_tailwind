@@ -6,6 +6,7 @@ import CartItemList from "./CartItemList";
 import CartTotal from "./CartTotal";
 import { Link } from "react-router-dom";
 import { useLayoutStore } from "../../store/layoutStore";
+import { useCartTotalItems } from "../../hooks/useCartTotalItems";
 
 const Cart = () => {
 	const { cart, removeAllCartItems } = useCartStore();
@@ -16,10 +17,7 @@ const Cart = () => {
 		updateModalOpen(false);
 	};
 
-	const cartTotalItems = cart.reduce((result, item) => {
-		result = result + item.productQty;
-		return result;
-	}, 0);
+	const cartTotalItems = useCartTotalItems(cart);
 
 	return (
 		<motion.div
