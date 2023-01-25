@@ -2,18 +2,11 @@ import CheckoutItemList from "./CheckoutItemLIst";
 import { useLayoutStore } from "../../store/layoutStore";
 
 const CheckoutSummary = () => {
-	const {
-		modalOpen,
-		thankYouOpen,
-		updateModalOpen,
-		updateMenuOpen,
-		updateCartOpen,
-		updateThankYouOpen,
-	} = useLayoutStore();
+	const { updateModalOpen, updateMenuOpen, updateCartOpen, updateThankYouOpen } = useLayoutStore();
 
 	const handleContinueClick = () => {
-		updateModalOpen(!modalOpen);
-		updateThankYouOpen(!thankYouOpen);
+		updateModalOpen(true);
+		updateThankYouOpen(true);
 		updateMenuOpen(false);
 		updateCartOpen(false);
 		window.scroll({

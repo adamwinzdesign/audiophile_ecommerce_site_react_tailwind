@@ -3,7 +3,6 @@ import produce from "immer";
 
 export const useCartStore = create((set) => ({
 	cart: [],
-	// orderSubmitted: false,
 	addCartItem: (payload) =>
 		set(
 			produce((draft) => {
@@ -37,10 +36,4 @@ export const useCartStore = create((set) => ({
 				draft.cart = [];
 			})
 		),
-	// updateOrderSubmitted: (payload) =>
-	// 	set(
-	// 		produce((draft) => {
-	// 			draft.orderSubmitted = payload;
-	// 		})
-	// 	),
 }));
