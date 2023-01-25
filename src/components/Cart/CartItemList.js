@@ -9,7 +9,7 @@ const CartItemList = () => {
 			{cart.map((item) => {
 				const cartItemThumbnail = require(`../../images/product-${item.slug}/mobile/image-product.jpg`);
 				return (
-					<div key={item.name} className='flex items-center justify-between'>
+					<div key={item.name} className='flex items-center justify-start'>
 						{/* product photo */}
 						<div className='z-20'>
 							<img
@@ -19,7 +19,7 @@ const CartItemList = () => {
 							/>
 						</div>
 						{/* product name and price (each) */}
-						<div className='h-full flex flex-col items-between'>
+						<div className='h-full mr-auto flex flex-col items-between'>
 							<h3 className='font-bold text-[15px] leading-[25px] text-black uppercase'>
 								{item.nameForCart}
 							</h3>

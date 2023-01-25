@@ -16,6 +16,10 @@ const CheckoutSummary = () => {
 		updateThankYouOpen(!thankYouOpen);
 		updateMenuOpen(false);
 		updateCartOpen(false);
+		window.scroll({
+			top: 0,
+			left: 0,
+		});
 	};
 
 	return (
