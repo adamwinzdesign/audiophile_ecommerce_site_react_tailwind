@@ -1,9 +1,7 @@
+import { useCartSubTotal } from "../../hooks/useCartSubtotal";
+
 const CartTotal = ({ cart }) => {
-	const cartSubtotal = cart.reduce((result, item) => {
-		const itemSubtotal = item.price * item.productQty;
-		result = result + itemSubtotal;
-		return result;
-	}, 0);
+	const cartSubtotal = useCartSubTotal(cart);
 
 	return (
 		<div className='w-full flex justify-between'>

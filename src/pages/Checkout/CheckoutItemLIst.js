@@ -1,13 +1,11 @@
 import React from "react";
+import { useCartSubTotal } from "../../hooks/useCartSubtotal";
 import { useCartStore } from "../../store/cartStore";
 
 const CheckoutItemLIst = () => {
 	const { cart } = useCartStore();
-	const cartSubtotal = cart.reduce((result, item) => {
-		const itemSubtotal = item.price * item.productQty;
-		result = result + itemSubtotal;
-		return result;
-	}, 0);
+
+	const cartSubtotal = useCartSubTotal(cart);
 
 	const shipping = 50;
 	const vat = Math.trunc(cartSubtotal * 0.2).toLocaleString();

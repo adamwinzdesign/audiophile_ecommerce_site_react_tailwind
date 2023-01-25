@@ -5,6 +5,7 @@ import { useLayoutStore } from "../../store/layoutStore";
 import checkmark from "../../images/checkout/icon-order-confirmation.svg";
 import { Link } from "react-router-dom";
 import { useCartStore } from "../../store/cartStore";
+import { useCartSubTotal } from "../../hooks/useCartSubtotal";
 
 const ThankYou = () => {
 	const { cart } = useCartStore();
@@ -13,12 +14,7 @@ const ThankYou = () => {
 	const firstCartItem = cart[0];
 	const { nameForCart, price, productQty, slug } = firstCartItem;
 
-	// extract useCartGrandTotal to a custom hook, replace the logic here and in CheckoutItemList
-	const cartSubtotal = cart.reduce((result, item) => {
-		const itemSubtotal = item.price * item.productQty;
-		result = result + itemSubtotal;
-		return result;
-	}, 0);
+	const cartSubtotal = useCartSubTotal(cart);
 
 	const shipping = 50;
 	const grandTotal = (cartSubtotal + shipping).toLocaleString();
