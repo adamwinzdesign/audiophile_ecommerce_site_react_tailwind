@@ -16,11 +16,23 @@ export const useCartStore = create((set) => ({
 				});
 			})
 		),
+	// updateCartItem: (payload) =>
+	// 	set(
+	// 		produce((draft) => {
+	// 			const cartItem = draft.cart.find((item) => item.id === payload.id);
+	// 			cartItem.productQty = payload.productQty;
+	// 		})
+	// 	),
 	updateCartItem: (payload) =>
 		set(
 			produce((draft) => {
 				const cartItem = draft.cart.find((item) => item.id === payload.id);
-				cartItem.productQty = payload.productQty;
+				if (cartItem.productQty === 0) {
+					const cartItemIndex = draft.cart.findIndex((item) => item.id === payload);
+					draft.cart.splice(cartItemIndex, 1);
+				} else {
+					cartItem.productQty = payload.productQty;
+				}
 			})
 		),
 	removeCartItem: (payload) =>

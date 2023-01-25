@@ -2,7 +2,7 @@ import React from "react";
 
 const CartProductQuantity = ({ id, productQty, updateCartItem, removeCartItem }) => {
 	const decrementQty = () => {
-		productQty > 0
+		productQty > 1
 			? updateCartItem({ id: id, productQty: productQty - 1 })
 			: removeCartItem({ id: id });
 	};
