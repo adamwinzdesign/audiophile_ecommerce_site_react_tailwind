@@ -54,3 +54,32 @@ export const menuSlideDown = {
 		},
 	},
 };
+
+export const svgAnimation = {
+	visible: {
+		pathLength: 1,
+		fillOpacity: 1,
+		transition: {
+			pathLength: {
+				duration: 1,
+			},
+			fillOpacity: {
+				duration: 1,
+				delay: 1,
+			},
+		},
+	},
+	hidden: {
+		pathLength: 0,
+		fillOpacity: 0,
+		transition: {
+			pathLength: {
+				duration: 2,
+				delay: 1,
+			},
+			fillOpacity: {
+				duration: 1,
+			},
+		},
+	},
+};

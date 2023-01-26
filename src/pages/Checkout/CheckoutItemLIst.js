@@ -1,4 +1,3 @@
-import React from "react";
 import { useCartSubTotal } from "../../hooks/useCartSubtotal";
 import { useCartStore } from "../../store/cartStore";
 

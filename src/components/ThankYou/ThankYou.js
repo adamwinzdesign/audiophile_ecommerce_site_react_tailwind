@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { modalFadeIn } from "../../utils/animations";
 import { useLayoutStore } from "../../store/layoutStore";
@@ -6,6 +6,7 @@ import checkmark from "../../images/checkout/icon-order-confirmation.svg";
 import { Link } from "react-router-dom";
 import { useCartStore } from "../../store/cartStore";
 import { useCartSubTotal } from "../../hooks/useCartSubtotal";
+import Checkmark from "./Checkmark";
 
 const ThankYou = () => {
 	const { cart } = useCartStore();
@@ -25,6 +26,10 @@ const ThankYou = () => {
 		updateModalOpen(false);
 	};
 
+	// setTimeout and local state to fake an API call for payment processing
+	const [paymentProcessed, setPaymentProcessed] = useState(false);
+	setTimeout(() => setPaymentProcessed(true), 5000);
+
 	return (
 		<motion.div
 			// left-[50%] and negative left margin equal to half of the width to center an absolute element
@@ -34,8 +39,11 @@ const ThankYou = () => {
 			animate='show'
 			exit='exit'
 		>
+			<p>{paymentProcessed ? "processed!" : "not processed!"}</p>
+			<button onClick={() => setPaymentProcessed(false)}>reset</button>
 			{/* checkmark */}
-			<img src={checkmark} alt='checkmark' />
+			{/* <img src={checkmark} alt='checkmark' /> */}
+			<Checkmark paymentProcessed={paymentProcessed} />
 			<h1 className='font-bold text-[1.5rem] leading-[28px] tracking-[0.8px] uppercase text-black'>
 				Thank you <br />
 				for your order

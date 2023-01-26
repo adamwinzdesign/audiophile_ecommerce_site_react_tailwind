@@ -1,5 +1,3 @@
-import React from "react";
-
 const CartProductQuantity = ({ id, productQty, updateCartItem, removeCartItem }) => {
 	const decrementQty = () => {
 		productQty > 1

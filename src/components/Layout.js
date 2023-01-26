@@ -6,7 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import Footer from "./Footer/Footer";
 import About from "./About/About";
 import Cart from "./Cart/Cart";
-import ThankYou from "./Cart/ThankYou";
+import ThankYou from "./ThankYou/ThankYou";
 import { useLayoutStore } from "../store/layoutStore";
 
 const Layout = () => {
