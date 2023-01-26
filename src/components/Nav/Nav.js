@@ -34,8 +34,8 @@ const Nav = () => {
 				<div className='desk:hidden w-[16px] h-[15px] cursor-pointer'>
 					<MenuButton />
 				</div>
-				<Link to='/'>
-					<div className='desk:min-w-[30%] flex justify-start'>
+				<Link to='/' className='desk:min-w-[30%]'>
+					<div className='flex justify-start'>
 						<img src={logo} alt='audiophile logo' />
 					</div>
 				</Link>
