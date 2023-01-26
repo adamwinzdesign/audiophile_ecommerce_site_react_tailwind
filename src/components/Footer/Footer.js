@@ -33,7 +33,7 @@ const Footer = () => {
 				</p>
 			</div>
 			{/* copyright and socials */}
-			<div className='relative w-full flex flex-col md:flex-row items-center md:justify-between'>
+			<div className='relative w-full flex flex-col md:flex-row items-center md:justify-between gap-[3rem]'>
 				{/* copyright */}
 				<div>
 					<p className='text-[15px] leading-[25px] text-white/50 text-center'>
