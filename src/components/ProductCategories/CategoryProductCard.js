@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import BasicP from "../shared/Typography/BasicP";
 import CategoryProductButton from "./CategoryProductButton";
 
 const CategoryProductCard = ({ product }) => {
@@ -50,9 +51,10 @@ const CategoryProductCard = ({ product }) => {
 					{name}
 				</h3>
 				{/* product text */}
-				<p className='md:px-[4.375rem] desk:px-0 desk:mt-[1rem] desk:mb-[1.5rem] text-[15px] leading-[1.5rem] text-center desk:text-left text-black/50'>
+				{/* <p className='md:px-[4.375rem] desk:px-0 desk:mt-[1rem] desk:mb-[1.5rem] text-[15px] leading-[1.5rem] text-center desk:text-left text-black/50'>
 					{description}
-				</p>
+				</p> */}
+				<BasicP>{description}</BasicP>
 				{/* product link/dest */}
 				<Link to={`/details/${slug}`}>
 					<CategoryProductButton />

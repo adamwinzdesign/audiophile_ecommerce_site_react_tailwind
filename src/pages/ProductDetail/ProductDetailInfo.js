@@ -1,3 +1,5 @@
+import MainP from "../../components/shared/Typography/MainP";
+
 const ProductDetailInfo = ({ name, description, price }) => {
 	return (
 		<>
@@ -6,9 +8,10 @@ const ProductDetailInfo = ({ name, description, price }) => {
 				{name}
 			</h1>
 			{/* description */}
-			<p className='my-[1.5rem] font-medium text-[15px] leading-[1.5rem] text-black/50'>
+			<MainP>{description}</MainP>
+			{/* <p className='my-[1.5rem] font-medium text-[15px] leading-[1.5rem] text-black/50'>
 				{description}
-			</p>
+			</p> */}
 			{/* price */}
 			<p className='mb-[2rem] font-bold text-[1.125rem] leading-[25px] tracking-[1.3px] uppercase text-black'>
 				$ {price.toLocaleString()}

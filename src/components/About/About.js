@@ -1,3 +1,5 @@
+import BasicP from "../shared/Typography/BasicP";
+
 const About = () => {
 	return (
 		<div className='h-[46.25rem] px-[1.5rem] md:px-[2.5rem] desk:px-[10.25rem] flex flex-col desk:flex-row-reverse items-center desk:justify-between'>
@@ -20,13 +22,13 @@ const About = () => {
 					Bringing you the <span className='text-peru'>best</span> audio gear
 				</h2>
 				{/* text */}
-				<p className='md:max-w-[36rem] desk:max-w-[28rem] text-[15px] leading-[1.625rem] text-center desk:text-left text-black/50'>
+				<BasicP>
 					Located at the heart of New York City, Audiophile is the premier store for high end
 					headphones, earphones, speakers, and audio accessories. We have a large showroom and
 					luxury demonstration rooms availabled for you to browse and experience a wide range of our
 					products. Stop by our store to meet some of the fantastic people who make Audiophile the
 					best place to buy your portable audio equipment.
-				</p>
+				</BasicP>
 			</div>
 		</div>
 	);
