@@ -30,11 +30,11 @@ const Nav = () => {
 
 	return (
 		<nav className='px-[1.5rem] md:px-[2.5rem] desk:px-[10.25rem] h-[5.625rem] desk:h-[6rem] bg-black'>
-			<div className='w-full h-full flex items-center justify-between border-b-[1px] border-white/20'>
+			<div className='w-full h-full flex items-center justify-between md:justify-start desk:justify-between border-b-[1px] border-white/20'>
 				<div className='desk:hidden w-[16px] h-[15px] cursor-pointer'>
 					<MenuButton />
 				</div>
-				<Link to='/' className='desk:min-w-[30%]'>
+				<Link to='/' className='desk:min-w-[30%] md:ml-[2.5rem] desk:ml-0 md:mr-auto desk:mr-0'>
 					<div className='flex justify-start'>
 						<img src={logo} alt='audiophile logo' />
 					</div>

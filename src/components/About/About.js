@@ -2,7 +2,7 @@ import BasicP from "../shared/Typography/BasicP";
 
 const About = () => {
 	return (
-		<div className='h-[46.25rem] px-[1.5rem] md:px-[2.5rem] desk:px-[10.25rem] flex flex-col desk:flex-row-reverse items-center desk:justify-between'>
+		<div className='h-[46.25rem] px-[1.5rem] md:px-[2.5rem] desk:px-[10.25rem] pb-[2.75rem] mb-[4.75rem] md:mb-0 flex flex-col desk:flex-row-reverse items-center desk:justify-between'>
 			{/* photo */}
 			<div
 				className='

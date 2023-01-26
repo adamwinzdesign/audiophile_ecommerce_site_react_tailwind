@@ -14,9 +14,6 @@ const HomeCategoryLinks = () => {
 				flex flex-col md:flex-row justify-between md:items-center desk:gap-[2rem]
 			'
 		>
-			{/* <MobileCard img={headphones} title='headphones' dest='/headphones' />
-			<MobileCard img={speakers} title='speakers' dest='/speakers' />
-			<MobileCard img={earphones} title='earphones' dest='/earphones' /> */}
 			<HomeCategoryCard img={headphones} title='headphones' dest='/headphones' />
 			<HomeCategoryCard img={speakers} title='speakers' dest='/speakers' />
 			<HomeCategoryCard img={earphones} title='earphones' dest='/earphones' />

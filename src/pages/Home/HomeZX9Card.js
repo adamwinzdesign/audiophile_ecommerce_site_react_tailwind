@@ -37,14 +37,7 @@ const HomeZX9Card = () => {
 					<br />
 					Speaker
 				</h2>
-				<p
-					className='
-              text-[1rem] 
-              leading-[1.5rem] 
-              text-center desk:text-left text-white 
-              opacity-75
-            '
-				>
+				<p className='md:mb-[1.25rem] text-[1rem] leading-[1.5rem] text-center desk:text-left text-white opacity-75'>
 					Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
 				</p>
 				<button

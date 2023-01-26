@@ -6,7 +6,7 @@ const HomeProductCards = () => {
 	return (
 		<div
 			className='
-				h-[94.5rem] px-[1.5rem] md:px-[2.5rem] desk:px-[10.25rem] my-[6rem] md:my-0
+				h-[94.5rem] px-[1.5rem] md:px-[2.5rem] desk:px-[10.25rem] mt-[6rem] md:my-0
 				flex flex-col gap-[1.5rem]
 			'
 		>
