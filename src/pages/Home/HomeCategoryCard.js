@@ -17,6 +17,7 @@ const HomeCategoryCard = ({ title, dest }) => {
 				<MobileLink dest={dest} />
 				<img src={arrowRight} alt='arrow' className='w-[5px] h-[10px]' />
 			</div>
+			<div className='absolute bottom-0 left-0 w-full h-[10.25rem] bg-light_grey rounded-lg' />
 		</div>
 	);
 };

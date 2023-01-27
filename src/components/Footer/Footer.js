@@ -13,9 +13,9 @@ const Footer = () => {
 			{/* brand accent */}
 			<div className='absolute top-0 md:left-[2.375rem] desk:left-[10.375rem] w-[101px] h-[4px] bg-peru' />
 			{/* logo and links */}
-			<div className='w-full flex flex-col items-center desk:flex-row desk:justify-between gap-[3rem] md:gap-0'>
+			<div className='w-full flex flex-col items-center md:items-start desk:flex-row desk:justify-between gap-[3rem] md:gap-0'>
 				{/* logo */}
-				<img src={logo} alt='audiophile logo' className='w-[9rem]' />
+				<img src={logo} alt='audiophile logo' className='w-[9rem] md:mb-[2rem]' />
 				{/* links */}
 				<div className='flex flex-col md:flex-row items-center gap-[1rem] md:gap-[2.125rem]'>
 					<StyledLink dest='/' text='Home' />
@@ -42,13 +42,12 @@ const Footer = () => {
 				</div>
 				{/* socials */}
 				<div className='desk:absolute desk:right-0 desk:bottom-[5rem] flex gap-[1rem]'>
-					<img src={facebook} alt='facebook' />
-					<img src={twitter} alt='twitter' />
-					<img src={instagram} alt='instagram' />
+					<img src={facebook} alt='facebook' className='hover:cursor-pointer' />
+					<img src={twitter} alt='twitter' className='hover:cursor-pointer' />
+					<img src={instagram} alt='instagram' className='hover:cursor-pointer' />
 				</div>
 			</div>
 		</FooterMain>
-		// </div>
 	);
 };
 
