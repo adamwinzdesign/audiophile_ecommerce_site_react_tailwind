@@ -18,7 +18,7 @@ const CategoryProductCard = ({ product }) => {
 			`}
 		>
 			{/* img */}
-			<div className='desk:w-[33.75rem] desk:h-[35rem]'>
+			<div className='desk:w-[33.75rem] desk:h-[35rem] rounded-lg overflow-hidden'>
 				<img src={mobilePreviewURL} alt='category preview' className='inline md:hidden' />
 				<img
 					src={tabletPreviewURL}

@@ -7,7 +7,7 @@ const CategoryList = ({ allCategoryProductData }) => {
 			className='
         mx-[1.5rem] md:mx-[2.5rem] desk:mx-[10.25rem]
         pt-[4rem] md:pt-[7.5rem] desk:pt-[10rem]
-				pb-[7.5rem] desk:pb-[10rem]
+				pb-[5rem] desk:pb-[10rem]
         flex flex-col-reverse items-center justify-between gap-[7.5rem] bg-white
       '
 		>
