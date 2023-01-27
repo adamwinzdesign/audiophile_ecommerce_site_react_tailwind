@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const YouMayAlsoLike = ({ others }) => {
 	return (
-		<div className='mt-[7.5rem] flex flex-col'>
-			<h2 className='mb-[2.6rem] font-bold text-[1.5rem] md:text-[2rem] leading-[2.25rem] tracking-[0.86px] md:tracking-[1.14px] text-center uppercase text-black'>
+		<div className='mt-[7.5rem] mb-[4.5rem] flex flex-col'>
+			<h2 className='font-bold text-[1.5rem] md:text-[2rem] leading-[2.25rem] tracking-[0.86px] md:tracking-[1.14px] text-center uppercase text-black'>
 				You May Also Like
 			</h2>
 			{others.map((item) => {
@@ -11,7 +11,10 @@ const YouMayAlsoLike = ({ others }) => {
 				const tabletYouMayAlsoLikeThumbnail = require(`../../images/shared/tablet/image-${item.slug}.jpg`);
 				const desktopYouMayAlsoLikeThumbnail = require(`../../images/shared/desktop/image-${item.slug}.jpg`);
 				return (
-					<div key={item.slug} className='flex flex-col items-center'>
+					<div
+						key={item.slug}
+						className='mt-[2.6rem] mb-[0.75rem] flex flex-col items-center gap-[2rem]'
+					>
 						{/* image */}
 						<img
 							src={mobileYouMayAlsoLikeThumbnail}

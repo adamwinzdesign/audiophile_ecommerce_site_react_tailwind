@@ -4,7 +4,7 @@ const DetailHeaderImg = ({ slug }) => {
 	const detailHeaderImgDesk = require(`../../images/product-${slug}/desktop/image-product.jpg`);
 
 	return (
-		<div className='rounded-lg overflow-hidden'>
+		<div className='mb-[2rem] rounded-lg overflow-hidden'>
 			<img src={detailHeaderImgMobile} alt='detail' className='inline md:hidden' />
 			<img src={detailHeaderImgTablet} alt='detail' className='hidden md:inline desk:hidden' />
 			<img src={detailHeaderImgDesk} alt='detail' className='hidden desk:inline' />
