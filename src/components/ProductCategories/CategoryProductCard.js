@@ -47,13 +47,15 @@ const CategoryProductCard = ({ product }) => {
 					</h2>
 				)}
 				{/* product title */}
-				<h3 className='max-w-[80%] md:max-w-[50%] desk:max-w-[75%] font-bold text-[1.75rem] md:text-[2.5rem] leading-[2.375rem] md:leading-[2.75rem] text-center desk:text-left tracking-[1px] md:tracking-[1.4px] uppercase text-black'>
+				{/* speakers title must be at least 2 lines per design file, but changing dimensions of the h3 to force text to wrap will also effect headphones and earphones titles onto 3 lines, so we check for window location and set max-w so title for speakers are also on 2 lines */}
+				<h3
+					className={`${
+						window.location.href.includes("speakers") ? "max-w-[60%]" : "max-w-[85%]"
+					}  md:max-w-[50%] desk:max-w-[75%] min-h-[5.5rem] px-[2rem] font-bold text-[1.75rem] md:text-[2.5rem] leading-[2.375rem] md:leading-[2.75rem] text-center desk:text-left tracking-[1px] md:tracking-[1.4px] uppercase text-black`}
+				>
 					{name}
 				</h3>
 				{/* product text */}
-				{/* <p className='md:px-[4.375rem] desk:px-0 desk:mt-[1rem] desk:mb-[1.5rem] text-[15px] leading-[1.5rem] text-center desk:text-left text-black/50'>
-					{description}
-				</p> */}
 				<BasicP>{description}</BasicP>
 				{/* product link/dest */}
 				<Link to={`/details/${slug}`}>
