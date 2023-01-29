@@ -2,16 +2,15 @@ import PageFadeIn from "../../components/PageFadeIn";
 import { paymentInputData } from "./checkoutInputData";
 import CheckoutInput from "./CheckoutInput";
 import cashIcon from "../../images/checkout/icon-cash-on-delivery.svg";
+import CheckoutH2 from "./CheckoutH2";
 
 const PaymentSelector = ({ paymentMethod, setPaymentMethod, formik }) => {
 	return (
 		<>
-			<h2 className='font-bold text-[13px] leading-[25px] tracking-[0.9px] uppercase text-peru'>
-				Payment Details
-			</h2>
+			<CheckoutH2>Payment Details</CheckoutH2>
 
 			{/* payment method selector */}
-			<div className='flex flex-col'>
+			<div className='pt-[1.1rem] flex flex-col gap-[1rem]'>
 				<h2 className='font-bold text-[12px] leading-[16px] tracking-[-0.2px] text-black'>
 					Payment Method
 				</h2>
@@ -50,7 +49,8 @@ const PaymentSelector = ({ paymentMethod, setPaymentMethod, formik }) => {
 
 			{paymentMethod === "eMoney" && (
 				<PageFadeIn>
-					<div className='flex flex-col'>
+					{/* <div className='flex flex-col'> */}
+					<div className='pt-[1.3rem] mt-[0.5rem] flex flex-col gap-[1.25rem]'>
 						{paymentInputData.map((input) => (
 							<CheckoutInput
 								key={input.inputName}
@@ -67,9 +67,9 @@ const PaymentSelector = ({ paymentMethod, setPaymentMethod, formik }) => {
 
 			{paymentMethod === "cash" && (
 				<PageFadeIn>
-					<div className='flex flex-col'>
+					<div className='mt-[2rem] flex flex-col'>
 						{/* cash icon */}
-						<img src={cashIcon} alt='cash' className='h-[48px] w-[48px]' />
+						<img src={cashIcon} alt='cash' className='h-[48px] w-[48px] mb-[0.5rem]' />
 						<p className='font-medium text-[15px] leading-[25px] text-black/50 '>
 							The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier
 							arrives at your residence. Just make sure your address is correct so that your order
