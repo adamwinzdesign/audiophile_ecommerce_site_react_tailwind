@@ -44,7 +44,7 @@ const CheckoutItemLIst = () => {
 			})}
 
 			{/* total, shipping, vat, grand total */}
-			<div className='flex flex-col'>
+			<div className='pt-[0.5rem] flex flex-col gap-[0.5rem]'>
 				<div className='flex items-center justify-between'>
 					<h3 className='font-medium text-[15px] leading-[25px] text-black/50 uppercase'>Total</h3>
 					<h3 className='font-bold text-[18px] leading-[25px] uppercase text-black'>
@@ -65,7 +65,7 @@ const CheckoutItemLIst = () => {
 					</h3>
 					<h3 className='font-bold text-[18px] leading-[25px] uppercase text-black'>$ {vat}</h3>
 				</div>
-				<div className='flex items-center justify-between'>
+				<div className='mt-[1rem] flex items-center justify-between'>
 					<h3 className='font-medium text-[15px] leading-[25px] text-black/50 uppercase'>
 						Grand Total
 					</h3>
