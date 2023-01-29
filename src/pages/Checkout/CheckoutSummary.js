@@ -1,4 +1,4 @@
-import CheckoutItemList from "./CheckoutItemLIst";
+import CheckoutItemList from "./CheckoutItemList";
 import { useLayoutStore } from "../../store/layoutStore";
 import { useCartStore } from "../../store/cartStore";
 import { useCartTotalItems } from "../../hooks/useCartTotalItems";

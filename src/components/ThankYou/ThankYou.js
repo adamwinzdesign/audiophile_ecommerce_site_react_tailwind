@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { modalFadeIn } from "../../utils/animations";
 import { useLayoutStore } from "../../store/layoutStore";
-import checkmark from "../../images/checkout/icon-order-confirmation.svg";
 import { Link } from "react-router-dom";
 import { useCartStore } from "../../store/cartStore";
 import { useCartSubTotal } from "../../hooks/useCartSubtotal";
@@ -39,10 +38,7 @@ const ThankYou = () => {
 			animate='show'
 			exit='exit'
 		>
-			<p>{paymentProcessed ? "processed!" : "not processed!"}</p>
-			<button onClick={() => setPaymentProcessed(false)}>reset</button>
 			{/* checkmark */}
-			{/* <img src={checkmark} alt='checkmark' /> */}
 			<Checkmark paymentProcessed={paymentProcessed} />
 			<h1 className='font-bold text-[1.5rem] leading-[28px] tracking-[0.8px] uppercase text-black'>
 				Thank you <br />
@@ -55,7 +51,7 @@ const ThankYou = () => {
 			<div className='w-full min-h-[14.5rem] flex flex-col rounded-lg overflow-hidden'>
 				<div className='h-[8.75rem] p-[1.5rem] flex flex-col bg-light_grey'>
 					{/* one item's photo, name from cart, price, and qty ordered */}
-					<div className='flex border-b border-black/10'>
+					<div className='pb-[1rem] flex border-b border-black/10'>
 						{/* photo */}
 						<img src={productThumbnail} alt='first cart item' className='h-[3rem] w-[3rem]' />
 						{/* name and price */}
@@ -71,14 +67,14 @@ const ThankYou = () => {
 						<p className='font-bold text-[15px] leading-[25px] text-black/50'>x{productQty}</p>
 					</div>
 					{/* and x other item(s) */}
-					<div className='pt-[12px] flex justify-center'>
+					<div className='pt-[1rem] flex justify-center'>
 						<p className='font-bold text-[12px] leading-[16px] tracking-[-0.21px] text-black/50'>
 							and {cart.length - 1} other item(s)
 						</p>
 					</div>
 				</div>
 				{/* grand total */}
-				<div className='w-full px-[1.5rem] py-[1rem] flex flex-col items-start justify-between bg-black rounded-b-lg'>
+				<div className='w-full px-[1.5rem] py-[1.25rem] flex flex-col items-start justify-between bg-black rounded-b-lg'>
 					<h3 className='font-medium text-[15px] leading-[25px] text-white/50 uppercase'>
 						Grand Total
 					</h3>
