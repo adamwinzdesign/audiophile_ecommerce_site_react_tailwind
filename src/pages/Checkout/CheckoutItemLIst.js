@@ -11,11 +11,11 @@ const CheckoutItemLIst = () => {
 	const grandTotal = (cartSubtotal + shipping).toLocaleString();
 
 	return (
-		<div className='w-full flex flex-col'>
+		<div className='w-full flex flex-col gap-[1.5rem]'>
 			{cart.map((item) => {
 				const cartItemThumbnail = require(`../../images/product-${item.slug}/mobile/image-product.jpg`);
 				return (
-					<div key={item.name} className='flex items-start justify-between'>
+					<div key={item.name} className='flex items-center justify-between'>
 						{/* product photo */}
 						<div>
 							<img
@@ -25,7 +25,7 @@ const CheckoutItemLIst = () => {
 							/>
 						</div>
 						{/* product name and price (each) */}
-						<div className='h-full flex flex-col items-between'>
+						<div className='h-full ml-[1rem] flex flex-col '>
 							<h3 className='font-bold text-[15px] leading-[25px] text-black uppercase'>
 								{item.nameForCart}
 							</h3>
