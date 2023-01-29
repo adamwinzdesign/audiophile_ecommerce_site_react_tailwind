@@ -1,7 +1,9 @@
+import CheckoutLabel from "./CheckoutLabel";
+
 const CheckoutInput = ({ formik, inputName, inputType, inputPlaceholder, label }) => {
 	return (
-		<>
-			<label htmlFor={inputName} className='w-full flex justify-between'>
+		<div className='flex flex-col'>
+			<CheckoutLabel inputName={inputName}>
 				<h2
 					className={`font-bold text-[12px] leading-[16px] tracking-[-0.2px]
 					    ${formik.touched[inputName] && formik.errors[inputName] ? "text-error_red" : "text-black"}
@@ -15,7 +17,7 @@ const CheckoutInput = ({ formik, inputName, inputType, inputPlaceholder, label }
 						{formik.errors[inputName]}
 					</p>
 				)}
-			</label>
+			</CheckoutLabel>
 			{/* autofill:opacity-40 and autofill:shadow-[rgb] are necessary to override chrome styling after autocomplete */}
 			<input
 				className={`
@@ -34,7 +36,7 @@ const CheckoutInput = ({ formik, inputName, inputType, inputPlaceholder, label }
 				onChange={formik.handleChange}
 				onBlur={formik.handleBlur}
 			/>
-		</>
+		</div>
 	);
 };
 

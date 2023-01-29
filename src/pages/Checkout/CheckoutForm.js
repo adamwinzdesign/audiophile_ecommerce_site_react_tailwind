@@ -8,6 +8,8 @@ import {
 	validationSchema,
 } from "./checkoutInputData";
 import PaymentSelector from "./PaymentSelector";
+import CheckoutH1 from "./CheckoutH1";
+import CheckoutH2 from "./CheckoutH2";
 
 const CheckoutForm = () => {
 	const [paymentMethod, setPaymentMethod] = useState("eMoney");
@@ -19,14 +21,10 @@ const CheckoutForm = () => {
 
 	return (
 		<div className='w-full p-[1.5rem] flex flex-col items-start bg-white rounded-lg'>
-			<h1 className='font-bold text-[1.75rem] leading-[38px] tracking-[1px] uppercase font-black'>
-				Checkout
-			</h1>
-			<form onSubmit={formik.handleSubmit} className='w-full'>
-				<h2 className='font-bold text-[13px] leading-[25px] tracking-[0.9px] uppercase text-peru'>
-					Billing Details
-				</h2>
-				<div className='flex flex-col'>
+			<CheckoutH1>Checkout</CheckoutH1>
+			<form onSubmit={formik.handleSubmit} className='w-full pt-[1.8rem]'>
+				<CheckoutH2>Billing Details</CheckoutH2>
+				<div className='pt-[1rem] mb-[1.9rem] flex flex-col gap-[1.45rem]'>
 					{billingInputData.map((input) => (
 						<CheckoutInput
 							key={input.inputName}
@@ -38,20 +36,20 @@ const CheckoutForm = () => {
 						/>
 					))}
 				</div>
-				<h2 className='font-bold text-[13px] leading-[25px] tracking-[0.9px] uppercase text-peru'>
-					Shipping Info
-				</h2>
 				<div className='flex flex-col'>
-					{shippingInputData.map((input) => (
-						<CheckoutInput
-							key={input.inputName}
-							formik={formik}
-							inputName={input.inputName}
-							inputType={input.inputType}
-							inputPlaceholder={input.inputPlaceholder}
-							label={input.label}
-						/>
-					))}
+					<CheckoutH2>Shipping Info</CheckoutH2>
+					<div className='pt-[1rem] mb-[1.9rem] flex flex-col gap-[1.45rem]'>
+						{shippingInputData.map((input) => (
+							<CheckoutInput
+								key={input.inputName}
+								formik={formik}
+								inputName={input.inputName}
+								inputType={input.inputType}
+								inputPlaceholder={input.inputPlaceholder}
+								label={input.label}
+							/>
+						))}
+					</div>
 				</div>
 				<PaymentSelector
 					paymentMethod={paymentMethod}
