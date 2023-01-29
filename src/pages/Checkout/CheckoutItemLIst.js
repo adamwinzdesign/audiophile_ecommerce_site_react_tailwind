@@ -69,7 +69,7 @@ const CheckoutItemLIst = () => {
 					<h3 className='font-medium text-[15px] leading-[25px] text-black/50 uppercase'>
 						Grand Total
 					</h3>
-					<h3 className='font-bold text-[18px] leading-[25px] uppercase text-black'>
+					<h3 className='font-bold text-[18px] leading-[25px] uppercase text-peru'>
 						$ {grandTotal}
 					</h3>
 				</div>
