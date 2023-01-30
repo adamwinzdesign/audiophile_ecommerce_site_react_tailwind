@@ -62,7 +62,7 @@ const Nav = () => {
 								initial='hidden'
 								animate='show'
 								exit='exit'
-								className={`absolute left-[15px] top-[15px] h-[1.5rem] w-[1.5rem] flex items-center justify-center bg-peru rounded-full`}
+								className={`absolute right-[-15px] top-[15px] h-[1.5rem] w-[1.5rem] flex items-center justify-center bg-peru rounded-full`}
 							>
 								<p className='text-[0.9rem] text-white'>{cartTotalItems}</p>
 							</motion.div>
