@@ -28,6 +28,8 @@ const Nav = () => {
 		}
 	};
 
+	console.log(window.location);
+
 	return (
 		<nav className='px-[1.5rem] md:px-[2.5rem] desk:px-[10.25rem] h-[5.625rem] desk:h-[6rem] bg-black'>
 			<div className='w-full h-full flex items-center justify-between md:justify-start desk:justify-between border-b-[1px] border-white/20'>
