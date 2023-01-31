@@ -12,16 +12,16 @@ const CartProductQuantity = ({ id, productQty, updateCartItem, removeCartItem })
 	return (
 		<div className='w-[6rem] h-[2rem] px-[1rem] flex items-center justify-between bg-light_grey'>
 			<p
-				className='font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-black/25 cursor-pointer'
+				className='font-bold text-13 leading-[18px] tracking-[1px] uppercase text-black/25 cursor-pointer'
 				onClick={decrementQty}
 			>
 				-
 			</p>
-			<p className='font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-black'>
+			<p className='font-bold text-13 leading-[18px] tracking-[1px] uppercase text-black'>
 				{productQty}
 			</p>
 			<p
-				className='font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-black/50 cursor-pointer'
+				className='font-bold text-13 leading-[18px] tracking-[1px] uppercase text-black/50 cursor-pointer'
 				onClick={incrementQty}
 			>
 				+

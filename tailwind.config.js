@@ -39,7 +39,9 @@ module.exports = {
 				border_grey: "#CFCFCF",
 			},
 			fontSize: {
+				13: "0.8125rem", // 13px
 				xs: "0.9375rem", // 15px
+				18: "1.125rem", // 18px
 			},
 			height: {
 				heightXS: "0.9375rem",

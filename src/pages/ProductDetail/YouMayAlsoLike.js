@@ -37,7 +37,7 @@ const YouMayAlsoLike = ({ others }) => {
 						</p>
 						{/* link */}
 						<Link to={`/details/${item.slug}`}>
-							<button className='w-[10rem] h-[3rem] font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-white bg-peru hover:bg-very_light_tangelo duration-500'>
+							<button className='w-[10rem] h-[3rem] font-bold text-13 leading-[18px] tracking-[1px] uppercase text-white bg-peru hover:bg-very_light_tangelo duration-500'>
 								see product
 							</button>
 						</Link>

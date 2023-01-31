@@ -45,21 +45,21 @@ const CheckoutItemLIst = () => {
 			<div className='pt-[0.5rem] flex flex-col gap-[0.5rem]'>
 				<div className='flex items-center justify-between'>
 					<h3 className='font-medium text-xs leading-25 text-black/50 uppercase'>Total</h3>
-					<h3 className='font-bold text-[18px] leading-25 uppercase text-black'>
+					<h3 className='font-bold text-18 leading-25 uppercase text-black'>
 						$ {cartSubtotal.toLocaleString()}
 					</h3>
 				</div>
 				<div className='flex items-center justify-between'>
 					<h3 className='font-medium text-xs leading-25 text-black/50 uppercase'>Shipping</h3>
-					<h3 className='font-bold text-[18px] leading-25 uppercase text-black'>$ {shipping}</h3>
+					<h3 className='font-bold text-18 leading-25 uppercase text-black'>$ {shipping}</h3>
 				</div>
 				<div className='flex items-center justify-between'>
 					<h3 className='font-medium text-xs leading-25 text-black/50 uppercase'>VAT (Included)</h3>
-					<h3 className='font-bold text-[18px] leading-25 uppercase text-black'>$ {vat}</h3>
+					<h3 className='font-bold text-18 leading-25 uppercase text-black'>$ {vat}</h3>
 				</div>
 				<div className='mt-[1rem] flex items-center justify-between'>
 					<h3 className='font-medium text-xs leading-25 text-black/50 uppercase'>Grand Total</h3>
-					<h3 className='font-bold text-[18px] leading-25 uppercase text-peru'>$ {grandTotal}</h3>
+					<h3 className='font-bold text-18 leading-25 uppercase text-peru'>$ {grandTotal}</h3>
 				</div>
 			</div>
 		</div>

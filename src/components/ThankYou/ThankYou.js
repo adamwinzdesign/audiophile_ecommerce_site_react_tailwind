@@ -74,12 +74,12 @@ const ThankYou = () => {
 				{/* grand total */}
 				<div className='w-full px-[1.5rem] py-[1.25rem] flex flex-col items-start justify-between bg-black rounded-b-lg'>
 					<h3 className='font-medium text-xs leading-25 text-white/50 uppercase'>Grand Total</h3>
-					<p className='font-bold text-[18px] leading-25 uppercase text-white'>$ {grandTotal}</p>
+					<p className='font-bold text-18 leading-25 uppercase text-white'>$ {grandTotal}</p>
 				</div>
 			</div>
 			<Link to='/' className='w-full'>
 				<button
-					className='w-full h-[3rem] font-bold text-[13px] leading-[18px] tracking-[1px] uppercase text-white bg-peru'
+					className='w-full h-[3rem] font-bold text-13 leading-[18px] tracking-[1px] uppercase text-white bg-peru'
 					onClick={handleThankYouClose}
 				>
 					back to home
