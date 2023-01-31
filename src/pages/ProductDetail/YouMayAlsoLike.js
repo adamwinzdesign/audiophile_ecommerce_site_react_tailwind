@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const YouMayAlsoLike = ({ others }) => {
 	return (
 		<div className='mt-[7.5rem] mb-[4.5rem] flex flex-col'>
-			<h2 className='font-bold text-[1.5rem] md:text-[2rem] leading-[2.25rem] tracking-[0.86px] md:tracking-[1.14px] text-center uppercase text-black'>
+			<h2 className='text-center text-[1.5rem] font-bold uppercase leading-[2.25rem] tracking-[0.86px] text-black md:text-[2rem] md:tracking-[1.14px]'>
 				You May Also Like
 			</h2>
 			{others.map((item) => {
@@ -19,7 +19,7 @@ const YouMayAlsoLike = ({ others }) => {
 						<img
 							src={mobileYouMayAlsoLikeThumbnail}
 							alt='another interesting product'
-							className='md:hidden rounded-md'
+							className='rounded-md md:hidden'
 						/>
 						<img
 							src={tabletYouMayAlsoLikeThumbnail}
@@ -32,12 +32,12 @@ const YouMayAlsoLike = ({ others }) => {
 							className='hidden desk:inline'
 						/>
 						{/* name */}
-						<p className='font-bold text-[1.5rem] leading-[2rem] text-center tracking-[1.71px] uppercase text-black'>
+						<p className='text-center text-[1.5rem] font-bold uppercase leading-[2rem] tracking-[1.71px] text-black'>
 							{item.name}
 						</p>
 						{/* link */}
 						<Link to={`/details/${item.slug}`}>
-							<button className='w-[10rem] h-[3rem] font-bold text-13 leading-[18px] tracking-[1px] uppercase text-white bg-peru hover:bg-very_light_tangelo duration-500'>
+							<button className='h-[3rem] w-[10rem] bg-peru text-13 font-bold uppercase leading-18 tracking-[1px] text-white duration-500 hover:bg-very_light_tangelo'>
 								see product
 							</button>
 						</Link>

@@ -21,13 +21,13 @@ const CheckoutSummary = () => {
 	};
 
 	return (
-		<div className='w-full mt-[2.5rem] px-[1.5rem] py-[1.8rem] flex flex-col items-start gap-[2rem] bg-white rounded-lg'>
-			<h2 className='font-bold text-18 leading-25 tracking-[1.28px] uppercase text-black'>
+		<div className='mt-[2.5rem] flex w-full flex-col items-start gap-[2rem] rounded-lg bg-white px-[1.5rem] py-[1.8rem]'>
+			<h2 className='text-18 font-bold uppercase leading-25 tracking-[1.28px] text-black'>
 				Summary
 			</h2>
 			<CheckoutItemList />
 			<button
-				className='w-full h-[3rem] font-bold text-13 leading-[18px] tracking-[1px] uppercase text-white bg-peru disabled:bg-peru/50 disabled:cursor-not-allowed'
+				className='h-[3rem] w-full bg-peru text-13 font-bold uppercase leading-18 tracking-[1px] text-white disabled:cursor-not-allowed disabled:bg-peru/50'
 				onClick={handleContinueClick}
 				disabled={cartTotalItems === 0}
 			>

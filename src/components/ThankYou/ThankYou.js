@@ -79,7 +79,7 @@ const ThankYou = () => {
 			</div>
 			<Link to='/' className='w-full'>
 				<button
-					className='h-[3rem] w-full bg-peru text-13 font-bold uppercase leading-[18px] tracking-[1px] text-white'
+					className='h-[3rem] w-full bg-peru text-13 font-bold uppercase leading-18 tracking-[1px] text-white'
 					onClick={handleThankYouClose}
 				>
 					back to home

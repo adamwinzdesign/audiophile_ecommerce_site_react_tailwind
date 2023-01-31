@@ -47,6 +47,7 @@ module.exports = {
 				heightXS: "0.9375rem",
 			},
 			lineHeight: {
+				18: "1.125rem", // 18px
 				25: "1.5625rem", // 25px
 			},
 			screens: {

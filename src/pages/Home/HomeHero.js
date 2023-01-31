@@ -21,7 +21,7 @@ const HomeHero = () => {
 					music enthusiast.
 				</p>
 				<Link to='/details/xx99-mark-two-headphones'>
-					<button className='h-[3rem] w-[10rem] bg-peru text-13 font-bold uppercase leading-[18px] tracking-[1px] text-white'>
+					<button className='h-[3rem] w-[10rem] bg-peru text-13 font-bold uppercase leading-18 tracking-[1px] text-white'>
 						see product
 					</button>
 				</Link>

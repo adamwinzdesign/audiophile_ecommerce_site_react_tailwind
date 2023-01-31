@@ -1,17 +1,17 @@
 const ProductQuantity = ({ incrementQty, decrementQty, productQty }) => {
 	return (
-		<div className='w-[7.5rem] flex items-center justify-center gap-[1.25rem] bg-light_grey'>
+		<div className='flex w-[7.5rem] items-center justify-center gap-[1.25rem] bg-light_grey'>
 			<p
-				className='font-bold text-13 leading-[18px] tracking-[1px] uppercase text-black/25 cursor-pointer'
+				className='cursor-pointer text-13 font-bold uppercase leading-18 tracking-[1px] text-black/25'
 				onClick={decrementQty}
 			>
 				-
 			</p>
-			<p className='font-bold text-13 leading-[18px] tracking-[1px] uppercase text-black'>
+			<p className='text-13 font-bold uppercase leading-18 tracking-[1px] text-black'>
 				{productQty}
 			</p>
 			<p
-				className='font-bold text-13 leading-[18px] tracking-[1px] uppercase text-black/50 cursor-pointer'
+				className='cursor-pointer text-13 font-bold uppercase leading-18 tracking-[1px] text-black/50'
 				onClick={incrementQty}
 			>
 				+

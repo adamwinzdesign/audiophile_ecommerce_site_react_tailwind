@@ -1,6 +1,6 @@
 const CategoryProductButton = () => {
 	return (
-		<button className='w-[10rem] h-[3rem] font-bold text-13 leading-[18px] tracking-[1px] uppercase text-white bg-peru'>
+		<button className='h-[3rem] w-[10rem] bg-peru text-13 font-bold uppercase leading-18 tracking-[1px] text-white'>
 			see product
 		</button>
 	);
