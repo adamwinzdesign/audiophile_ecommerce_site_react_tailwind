@@ -44,7 +44,7 @@ const ThankYou = () => {
 				Thank you <br />
 				for your order
 			</h1>
-			<p className='font-medium text-[15px] leading-[25px] text-black/50'>
+			<p className='font-medium text-xs leading-25 text-black/50'>
 				You will receive an email confirmation shortly.
 			</p>
 			{/* thank you summary, see design, only includes one item with photo, price and qty and a line about additional items, plus the grand total */}
@@ -56,15 +56,13 @@ const ThankYou = () => {
 						<img src={productThumbnail} alt='first cart item' className='h-[3rem] w-[3rem]' />
 						{/* name and price */}
 						<div className='mr-auto flex flex-col'>
-							<h3 className='font-bold text-[15px] leading-[25px] uppercase text-black'>
-								{nameForCart}
-							</h3>
-							<p className='font-bold text-[14px] leading-[25px] text-black/50'>
+							<h3 className='font-bold text-xs leading-25 uppercase text-black'>{nameForCart}</h3>
+							<p className='font-bold text-[14px] leading-25 text-black/50'>
 								$ {price.toLocaleString()}
 							</p>
 						</div>
 						{/* quantity of just this one item */}
-						<p className='font-bold text-[15px] leading-[25px] text-black/50'>x{productQty}</p>
+						<p className='font-bold text-xs leading-25 text-black/50'>x{productQty}</p>
 					</div>
 					{/* and x other item(s) */}
 					<div className='pt-[1rem] flex justify-center'>
@@ -75,12 +73,8 @@ const ThankYou = () => {
 				</div>
 				{/* grand total */}
 				<div className='w-full px-[1.5rem] py-[1.25rem] flex flex-col items-start justify-between bg-black rounded-b-lg'>
-					<h3 className='font-medium text-[15px] leading-[25px] text-white/50 uppercase'>
-						Grand Total
-					</h3>
-					<p className='font-bold text-[18px] leading-[25px] uppercase text-white'>
-						$ {grandTotal}
-					</p>
+					<h3 className='font-medium text-xs leading-25 text-white/50 uppercase'>Grand Total</h3>
+					<p className='font-bold text-[18px] leading-25 uppercase text-white'>$ {grandTotal}</p>
 				</div>
 			</div>
 			<Link to='/' className='w-full'>

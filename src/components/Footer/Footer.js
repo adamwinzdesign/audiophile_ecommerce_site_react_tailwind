@@ -26,7 +26,7 @@ const Footer = () => {
 			</div>
 			{/* info */}
 			<div>
-				<p className='desk:w-[33rem] text-[15px] leading-[25px] text-white/50 text-center md:text-left md:pb-[3.2rem]'>
+				<p className='desk:w-[33rem] text-xs leading-25 text-white/50 text-center md:text-left md:pb-[3.2rem]'>
 					Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music
 					lovers and sound specialists who are devoted to helping you get the most out of personal
 					audio. Come and visit our demo facility - we’re open 7 days a week.
@@ -36,7 +36,7 @@ const Footer = () => {
 			<div className='relative w-full flex flex-col md:flex-row items-center md:justify-between gap-[3rem]'>
 				{/* copyright */}
 				<div>
-					<p className='text-[15px] leading-[25px] text-white/50 text-center'>
+					<p className='text-xs leading-25 text-white/50 text-center'>
 						Copyright 2021. All Rights Reserved
 					</p>
 				</div>

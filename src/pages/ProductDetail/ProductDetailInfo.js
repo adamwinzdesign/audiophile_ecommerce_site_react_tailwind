@@ -10,7 +10,7 @@ const ProductDetailInfo = ({ name, description, price }) => {
 			{/* description */}
 			<MainP>{description}</MainP>
 			{/* price */}
-			<p className='mb-[2rem] font-bold text-[1.125rem] leading-[25px] tracking-[1.3px] uppercase text-black'>
+			<p className='mb-[2rem] font-bold text-[1.125rem] leading-25 tracking-[1.3px] uppercase text-black'>
 				$ {price.toLocaleString()}
 			</p>
 		</div>

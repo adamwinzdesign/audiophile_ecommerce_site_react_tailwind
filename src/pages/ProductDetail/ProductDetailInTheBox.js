@@ -7,7 +7,7 @@ const ProductDetailInTheBox = ({ includes }) => {
 			<div className='mt-[1.6rem] flex flex-col gap-[0.5rem]'>
 				{includes.map((item) => (
 					<div key={item.item}>
-						<p className='font-bold text-[15px] leading-[25px] text-peru'>
+						<p className='font-bold text-xs leading=25 text-peru'>
 							{item.quantity}x{" "}
 							<span className='ml-[20px] md:ml-[24px] font-medium text-black/50'>{item.item}</span>
 						</p>

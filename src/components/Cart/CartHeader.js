@@ -8,19 +8,19 @@ const CartHeader = ({ cart, removeAllCartItems }) => {
 	};
 	return (
 		<div className='w-full flex justify-between'>
-			<h3 className='font-bold text-[18px] leading-[25px] tracking-[1.28px] uppercase text-black'>
+			<h3 className='font-bold text-[18px] leading-25 tracking-[1.28px] uppercase text-black'>
 				cart ({cart.length})
 			</h3>
 			{cart.length > 0 && (
 				<button
-					className='font-medium text-[15px] leading-[25px] text-black/50 underline'
+					className='font-medium text-xs leading-25 text-black/50 underline'
 					onClick={removeAllCartItems}
 				>
 					Remove all
 				</button>
 			)}
 			<button
-				className='font-medium text-[15px] leading-[25px] text-black/50 underline'
+				className='font-medium text-xs leading-25 text-black/50 underline'
 				onClick={handleCartClose}
 			>
 				Close

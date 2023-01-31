@@ -16,7 +16,7 @@ const HomeHero = () => {
 				<h2 className='font-bold text-[2.25rem] md:text-[3.5rem] leading-[2.5rem] md:leading-[3.625rem] tracking-[1.28px] md:tracking-[2px] text-center desk:text-left text-white uppercase'>
 					XX99 mark II headphones
 				</h2>
-				<p className='md:max-w-[22rem] md:mb-[1rem] font-medium text-[15px] leading-[25px] text-center desk:text-left text-white/75'>
+				<p className='md:max-w-[22rem] md:mb-[1rem] font-medium text-xs leading-25 text-center desk:text-left text-white/75'>
 					Experience natural, lifelike audio and exceptional build quality made for the passionate
 					music enthusiast.
 				</p>

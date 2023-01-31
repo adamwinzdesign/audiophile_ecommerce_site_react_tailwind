@@ -22,7 +22,7 @@ const CheckoutSummary = () => {
 
 	return (
 		<div className='w-full mt-[2.5rem] px-[1.5rem] py-[1.8rem] flex flex-col items-start gap-[2rem] bg-white rounded-lg'>
-			<h2 className='font-bold text-[18px] leading-[25px] tracking-[1.28px] uppercase text-black'>
+			<h2 className='font-bold text-[18px] leading-25 tracking-[1.28px] uppercase text-black'>
 				Summary
 			</h2>
 			<CheckoutItemList />

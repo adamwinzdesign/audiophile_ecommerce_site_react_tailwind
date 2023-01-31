@@ -70,7 +70,7 @@ const PaymentSelector = ({ paymentMethod, setPaymentMethod, formik }) => {
 					<div className='mt-[2rem] flex flex-col'>
 						{/* cash icon */}
 						<img src={cashIcon} alt='cash' className='h-[48px] w-[48px] mb-[0.5rem]' />
-						<p className='font-medium text-[15px] leading-[25px] text-black/50 '>
+						<p className='font-medium text-xs leading-25 text-black/50 '>
 							The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier
 							arrives at your residence. Just make sure your address is correct so that your order
 							will not be cancelled.

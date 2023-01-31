@@ -26,18 +26,16 @@ const CheckoutItemLIst = () => {
 						</div>
 						{/* product name and price (each) */}
 						<div className='h-full ml-[1rem] flex flex-col '>
-							<h3 className='font-bold text-[15px] leading-[25px] text-black uppercase'>
+							<h3 className='font-bold text-xs leading-25 text-black uppercase'>
 								{item.nameForCart}
 							</h3>
-							<p className='font-bold text-[14px] leading-[25px] text-black/50'>
+							<p className='font-bold text-[14px] leading-25 text-black/50'>
 								$ {item.price.toLocaleString()}
 							</p>
 						</div>
 						{/* quantity indciators */}
 						<div className='ml-auto'>
-							<p className='font-bold text-[15px] leading-[25px] text-black/50'>
-								x{item.productQty}
-							</p>
+							<p className='font-bold text-xs leading-25 text-black/50'>x{item.productQty}</p>
 						</div>
 					</div>
 				);
@@ -46,32 +44,22 @@ const CheckoutItemLIst = () => {
 			{/* total, shipping, vat, grand total */}
 			<div className='pt-[0.5rem] flex flex-col gap-[0.5rem]'>
 				<div className='flex items-center justify-between'>
-					<h3 className='font-medium text-[15px] leading-[25px] text-black/50 uppercase'>Total</h3>
-					<h3 className='font-bold text-[18px] leading-[25px] uppercase text-black'>
+					<h3 className='font-medium text-xs leading-25 text-black/50 uppercase'>Total</h3>
+					<h3 className='font-bold text-[18px] leading-25 uppercase text-black'>
 						$ {cartSubtotal.toLocaleString()}
 					</h3>
 				</div>
 				<div className='flex items-center justify-between'>
-					<h3 className='font-medium text-[15px] leading-[25px] text-black/50 uppercase'>
-						Shipping
-					</h3>
-					<h3 className='font-bold text-[18px] leading-[25px] uppercase text-black'>
-						$ {shipping}
-					</h3>
+					<h3 className='font-medium text-xs leading-25 text-black/50 uppercase'>Shipping</h3>
+					<h3 className='font-bold text-[18px] leading-25 uppercase text-black'>$ {shipping}</h3>
 				</div>
 				<div className='flex items-center justify-between'>
-					<h3 className='font-medium text-[15px] leading-[25px] text-black/50 uppercase'>
-						VAT (Included)
-					</h3>
-					<h3 className='font-bold text-[18px] leading-[25px] uppercase text-black'>$ {vat}</h3>
+					<h3 className='font-medium text-xs leading-25 text-black/50 uppercase'>VAT (Included)</h3>
+					<h3 className='font-bold text-[18px] leading-25 uppercase text-black'>$ {vat}</h3>
 				</div>
 				<div className='mt-[1rem] flex items-center justify-between'>
-					<h3 className='font-medium text-[15px] leading-[25px] text-black/50 uppercase'>
-						Grand Total
-					</h3>
-					<h3 className='font-bold text-[18px] leading-[25px] uppercase text-peru'>
-						$ {grandTotal}
-					</h3>
+					<h3 className='font-medium text-xs leading-25 text-black/50 uppercase'>Grand Total</h3>
+					<h3 className='font-bold text-[18px] leading-25 uppercase text-peru'>$ {grandTotal}</h3>
 				</div>
 			</div>
 		</div>

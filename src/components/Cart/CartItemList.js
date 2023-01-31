@@ -20,10 +20,10 @@ const CartItemList = () => {
 						</div>
 						{/* product name and price (each) */}
 						<div className='h-full mr-auto ml-[1rem] flex flex-col items-between'>
-							<h3 className='font-bold text-[15px] leading-[25px] text-black uppercase'>
+							<h3 className='font-bold text-xs leading-25 text-black uppercase'>
 								{item.nameForCart}
 							</h3>
-							<p className='font-bold text-[14px] leading-[25px] text-black/50'>
+							<p className='font-bold text-[14px] leading-25 text-black/50'>
 								$ {item.price.toLocaleString()}
 							</p>
 						</div>

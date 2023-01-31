@@ -38,6 +38,15 @@ module.exports = {
 				light_grey: "#F1F1F1",
 				border_grey: "#CFCFCF",
 			},
+			fontSize: {
+				xs: "0.9375rem", // 15px
+			},
+			height: {
+				heightXS: "0.9375rem",
+			},
+			lineHeight: {
+				25: "1.5625rem", // 25px
+			},
 			screens: {
 				desk: "1440px",
 			},
