@@ -1,6 +1,6 @@
 const BasicP = ({ children }) => {
 	return (
-		<p className='font-medium text-xs leading-25 text-center desk:text-left text-black/50'>
+		<p className='text-center text-15 font-medium leading-25 text-black/50 desk:text-left'>
 			{children}
 		</p>
 	);

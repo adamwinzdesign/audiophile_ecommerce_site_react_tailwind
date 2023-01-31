@@ -5,7 +5,7 @@ const CartItemList = () => {
 	const { cart, updateCartItem, removeCartItem } = useCartStore();
 
 	return (
-		<div className='w-full py-[2rem] flex flex-col gap-[1.5rem]'>
+		<div className='flex w-full flex-col gap-[1.5rem] py-[2rem]'>
 			{cart.map((item) => {
 				const cartItemThumbnail = require(`../../images/product-${item.slug}/mobile/image-product.jpg`);
 				return (
@@ -15,15 +15,15 @@ const CartItemList = () => {
 							<img
 								src={cartItemThumbnail}
 								alt={item.name}
-								className='w-[4rem] h-[4rem] rounded-lg'
+								className='h-[4rem] w-[4rem] rounded-lg'
 							/>
 						</div>
 						{/* product name and price (each) */}
-						<div className='h-full mr-auto ml-[1rem] flex flex-col items-between'>
-							<h3 className='font-bold text-xs leading-25 text-black uppercase'>
+						<div className='items-between mr-auto ml-[1rem] flex h-full flex-col'>
+							<h3 className='text-15 font-bold uppercase leading-25 text-black'>
 								{item.nameForCart}
 							</h3>
-							<p className='font-bold text-[14px] leading-25 text-black/50'>
+							<p className='text-[14px] font-bold leading-25 text-black/50'>
 								$ {item.price.toLocaleString()}
 							</p>
 						</div>

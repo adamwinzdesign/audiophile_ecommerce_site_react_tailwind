@@ -11,13 +11,13 @@ const Footer = () => {
 	return (
 		<FooterMain>
 			{/* brand accent */}
-			<div className='absolute top-0 md:left-[2.375rem] desk:left-[10.375rem] w-[101px] h-[4px] bg-peru' />
+			<div className='absolute top-0 h-[4px] w-[101px] bg-peru md:left-[2.375rem] desk:left-[10.375rem]' />
 			{/* logo and links */}
-			<div className='w-full flex flex-col items-center md:items-start desk:flex-row desk:justify-between gap-[3rem] md:gap-0'>
+			<div className='flex w-full flex-col items-center gap-[3rem] md:items-start md:gap-0 desk:flex-row desk:justify-between'>
 				{/* logo */}
 				<img src={logo} alt='audiophile logo' className='w-[9rem] md:mb-[2rem]' />
 				{/* links */}
-				<div className='flex flex-col md:flex-row items-center gap-[1rem] md:gap-[2.125rem]'>
+				<div className='flex flex-col items-center gap-[1rem] md:flex-row md:gap-[2.125rem]'>
 					<StyledLink dest='/' text='Home' />
 					<StyledLink dest='/headphones' text='Headphones' />
 					<StyledLink dest='/speakers' text='Speakers' />
@@ -26,22 +26,22 @@ const Footer = () => {
 			</div>
 			{/* info */}
 			<div>
-				<p className='desk:w-[33rem] text-xs leading-25 text-white/50 text-center md:text-left md:pb-[3.2rem]'>
+				<p className='text-center text-15 leading-25 text-white/50 md:pb-[3.2rem] md:text-left desk:w-[33rem]'>
 					Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music
 					lovers and sound specialists who are devoted to helping you get the most out of personal
 					audio. Come and visit our demo facility - we’re open 7 days a week.
 				</p>
 			</div>
 			{/* copyright and socials */}
-			<div className='relative w-full flex flex-col md:flex-row items-center md:justify-between gap-[3rem]'>
+			<div className='relative flex w-full flex-col items-center gap-[3rem] md:flex-row md:justify-between'>
 				{/* copyright */}
 				<div>
-					<p className='text-xs leading-25 text-white/50 text-center'>
+					<p className='text-center text-15 leading-25 text-white/50'>
 						Copyright 2021. All Rights Reserved
 					</p>
 				</div>
 				{/* socials */}
-				<div className='desk:absolute desk:right-0 desk:bottom-[5rem] flex gap-[1rem]'>
+				<div className='flex gap-[1rem] desk:absolute desk:right-0 desk:bottom-[5rem]'>
 					<img src={facebook} alt='facebook' className='hover:cursor-pointer' />
 					<img src={twitter} alt='twitter' className='hover:cursor-pointer' />
 					<img src={instagram} alt='instagram' className='hover:cursor-pointer' />

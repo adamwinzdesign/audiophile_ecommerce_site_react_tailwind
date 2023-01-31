@@ -11,7 +11,7 @@ const CheckoutItemLIst = () => {
 	const grandTotal = (cartSubtotal + shipping).toLocaleString();
 
 	return (
-		<div className='w-full flex flex-col gap-[1.5rem]'>
+		<div className='flex w-full flex-col gap-[1.5rem]'>
 			{cart.map((item) => {
 				const cartItemThumbnail = require(`../../images/product-${item.slug}/mobile/image-product.jpg`);
 				return (
@@ -21,45 +21,45 @@ const CheckoutItemLIst = () => {
 							<img
 								src={cartItemThumbnail}
 								alt={item.name}
-								className='w-[4rem] h-[4rem] rounded-lg'
+								className='h-[4rem] w-[4rem] rounded-lg'
 							/>
 						</div>
 						{/* product name and price (each) */}
-						<div className='h-full ml-[1rem] flex flex-col '>
-							<h3 className='font-bold text-xs leading-25 text-black uppercase'>
+						<div className='ml-[1rem] flex h-full flex-col '>
+							<h3 className='text-15 font-bold uppercase leading-25 text-black'>
 								{item.nameForCart}
 							</h3>
-							<p className='font-bold text-[14px] leading-25 text-black/50'>
+							<p className='text-[14px] font-bold leading-25 text-black/50'>
 								$ {item.price.toLocaleString()}
 							</p>
 						</div>
 						{/* quantity indciators */}
 						<div className='ml-auto'>
-							<p className='font-bold text-xs leading-25 text-black/50'>x{item.productQty}</p>
+							<p className='text-15 font-bold leading-25 text-black/50'>x{item.productQty}</p>
 						</div>
 					</div>
 				);
 			})}
 
 			{/* total, shipping, vat, grand total */}
-			<div className='pt-[0.5rem] flex flex-col gap-[0.5rem]'>
+			<div className='flex flex-col gap-[0.5rem] pt-[0.5rem]'>
 				<div className='flex items-center justify-between'>
-					<h3 className='font-medium text-xs leading-25 text-black/50 uppercase'>Total</h3>
-					<h3 className='font-bold text-18 leading-25 uppercase text-black'>
+					<h3 className='text-15 font-medium uppercase leading-25 text-black/50'>Total</h3>
+					<h3 className='text-18 font-bold uppercase leading-25 text-black'>
 						$ {cartSubtotal.toLocaleString()}
 					</h3>
 				</div>
 				<div className='flex items-center justify-between'>
-					<h3 className='font-medium text-xs leading-25 text-black/50 uppercase'>Shipping</h3>
-					<h3 className='font-bold text-18 leading-25 uppercase text-black'>$ {shipping}</h3>
+					<h3 className='text-15 font-medium uppercase leading-25 text-black/50'>Shipping</h3>
+					<h3 className='text-18 font-bold uppercase leading-25 text-black'>$ {shipping}</h3>
 				</div>
 				<div className='flex items-center justify-between'>
-					<h3 className='font-medium text-xs leading-25 text-black/50 uppercase'>VAT (Included)</h3>
-					<h3 className='font-bold text-18 leading-25 uppercase text-black'>$ {vat}</h3>
+					<h3 className='text-15 font-medium uppercase leading-25 text-black/50'>VAT (Included)</h3>
+					<h3 className='text-18 font-bold uppercase leading-25 text-black'>$ {vat}</h3>
 				</div>
 				<div className='mt-[1rem] flex items-center justify-between'>
-					<h3 className='font-medium text-xs leading-25 text-black/50 uppercase'>Grand Total</h3>
-					<h3 className='font-bold text-18 leading-25 uppercase text-peru'>$ {grandTotal}</h3>
+					<h3 className='text-15 font-medium uppercase leading-25 text-black/50'>Grand Total</h3>
+					<h3 className='text-18 font-bold uppercase leading-25 text-peru'>$ {grandTotal}</h3>
 				</div>
 			</div>
 		</div>

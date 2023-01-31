@@ -10,22 +10,22 @@ const PaymentSelector = ({ paymentMethod, setPaymentMethod, formik }) => {
 			<CheckoutH2>Payment Details</CheckoutH2>
 
 			{/* payment method selector */}
-			<div className='pt-[1.1rem] flex flex-col gap-[1rem]'>
-				<h2 className='font-bold text-[12px] leading-[16px] tracking-[-0.2px] text-black'>
+			<div className='flex flex-col gap-[1rem] pt-[1.1rem]'>
+				<h2 className='text-[12px] font-bold leading-[16px] tracking-[-0.2px] text-black'>
 					Payment Method
 				</h2>
 				<button
 					onClick={() => setPaymentMethod("eMoney")}
 					type='button'
-					className={`w-full px-[1rem] py-[18px] font-bold text-[14px] leading-[19px] tracking-[-0.25px] text-black flex items-center justify-start gap-[1rem] rounded-lg border ${
+					className={`flex w-full items-center justify-start gap-[1rem] rounded-lg border px-[1rem] py-[18px] text-[14px] font-bold leading-[19px] tracking-[-0.25px] text-black ${
 						paymentMethod === "eMoney" ? "border-peru" : "border-border_grey"
 					}`}
 				>
 					{/* indicator */}
-					<div className='w-[20px] h-[20px] flex items-center justify-center border border-border_grey rounded-full'>
+					<div className='flex h-[20px] w-[20px] items-center justify-center rounded-full border border-border_grey'>
 						{/* center of indicator */}
 						{paymentMethod === "eMoney" && (
-							<div className='w-[10px] h-[10px] bg-peru rounded-full' />
+							<div className='h-[10px] w-[10px] rounded-full bg-peru' />
 						)}
 					</div>
 					<p>e-Money</p>
@@ -34,14 +34,14 @@ const PaymentSelector = ({ paymentMethod, setPaymentMethod, formik }) => {
 				<button
 					onClick={() => setPaymentMethod("cash")}
 					type='button'
-					className={`w-full px-[1rem] py-[18px] font-bold text-[14px] leading-[19px] tracking-[-0.25px] text-black flex items-center justify-start gap-[1rem] rounded-lg border ${
+					className={`flex w-full items-center justify-start gap-[1rem] rounded-lg border px-[1rem] py-[18px] text-[14px] font-bold leading-[19px] tracking-[-0.25px] text-black ${
 						paymentMethod === "cash" ? "border-peru" : "border-border_grey"
 					}`}
 				>
 					{/* indicator */}
-					<div className='w-[20px] h-[20px] flex items-center justify-center border border-border_grey rounded-full'>
+					<div className='flex h-[20px] w-[20px] items-center justify-center rounded-full border border-border_grey'>
 						{/* center of indicator */}
-						{paymentMethod === "cash" && <div className='w-[10px] h-[10px] bg-peru rounded-full' />}
+						{paymentMethod === "cash" && <div className='h-[10px] w-[10px] rounded-full bg-peru' />}
 					</div>
 					<p>Cash on Delivery</p>
 				</button>
@@ -50,7 +50,7 @@ const PaymentSelector = ({ paymentMethod, setPaymentMethod, formik }) => {
 			{paymentMethod === "eMoney" && (
 				<PageFadeIn>
 					{/* <div className='flex flex-col'> */}
-					<div className='pt-[1.3rem] mt-[0.5rem] flex flex-col gap-[1.25rem]'>
+					<div className='mt-[0.5rem] flex flex-col gap-[1.25rem] pt-[1.3rem]'>
 						{paymentInputData.map((input) => (
 							<CheckoutInput
 								key={input.inputName}
@@ -69,8 +69,8 @@ const PaymentSelector = ({ paymentMethod, setPaymentMethod, formik }) => {
 				<PageFadeIn>
 					<div className='mt-[2rem] flex flex-col'>
 						{/* cash icon */}
-						<img src={cashIcon} alt='cash' className='h-[48px] w-[48px] mb-[0.5rem]' />
-						<p className='font-medium text-xs leading-25 text-black/50 '>
+						<img src={cashIcon} alt='cash' className='mb-[0.5rem] h-[48px] w-[48px]' />
+						<p className='text-15 font-medium leading-25 text-black/50 '>
 							The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier
 							arrives at your residence. Just make sure your address is correct so that your order
 							will not be cancelled.
