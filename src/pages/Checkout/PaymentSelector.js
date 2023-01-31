@@ -17,7 +17,7 @@ const PaymentSelector = ({ paymentMethod, setPaymentMethod, formik }) => {
 				<button
 					onClick={() => setPaymentMethod("eMoney")}
 					type='button'
-					className={`flex w-full items-center justify-start gap-[1rem] rounded-lg border px-[1rem] py-[18px] text-[14px] font-bold leading-[19px] tracking-[-0.25px] text-black ${
+					className={`flex w-full items-center justify-start gap-[1rem] rounded-lg border px-[1rem] py-[18px] text-14 font-bold leading-[19px] tracking-[-0.25px] text-black ${
 						paymentMethod === "eMoney" ? "border-peru" : "border-border_grey"
 					}`}
 				>
@@ -34,7 +34,7 @@ const PaymentSelector = ({ paymentMethod, setPaymentMethod, formik }) => {
 				<button
 					onClick={() => setPaymentMethod("cash")}
 					type='button'
-					className={`flex w-full items-center justify-start gap-[1rem] rounded-lg border px-[1rem] py-[18px] text-[14px] font-bold leading-[19px] tracking-[-0.25px] text-black ${
+					className={`flex w-full items-center justify-start gap-[1rem] rounded-lg border px-[1rem] py-[18px] text-14 font-bold leading-[19px] tracking-[-0.25px] text-black ${
 						paymentMethod === "cash" ? "border-peru" : "border-border_grey"
 					}`}
 				>

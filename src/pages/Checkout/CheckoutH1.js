@@ -1,6 +1,6 @@
 const CheckoutH1 = ({ children }) => {
 	return (
-		<h1 className='font-bold text-[1.75rem] leading-[38px] tracking-[1px] uppercase font-black'>
+		<h1 className='text-[1.75rem] font-bold font-black uppercase leading-[38px] tracking-1'>
 			{children}
 		</h1>
 	);

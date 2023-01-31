@@ -5,8 +5,6 @@ import instagram from "../../images/shared/desktop/icon-instagram.svg";
 import StyledLink from "../Nav/StyledLink";
 import FooterMain from "../Footer/FooterMain";
 
-// left off with spacing on footer at tablet width.  Spacing has been updated/specified, but was rendered incorrect when we had to group the logo and links together to switch to flex row for the links at desktop width
-
 const Footer = () => {
 	return (
 		<FooterMain>

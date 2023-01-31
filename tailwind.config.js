@@ -40,6 +40,7 @@ module.exports = {
 			},
 			fontSize: {
 				13: "0.8125rem", // 13px
+				14: "0.875rem", // 14px
 				15: "0.9375rem", // 15px
 				18: "1.125rem", // 18px
 			},
@@ -49,6 +50,10 @@ module.exports = {
 			lineHeight: {
 				18: "1.125rem", // 18px
 				25: "1.5625rem", // 25px
+			},
+			letterSpacing: {
+				1: "0.0625rem", // 1px
+				128: "0.08rem", // 1.28px
 			},
 			screens: {
 				desk: "1440px",

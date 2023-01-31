@@ -8,7 +8,7 @@ const CartHeader = ({ cart, removeAllCartItems }) => {
 	};
 	return (
 		<div className='flex w-full justify-between'>
-			<h3 className='text-18 font-bold uppercase leading-25 tracking-[1.28px] text-black'>
+			<h3 className='text-18 font-bold uppercase leading-25 tracking-128 text-black'>
 				cart ({cart.length})
 			</h3>
 			{cart.length > 0 && (

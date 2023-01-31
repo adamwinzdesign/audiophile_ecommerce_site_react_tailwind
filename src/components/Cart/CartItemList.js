@@ -23,7 +23,7 @@ const CartItemList = () => {
 							<h3 className='text-15 font-bold uppercase leading-25 text-black'>
 								{item.nameForCart}
 							</h3>
-							<p className='text-[14px] font-bold leading-25 text-black/50'>
+							<p className='text-14 font-bold leading-25 text-black/50'>
 								$ {item.price.toLocaleString()}
 							</p>
 						</div>

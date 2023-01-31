@@ -40,7 +40,7 @@ const Cart = () => {
 			{/* checkout button */}
 			<Link to='/checkout' className='mt-[1.5rem] w-full'>
 				<button
-					className='h-[3rem] w-full bg-peru text-13 font-bold uppercase leading-18 tracking-[1px] text-white disabled:cursor-not-allowed disabled:bg-peru/50'
+					className='h-[3rem] w-full bg-peru text-13 font-bold uppercase leading-18 tracking-1 text-white disabled:cursor-not-allowed disabled:bg-peru/50'
 					onClick={handleCheckoutClick}
 					disabled={cartTotalItems === 0}
 				>

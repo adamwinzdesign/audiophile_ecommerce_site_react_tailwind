@@ -13,12 +13,12 @@ const CategoryProductCard = ({ product }) => {
 	return (
 		<div
 			className={`
-				w-full desk:max-h-[35rem]
-        flex flex-col desk:flex-row desk:even:flex-row-reverse justify-between items-center
+				flex w-full
+        flex-col items-center justify-between desk:max-h-[35rem] desk:flex-row desk:even:flex-row-reverse
 			`}
 		>
 			{/* img */}
-			<div className='desk:w-[33.75rem] desk:h-[35rem] rounded-lg overflow-hidden'>
+			<div className='overflow-hidden rounded-lg desk:h-[35rem] desk:w-[33.75rem]'>
 				<img src={mobilePreviewURL} alt='category preview' className='inline md:hidden' />
 				<img
 					src={tabletPreviewURL}
@@ -37,12 +37,12 @@ const CategoryProductCard = ({ product }) => {
 							? "min-h-[23.25rem] md:min-h-[22.25rem] desk:min-h-[21.5rem]"
 							: "min-h-[20.5rem] md:min-h-[20rem] desk:min-h-[19.25]"
 					}
-					 pt-[2rem] md:pt-[3.25rem] desk:pt-0 flex flex-col items-center desk:items-start justify-between
+					 flex flex-col items-center justify-between pt-[2rem] md:pt-[3.25rem] desk:items-start desk:pt-0
 				`}
 			>
 				{/* if new product, display new product text */}
 				{newProduct && (
-					<h2 className='text-[14px] leading-[19px] text-center desk:text-left tracking-[10px] uppercase text-peru '>
+					<h2 className='text-center text-14 uppercase leading-[19px] tracking-[10px] text-peru desk:text-left '>
 						new product
 					</h2>
 				)}
@@ -51,7 +51,7 @@ const CategoryProductCard = ({ product }) => {
 				<h3
 					className={`${
 						window.location.href.includes("speakers") ? "max-w-[60%]" : "max-w-[85%]"
-					}  md:max-w-[50%] desk:max-w-[75%] min-h-[5.5rem] px-[2rem] font-bold text-[1.75rem] md:text-[2.5rem] leading-[2.375rem] md:leading-[2.75rem] text-center desk:text-left tracking-[1px] md:tracking-[1.4px] uppercase text-black`}
+					}  min-h-[5.5rem] px-[2rem] text-center text-[1.75rem] font-bold uppercase leading-[2.375rem] tracking-1 text-black md:max-w-[50%] md:text-[2.5rem] md:leading-[2.75rem] md:tracking-[1.4px] desk:max-w-[75%] desk:text-left`}
 				>
 					{name}
 				</h3>

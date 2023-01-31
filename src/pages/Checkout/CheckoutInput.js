@@ -5,7 +5,7 @@ const CheckoutInput = ({ formik, inputName, inputType, inputPlaceholder, label }
 		<div className='flex flex-col'>
 			<CheckoutLabel inputName={inputName}>
 				<h2
-					className={`font-bold text-[12px] leading-[16px] tracking-[-0.2px]
+					className={`text-[12px] font-bold leading-[16px] tracking-[-0.2px]
 					    ${formik.touched[inputName] && formik.errors[inputName] ? "text-error_red" : "text-black"}
 					  `}
 				>
@@ -21,8 +21,8 @@ const CheckoutInput = ({ formik, inputName, inputType, inputPlaceholder, label }
 			{/* autofill:opacity-40 and autofill:shadow-[rgb] are necessary to override chrome styling after autocomplete */}
 			<input
 				className={`
-          h-[3.5rem] px-[1.5rem] py-[1.25rem] font-bold text-[14px] leading-[19px] -tracking-[0.25px] text-black/40 focus:text-black caret-peru rounded-lg border
-          autofill:opacity-40 autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)]
+          h-[3.5rem] rounded-lg border px-[1.5rem] py-[1.25rem] text-14 font-bold leading-[19px] -tracking-[0.25px] text-black/40 caret-peru autofill:opacity-40
+          autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)] focus:text-black
           ${
 						formik.touched[inputName] && formik.errors[inputName]
 							? "border-[2px] border-error_red focus-visible:outline-error_red"

@@ -57,7 +57,7 @@ const ThankYou = () => {
 						{/* name and price */}
 						<div className='mr-auto flex flex-col'>
 							<h3 className='text-15 font-bold uppercase leading-25 text-black'>{nameForCart}</h3>
-							<p className='text-[14px] font-bold leading-25 text-black/50'>
+							<p className='text-14 font-bold leading-25 text-black/50'>
 								$ {price.toLocaleString()}
 							</p>
 						</div>
@@ -79,7 +79,7 @@ const ThankYou = () => {
 			</div>
 			<Link to='/' className='w-full'>
 				<button
-					className='h-[3rem] w-full bg-peru text-13 font-bold uppercase leading-18 tracking-[1px] text-white'
+					className='h-[3rem] w-full bg-peru text-13 font-bold uppercase leading-18 tracking-1 text-white'
 					onClick={handleThankYouClose}
 				>
 					back to home
