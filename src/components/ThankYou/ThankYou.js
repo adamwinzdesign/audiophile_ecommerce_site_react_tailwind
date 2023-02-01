@@ -66,7 +66,7 @@ const ThankYou = () => {
 					</div>
 					{/* and x other item(s) */}
 					<div className='flex justify-center pt-[1rem]'>
-						<p className='text-[12px] font-bold leading-[16px] tracking-[-0.21px] text-black/50'>
+						<p className='text-12 font-bold leading-[16px] tracking-[-0.21px] text-black/50'>
 							and {cart.length - 1} other item(s)
 						</p>
 					</div>

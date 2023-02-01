@@ -5,7 +5,7 @@ const CheckoutInput = ({ formik, inputName, inputType, inputPlaceholder, label }
 		<div className='flex flex-col'>
 			<CheckoutLabel inputName={inputName}>
 				<h2
-					className={`text-[12px] font-bold leading-[16px] tracking-[-0.2px]
+					className={`text-12 font-bold leading-[16px] tracking-[-0.2px]
 					    ${formik.touched[inputName] && formik.errors[inputName] ? "text-error_red" : "text-black"}
 					  `}
 				>
@@ -13,7 +13,7 @@ const CheckoutInput = ({ formik, inputName, inputType, inputPlaceholder, label }
 				</h2>
 
 				{formik.touched[inputName] && formik.errors[inputName] && (
-					<p className='font-med text-[12px] leading-[16px] tracking-[0.2px] text-error_red'>
+					<p className='font-med text-12 leading-[16px] tracking-[0.2px] text-error_red'>
 						{formik.errors[inputName]}
 					</p>
 				)}

@@ -34,7 +34,7 @@ const Footer = () => {
 			<div className='relative flex w-full flex-col items-center gap-[3rem] md:flex-row md:justify-between'>
 				{/* copyright */}
 				<div>
-					<p className='text-center text-15 leading-25 text-white/50'>
+					<p className='text-center text-15 font-bold leading-25 text-white/50'>
 						Copyright 2021. All Rights Reserved
 					</p>
 				</div>

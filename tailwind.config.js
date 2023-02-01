@@ -39,6 +39,7 @@ module.exports = {
 				border_grey: "#CFCFCF",
 			},
 			fontSize: {
+				12: "0.75rem", // 12px
 				13: "0.8125rem", // 13px
 				14: "0.875rem", // 14px
 				15: "0.9375rem", // 15px
@@ -48,6 +49,7 @@ module.exports = {
 				heightXS: "0.9375rem",
 			},
 			lineHeight: {
+				16: "1rem",
 				18: "1.125rem", // 18px
 				25: "1.5625rem", // 25px
 			},

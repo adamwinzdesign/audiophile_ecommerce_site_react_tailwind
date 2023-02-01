@@ -28,21 +28,19 @@ const Nav = () => {
 		}
 	};
 
-	console.log(window.location);
-
 	return (
-		<nav className='px-[1.5rem] md:px-[2.5rem] desk:px-[10.25rem] h-[5.625rem] desk:h-[6rem] bg-black'>
-			<div className='w-full h-full flex items-center justify-between md:justify-start desk:justify-between border-b-[1px] border-white/20'>
-				<div className='desk:hidden w-4 h-heightXS cursor-pointer'>
+		<nav className='h-[5.625rem] bg-black px-[1.5rem] md:px-[2.5rem] desk:h-[6rem] desk:px-[10.25rem]'>
+			<div className='flex h-full w-full items-center justify-between border-b-[1px] border-white/20 md:justify-start desk:justify-between'>
+				<div className='h-heightXS w-4 cursor-pointer desk:hidden'>
 					<MenuButton />
 				</div>
-				<Link to='/' className='desk:min-w-[30%] md:ml-[2.5rem] desk:ml-0 md:mr-auto desk:mr-0'>
+				<Link to='/' className='md:ml-[2.5rem] md:mr-auto desk:ml-0 desk:mr-0 desk:min-w-[30%]'>
 					<div className='flex justify-start'>
 						<img src={logo} alt='audiophile logo' />
 					</div>
 				</Link>
-				<div className='desk:min-w-[30%] hidden desk:flex'>
-					<div className='hidden desk:flex gap-[2.125rem]'>
+				<div className='hidden desk:flex desk:min-w-[30%]'>
+					<div className='hidden gap-[2.125rem] desk:flex'>
 						<StyledLink dest='/' text='Home' />
 						<StyledLink dest='/headphones' text='Headphones' />
 						<StyledLink dest='/speakers' text='Speakers' />
@@ -51,7 +49,7 @@ const Nav = () => {
 				</div>
 
 				<div
-					className={`relative desk:min-w-[30%] flex justify-end overflow-visible ${
+					className={`relative flex justify-end overflow-visible desk:min-w-[30%] ${
 						cartTotalItems > 0 ? "cursor-pointer" : "cursor-not-allowed"
 					}`}
 					onClick={cartTotalItems > 0 ? handleCartClick : null}
@@ -64,7 +62,7 @@ const Nav = () => {
 								initial='hidden'
 								animate='show'
 								exit='exit'
-								className={`absolute -right-4 top-4 h-6 w-6 flex items-center justify-center bg-peru rounded-full`}
+								className={`absolute -right-4 top-4 flex h-6 w-6 items-center justify-center rounded-full bg-peru`}
 							>
 								<p className='text-[0.9rem] text-white'>{cartTotalItems}</p>
 							</motion.div>

@@ -11,7 +11,7 @@ const PaymentSelector = ({ paymentMethod, setPaymentMethod, formik }) => {
 
 			{/* payment method selector */}
 			<div className='flex flex-col gap-[1rem] pt-[1.1rem]'>
-				<h2 className='text-[12px] font-bold leading-[16px] tracking-[-0.2px] text-black'>
+				<h2 className='text-12 font-bold leading-[16px] tracking-[-0.2px] text-black'>
 					Payment Method
 				</h2>
 				<button
